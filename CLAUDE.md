@@ -30,7 +30,7 @@ Nome provvisorio: **TechTalk Coach** (da decidere).
 ## Regole di lavoro
 
 1. Lavora **una fase di PLAN.md alla volta**. Non anticipare fasi successive.
-2. A fine fase: test verdi, build ok, spunta le checkbox in PLAN.md, commit con messaggio chiaro.
+2. A fine fase: test verdi, build ok, spunta le checkbox in PLAN.md, incrementa la versione in `package.json` (`npm version <x.y.z> --no-git-tag-version`; Fase N → 0.(N+1).0, correzioni → patch), commit con messaggio chiaro.
 3. Mobile first: progetta a 360px di larghezza, target touch ≥ 44px, una mano sola.
 4. UI e spiegazioni in **italiano**; contenuti da imparare in **inglese**.
 5. I contenuti didattici stanno in `/src/content/*.json` (o generatori in `/src/content/generators/`), mai hardcoded nei componenti.
