@@ -1,0 +1,96 @@
+{
+  "levels": [
+    {
+      "level": 1,
+      "name": "Da 0 a 100",
+      "description": "I numeri base e le coppie trappola: thirteen/thirty, fifteen/fifty…",
+      "kinds": ["small", "tens", "teen-ty"]
+    },
+    {
+      "level": 2,
+      "name": "Grandi numeri, date e orari",
+      "description": "Hundred, thousand, million, ordinali, anni, date UK e US, orari.",
+      "kinds": ["big", "ordinal", "year", "date", "time"]
+    },
+    {
+      "level": 3,
+      "name": "Decimali, negativi, percentuali, prezzi",
+      "description": "«three point three», «minus forty», «fifteen percent», «twelve ninety-nine».",
+      "kinds": ["decimal", "negative", "percent", "price"]
+    },
+    {
+      "level": 4,
+      "name": "Telefoni e codici",
+      "description": "Cifre una per una, con «oh» per lo zero e «double five».",
+      "kinds": ["phone", "code"]
+    },
+    {
+      "level": 5,
+      "name": "Misure elettriche",
+      "description": "Prefissi SI: «forty-seven kilo-ohms», «sixteen megahertz», «twelve nanoseconds».",
+      "kinds": [
+        "resistance",
+        "capacitance",
+        "voltage",
+        "current",
+        "frequency",
+        "time-unit",
+        "power"
+      ]
+    },
+    {
+      "level": 6,
+      "name": "Tolleranze e range",
+      "description": "«plus or minus five percent», «from minus forty to one hundred twenty-five degrees Celsius».",
+      "kinds": ["tolerance", "range"]
+    },
+    {
+      "level": 7,
+      "name": "Esadecimale e registri",
+      "description": "«zero x four zero zero zero», «bit seven», «register offset zero x one C».",
+      "kinds": ["hex", "bit", "register"]
+    }
+  ],
+  "kindTips": {
+    "small": "Da 0 a 20 ogni numero ha il suo nome: impararli bene rende facile tutto il resto.",
+    "tens": "Decine e unità si uniscono con un trattino: forty-seven. Attenzione: forty, senza u!",
+    "teen-ty": "-teen (13–19) ha l'accento alla fine e una n: thir-TEEN. -ty (30–90) ha l'accento all'inizio e finisce secca: THIR-ty.",
+    "big": "Si legge a gruppi di tre cifre: 250,000 = two hundred fifty thousand. Hundred, thousand e million non prendono la s.",
+    "ordinal": "1st first, 2nd second, 3rd third, poi -th: fourth, fifth, twelfth, twentieth, twenty-first.",
+    "year": "Gli anni si leggono a coppie: 1984 = nineteen eighty-four, 2026 = twenty twenty-six (o two thousand twenty-six).",
+    "date": "UK: giorno e mese, «the fifth of March». US: mese e giorno, «March fifth». Attenzione a 5/3: in UK è il 5 marzo, in US il 3 maggio!",
+    "time": "3:45 = three forty-five oppure a quarter to four. 3:30 = half past three. 9:00 = nine o'clock.",
+    "decimal": "Il separatore decimale è il punto e si dice «point»; dopo il punto le cifre si leggono una per una: 3.25 = three point two five.",
+    "negative": "I numeri negativi si leggono con «minus»: -40 = minus forty.",
+    "percent": "% si legge «percent», sempre al singolare: fifteen percent.",
+    "price": "$12.99 = twelve dollars ninety-nine, o più veloce «twelve ninety-nine». €250 = two hundred fifty euros.",
+    "phone": "I numeri di telefono si leggono cifra per cifra, a gruppi. Lo zero spesso è «oh» e due cifre uguali sono «double»: 55 = double five.",
+    "code": "Codici, PIN e numeri di stanza si leggono cifra per cifra: 405 = four oh five.",
+    "resistance": "kΩ = kilo-ohms, MΩ = megohms. In laboratorio si sente spesso solo «forty-seven K».",
+    "capacitance": "pF = picofarads, nF = nanofarads, µF = microfarads (spesso detto «mike»).",
+    "voltage": "mV = millivolts. pp = peak-to-peak, cioè da picco a picco.",
+    "current": "µA = microamps, mA = milliamps. In inglese «amps» è più comune di «amperes».",
+    "frequency": "kHz = kilohertz, MHz = megahertz. Hertz non prende la s.",
+    "time-unit": "ns = nanoseconds, µs = microseconds, ms = milliseconds. Rise time = tempo di salita.",
+    "power": "µW = microwatts, mW = milliwatts.",
+    "tolerance": "± si legge «plus or minus»: ±5% = plus or minus five percent.",
+    "range": "Gli intervalli si leggono «from … to …»: -40 °C to +125 °C = from minus forty to plus one hundred twenty-five degrees Celsius.",
+    "hex": "0x si legge «zero x», poi le cifre una per una: 0x4000 = zero x four zero zero zero. Le lettere: A «ei», B «bi», C «si», D «di», E «i», F «ef».",
+    "bit": "bit 7 = bit seven. bits 15 to 8 = i bit da 15 a 8, scritto anche [15:8].",
+    "register": "register offset 0x1C = l'indirizzo del registro rispetto alla base della periferica."
+  },
+  "errorTips": {
+    "teen-ty": "Trappola -teen/-ty! Ascolta l'accento: thir-TEEN (13) ha l'accento alla fine e la n, THIR-ty (30) all'inizio.",
+    "digits": "Cifre scambiate o una cifra diversa: riascolta con calma, gruppo per gruppo.",
+    "magnitude": "Le cifre sono giuste ma l'ordine di grandezza no: controlla il prefisso (kilo, mega, milli, micro…) o gli zeri.",
+    "decimal": "Attenzione al «point»: è la virgola decimale. 3.3 = three point three.",
+    "sign": "Hai perso il segno: «minus» indica un numero negativo."
+  },
+  "errorNames": {
+    "teen-ty": "-teen / -ty (13 o 30?)",
+    "digits": "Cifre scambiate",
+    "magnitude": "Ordine di grandezza / prefisso",
+    "decimal": "Virgola decimale",
+    "sign": "Segno meno"
+  }
+}

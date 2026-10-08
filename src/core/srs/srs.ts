@@ -55,7 +55,13 @@ export async function recordReview(
   itemId: string,
   module: string,
   grade: Grade,
-  options: { correct: boolean; answer?: string; now?: Date } = { correct: grade !== Rating.Again },
+  options: {
+    correct: boolean
+    answer?: string
+    expected?: string
+    errorTag?: string
+    now?: Date
+  } = { correct: grade !== Rating.Again },
   database: AppDatabase = defaultDb,
 ): Promise<ItemRecord> {
   const now = options.now ?? new Date()
@@ -70,6 +76,8 @@ export async function recordReview(
       rating: grade,
       correct: options.correct,
       answer: options.answer,
+      expected: options.expected,
+      errorTag: options.errorTag,
       reviewedAt: now.getTime(),
     })
     return updated

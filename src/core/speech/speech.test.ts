@@ -90,11 +90,11 @@ describe('TtsQueue', () => {
   const flush = () => new Promise((r) => setTimeout(r, 0))
 
   it('legge le frasi in ordine, una alla volta', async () => {
-    const first = queue.enqueue('One', { rate: 2, accent: 'en-US' })
+    const first = queue.enqueue('One', { rate: 3, accent: 'en-US' })
     const second = queue.enqueue('Two')
     await flush()
     expect(synth.spoken.map((u) => u.text)).toEqual(['One'])
-    expect(synth.spoken[0]?.rate).toBe(1.2)
+    expect(synth.spoken[0]?.rate).toBe(1.6)
     expect(synth.spoken[0]?.voice?.lang).toBe('en-US')
 
     synth.finishCurrent()
@@ -233,5 +233,29 @@ describe('listen', () => {
     await new Promise((r) => setTimeout(r, 0))
     ctrl.abort()
     await expect(p).rejects.toMatchObject({ code: 'aborted' })
+  })
+})
+
+describe('TtsQueue: attesa delle voci', () => {
+  afterEach(() => vi.unstubAllGlobals())
+
+  it('se il browser non annuncia voci, aspetta una volta sola', async () => {
+    vi.stubGlobal('SpeechSynthesisUtterance', FakeUtterance)
+    vi.useFakeTimers()
+    const synth = new FakeSynth()
+    synth.getVoices = () => []
+    const queue = new TtsQueue(synth as unknown as SpeechSynthesis)
+
+    void queue.enqueue('One')
+    await vi.advanceTimersByTimeAsync(1999)
+    expect(synth.spoken).toHaveLength(0)
+    await vi.advanceTimersByTimeAsync(1)
+    expect(synth.spoken).toHaveLength(1)
+    synth.finishCurrent()
+
+    void queue.enqueue('Two')
+    await vi.advanceTimersByTimeAsync(0)
+    expect(synth.spoken).toHaveLength(2)
+    vi.useRealTimers()
   })
 })

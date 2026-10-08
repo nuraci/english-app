@@ -20,6 +20,10 @@ export type ReviewRecord = {
   correct: boolean
   /** Risposta data dall'utente, utile per le statistiche sugli errori ricorrenti. */
   answer?: string
+  /** Risposta attesa (per gli item generati, dove l'id non basta a ricostruirla). */
+  expected?: string
+  /** Tipo di errore riconosciuto, es. "teen-ty". */
+  errorTag?: string
   reviewedAt: number
 }
 

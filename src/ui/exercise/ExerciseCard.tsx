@@ -25,7 +25,7 @@ export function ExerciseCard({ exercise, answered, onAnswer }: Props) {
       )}
       {prompt.speak && (
         <div className="mt-4">
-          <SpeakButton text={prompt.speak} />
+          <SpeakButton text={prompt.speak} rate={prompt.rate} autoplay={prompt.autoplay} />
         </div>
       )}
       <div className="mt-5">
@@ -126,18 +126,23 @@ function SpeechAnswer({ exercise, answered, onAnswer }: Props) {
   const { start, cancel, listening, interim, error } = useListener()
   const [fallback, setFallback] = useState(!isSttSupported())
 
+  const fallbackMode = exercise.answer.fallback ?? settings.sttFallback
   const fallbackNeeded =
     fallback || error === 'offline' || error === 'network' || error === 'not-supported'
   if (fallbackNeeded) {
     return (
       <div className="space-y-3">
         <p className="text-sm text-slate-600 dark:text-slate-300">
-          {error ? sttErrorMessage(error) : 'Il riconoscimento vocale non è disponibile qui.'}{' '}
-          {settings.sttFallback === 'type'
+          {error
+            ? sttErrorMessage(error)
+            : isSttSupported()
+              ? 'Va bene, niente microfono.'
+              : 'Il riconoscimento vocale non è disponibile qui.'}{' '}
+          {fallbackMode === 'type'
             ? 'Dilla ad alta voce, poi scrivila.'
             : 'Dilla ad alta voce, poi valuta tu come è andata.'}
         </p>
-        {settings.sttFallback === 'type' ? (
+        {fallbackMode === 'type' ? (
           <TypeAnswer exercise={exercise} answered={answered} onAnswer={onAnswer} />
         ) : (
           <SelfGradeAnswer exercise={exercise} answered={answered} onAnswer={onAnswer} />

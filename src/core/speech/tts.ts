@@ -1,7 +1,10 @@
 import type { Accent } from '../db/settings'
 
+/** Intervallo della velocità scelta nelle impostazioni. */
 export const MIN_RATE = 0.6
 export const MAX_RATE = 1.2
+/** Gli esercizi di velocità crescente possono andare oltre l'impostazione. */
+const SPEECH_RATE_LIMITS = [0.5, 1.6] as const
 
 export type SpeakOptions = {
   accent?: Accent
@@ -13,8 +16,11 @@ export function isTtsSupported(): boolean {
   return typeof window !== 'undefined' && 'speechSynthesis' in window
 }
 
-export function clampRate(rate: number): number {
-  return Math.min(MAX_RATE, Math.max(MIN_RATE, rate))
+export function clampRate(
+  rate: number,
+  [min, max]: readonly [number, number] = [MIN_RATE, MAX_RATE],
+): number {
+  return Math.min(max, Math.max(min, rate))
 }
 
 /** Android a volte usa "en_US" invece di "en-US". */
@@ -85,6 +91,8 @@ export class TtsQueue {
   private queue: QueueEntry[] = []
   private currentEntry: QueueEntry | null = null
   private voices: SpeechSynthesisVoice[] = []
+  /** L'attesa delle voci si fa una volta sola: alcuni browser non ne annunciano mai. */
+  private voicesRequested = false
   private idleListeners = new Set<() => void>()
 
   constructor(
@@ -138,14 +146,20 @@ export class TtsQueue {
       return
     }
     this.currentEntry = entry
-    if (this.voices.length === 0) this.voices = await loadVoices(this.synth)
+    if (!this.voicesRequested) {
+      this.voicesRequested = true
+      this.voices = await loadVoices(this.synth)
+      this.synth.addEventListener?.('voiceschanged', () => {
+        this.voices = this.synth?.getVoices() ?? []
+      })
+    }
     // Annullata mentre si caricavano le voci.
     if (this.currentEntry !== entry) return
 
     const accent = entry.options.accent ?? 'en-US'
     const utterance = new SpeechSynthesisUtterance(entry.text)
     utterance.lang = accent
-    utterance.rate = clampRate(entry.options.rate ?? 1)
+    utterance.rate = clampRate(entry.options.rate ?? 1, SPEECH_RATE_LIMITS)
     const voice = pickVoice(this.voices, accent, entry.options.voiceURI)
     if (voice) utterance.voice = voice
 

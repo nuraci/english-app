@@ -8,9 +8,15 @@ const MODULES = [
     subtitle: 'write → wrote → written',
     emoji: '🔁',
   },
+  {
+    to: '/allenamenti/numeri',
+    title: 'Numeri e misure',
+    subtitle: '13 or 30? · 47 kΩ · 0x4000',
+    emoji: '🔢',
+  },
 ]
 
-const COMING = ['Numeri e misure', 'Spelling', 'Vocabolario tecnico', 'Simulazione di colloquio']
+const COMING = ['Spelling', 'Vocabolario tecnico', 'Simulazione di colloquio']
 
 export function TrainingScreen() {
   return (

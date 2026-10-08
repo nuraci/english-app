@@ -1,4 +1,4 @@
-import { compareAnswer, type MatchKind, type WordDiff } from '../normalize'
+import { compareAnswer, compareNumeric, type MatchKind, type WordDiff } from '../normalize'
 import { Rating, type Grade } from '../srs'
 import type { Exercise, Response, SelfGrade } from './types'
 
@@ -12,6 +12,8 @@ export type Evaluation = {
   expected: string
   diffs: WordDiff[]
   grade: Grade
+  /** Tipo di errore riconosciuto (es. "teen-ty"), per feedback mirato e statistiche. */
+  errorTag?: string
 }
 
 const SELF_GRADES: Record<SelfGrade, Grade> = {
@@ -49,9 +51,10 @@ export function evaluate(exercise: Exercise, response: Response): Evaluation {
   if (candidates.length === 0) candidates.push('')
 
   // Con la voce basta che una delle trascrizioni alternative sia giusta.
-  let best: { given: string; result: ReturnType<typeof compareAnswer> } | undefined
+  const compare = exercise.answer.match === 'number' ? compareNumeric : compareAnswer
+  let best: { given: string; result: ReturnType<typeof compareNumeric> } | undefined
   for (const given of candidates) {
-    const result = compareAnswer(given, exercise.answer.accepted)
+    const result = compare(given, exercise.answer.accepted)
     if (!best || RANK[result.kind] < RANK[best.result.kind]) best = { given, result }
   }
   const { given, result } = best as NonNullable<typeof best>
@@ -64,5 +67,6 @@ export function evaluate(exercise: Exercise, response: Response): Evaluation {
     expected: result.expected,
     diffs: result.diffs,
     grade: KIND_GRADES[result.kind],
+    ...(result.errorTag ? { errorTag: result.errorTag } : {}),
   }
 }

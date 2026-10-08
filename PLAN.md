@@ -75,7 +75,7 @@ Ogni fase ha: **Obiettivo**, **Task**, **Criteri di accettazione**.
 
 **Obiettivo:** capire e dire i numeri al primo colpo, soprattutto in contesto tecnico.
 
-- [ ] **Generatore** (non lista statica) con livelli:
+- [x] **Generatore** (non lista statica) con livelli:
   1. Cardinali 0–100, coppie trappola (thirteen/thirty, fifteen/fifty…)
   2. Grandi numeri (hundred, thousand, million), ordinali, anni, date (UK vs US), orari
   3. Decimali ("three point three"), negativi, percentuali, prezzi
@@ -83,8 +83,8 @@ Ogni fase ha: **Obiettivo**, **Task**, **Criteri di accettazione**.
   5. **Misure elettriche** con prefissi SI: "forty-seven kilo-ohms", "two hundred millivolts peak-to-peak", "twelve nanoseconds rise time", "sixteen megahertz"
   6. Tolleranze e range: "plus or minus five percent", "from minus forty to one hundred twenty-five degrees Celsius"
   7. Esadecimale e registri: "zero x four zero zero zero", "bit seven", "address offset zero x one C"
-- [ ] Modalità: ascolta e scrivi · leggi ad alta voce (STT) · velocità crescente
-- [ ] Statistiche sugli errori ricorrenti (es. confonde sempre -teen/-ty) e riproposta mirata
+- [x] Modalità: ascolta e scrivi · leggi ad alta voce (STT) · velocità crescente
+- [x] Statistiche sugli errori ricorrenti (es. confonde sempre -teen/-ty) e riproposta mirata
 
 **Accettazione:** almeno 7 livelli giocabili, il generatore produce varianti infinite, test unitari sulla conversione numero ↔ parole.
 

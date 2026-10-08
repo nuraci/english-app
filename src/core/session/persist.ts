@@ -14,7 +14,13 @@ export async function saveAnswer(
     itemIdOf(exercise),
     exercise.module,
     evaluation.grade,
-    { correct: evaluation.correct, answer: evaluation.given || undefined, now },
+    {
+      correct: evaluation.correct,
+      answer: evaluation.given || undefined,
+      expected: evaluation.expected,
+      errorTag: evaluation.errorTag,
+      now,
+    },
     database,
   )
 }

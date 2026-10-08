@@ -12,6 +12,8 @@ export type Settings = {
   voiceURI: string | null
   /** Cosa fare negli esercizi parlati se il riconoscimento vocale non c'è. */
   sttFallback: SttFallback
+  /** Numeri: velocità normale o crescente durante la sessione. */
+  numbersSpeed: 'normal' | 'ramp'
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -19,6 +21,7 @@ export const DEFAULT_SETTINGS: Settings = {
   rate: 0.9,
   voiceURI: null,
   sttFallback: 'type',
+  numbersSpeed: 'normal',
 }
 
 export async function getSettings(database = db): Promise<Settings> {

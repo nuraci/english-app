@@ -7,12 +7,30 @@ export type Exercise = {
    */
   id: string
   module: string
-  prompt: { text?: string; speak?: string; hint?: string }
-  answer: { accepted: string[]; mode: AnswerMode; choices?: string[] }
+  prompt: {
+    text?: string
+    speak?: string
+    hint?: string
+    /** Legge `speak` appena l'esercizio compare (esercizi di ascolto). */
+    autoplay?: boolean
+    /** Moltiplicatore della velocità di lettura rispetto alle impostazioni. */
+    rate?: number
+  }
+  answer: {
+    accepted: string[]
+    mode: AnswerMode
+    choices?: string[]
+    /** 'number': confronto numerico ("47k" = "47 kΩ" = "forty-seven kilo-ohms"). */
+    match?: 'text' | 'number'
+    /** Cosa fare negli esercizi parlati senza microfono, se diverso dalle impostazioni. */
+    fallback?: 'type' | 'selfgrade'
+  }
   /** Spiegazione in italiano, mostrata dopo la risposta. */
   explanation?: string
   /** Testo da far ascoltare con la risposta (es. "write, wrote, written"). */
   say?: string
+  /** Spiegazioni mirate per tipo di errore (es. "teen-ty"), al posto di `explanation`. */
+  tips?: Record<string, string>
 }
 
 const VARIANT_SEPARATOR = '#'

@@ -100,7 +100,10 @@ export function SessionRunner({ module, exercises, onDone, summary }: Props) {
       {state.current && (
         <Feedback
           message={buildFeedback(state.current, state.index)}
-          explanation={exercise.explanation}
+          explanation={
+            (state.current.errorTag && exercise.tips?.[state.current.errorTag]) ||
+            exercise.explanation
+          }
           speak={exercise.say}
           onContinue={() => dispatch({ type: 'next', retry: !state.current?.correct })}
         />

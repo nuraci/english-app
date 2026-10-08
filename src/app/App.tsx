@@ -7,6 +7,8 @@ import { SettingsScreen } from './screens/SettingsScreen'
 import { DebugScreen } from './screens/DebugScreen'
 import { VerbsScreen } from '../modules/verbs/VerbsScreen'
 import { VerbSessionScreen } from '../modules/verbs/VerbSessionScreen'
+import { NumbersScreen } from '../modules/numbers/NumbersScreen'
+import { NumbersSessionScreen } from '../modules/numbers/NumbersSessionScreen'
 
 export function App() {
   return (
@@ -16,6 +18,8 @@ export function App() {
         <Route path="allenamenti" element={<TrainingScreen />} />
         <Route path="allenamenti/verbi" element={<VerbsScreen />} />
         <Route path="allenamenti/verbi/sessione" element={<VerbSessionScreen />} />
+        <Route path="allenamenti/numeri" element={<NumbersScreen />} />
+        <Route path="allenamenti/numeri/sessione" element={<NumbersSessionScreen />} />
         <Route path="progressi" element={<ProgressScreen />} />
         <Route path="impostazioni" element={<SettingsScreen />} />
         <Route path="prova" element={<DebugScreen />} />

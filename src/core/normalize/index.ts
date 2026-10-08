@@ -7,3 +7,11 @@ export {
   numberStringToWords,
   NUMBER_WORDS,
 } from './numberToWords'
+export {
+  classifyNumberError,
+  compareNumeric,
+  numericKey,
+  ordinalSuffix,
+  wordsToDigits,
+} from './numeric'
+export type { NumberErrorTag, NumericCompareResult } from './numeric'

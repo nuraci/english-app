@@ -7,20 +7,32 @@ import { tts } from './tts'
 export function useSpeaker() {
   const settings = useSettings()
   const [speaking, setSpeaking] = useState(false)
+  /** Lettura avviata da questo componente e non ancora finita. */
+  const pending = useRef(false)
 
   useEffect(() => tts.onIdle(() => setSpeaking(false)), [])
-  useEffect(() => () => tts.cancel(), [])
+  // Uscendo si ferma solo la propria lettura, non quella avviata nel frattempo da un altro componente.
+  useEffect(
+    () => () => {
+      if (pending.current) tts.cancel()
+    },
+    [],
+  )
 
   const speak = useCallback(
     (text: string | readonly string[], rateFactor = 1) => {
       setSpeaking(true)
+      pending.current = true
       return tts
         .speak(text, {
           accent: settings.accent,
           rate: settings.rate * rateFactor,
           voiceURI: settings.voiceURI,
         })
-        .finally(() => setSpeaking(tts.speaking))
+        .finally(() => {
+          pending.current = false
+          setSpeaking(tts.speaking)
+        })
     },
     [settings.accent, settings.rate, settings.voiceURI],
   )
