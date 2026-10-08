@@ -31,10 +31,10 @@ Ogni fase ha: **Obiettivo**, **Task**, **Criteri di accettazione**.
 
 **Obiettivo:** i mattoni che tutti i moduli riusano.
 
-- [ ] `core/speech/tts`: wrapper di `speechSynthesis`; scelta voce (en-US / en-GB), velocità (0.6–1.2), coda di frasi, evento di fine
-- [ ] `core/speech/stt`: wrapper di `SpeechRecognition` con feature detection; se non disponibile, fallback a scrittura o autovalutazione
-- [ ] `core/srs`: ts-fsrs; ogni item ha stato di ripasso; funzione `getDueItems(module, n)`
-- [ ] `core/session`: esercizio generico
+- [x] `core/speech/tts`: wrapper di `speechSynthesis`; scelta voce (en-US / en-GB), velocità (0.6–1.2), coda di frasi, evento di fine
+- [x] `core/speech/stt`: wrapper di `SpeechRecognition` con feature detection; se non disponibile, fallback a scrittura o autovalutazione
+- [x] `core/srs`: ts-fsrs; ogni item ha stato di ripasso; funzione `getDueItems(module, n)`
+- [x] `core/session`: esercizio generico
   ```ts
   type Exercise = {
     id: string
@@ -48,9 +48,9 @@ Ogni fase ha: **Obiettivo**, **Task**, **Criteri di accettazione**.
     explanation?: string // in italiano
   }
   ```
-- [ ] `core/normalize`: confronto tollerante (maiuscole, punteggiatura, spazi, "47" vs "forty-seven", "Ω" vs "ohm")
-- [ ] Schema Dexie: `items`, `reviews`, `sessions`, `settings`, `userTexts`
-- [ ] Componente feedback incoraggiante con spiegazione dell'errore
+- [x] `core/normalize`: confronto tollerante (maiuscole, punteggiatura, spazi, "47" vs "forty-seven", "Ω" vs "ohm")
+- [x] Schema Dexie: `items`, `reviews`, `sessions`, `settings`, `userTexts`
+- [x] Componente feedback incoraggiante con spiegazione dell'errore
 
 **Accettazione:** pagina di debug che legge una frase in TTS, ascolta l'utente in STT e valuta una risposta; unit test su normalize e srs.
 

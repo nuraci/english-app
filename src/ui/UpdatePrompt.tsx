@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useRegisterSW } from 'virtual:pwa-register/react'
 import { Button } from './Button'
 
@@ -7,6 +8,13 @@ export function UpdatePrompt() {
     needRefresh: [needRefresh, setNeedRefresh],
     updateServiceWorker,
   } = useRegisterSW()
+
+  // L'avviso "pronta offline" è solo informativo: sparisce da solo per non coprire gli esercizi.
+  useEffect(() => {
+    if (!offlineReady || needRefresh) return
+    const timer = setTimeout(() => setOfflineReady(false), 4000)
+    return () => clearTimeout(timer)
+  }, [offlineReady, needRefresh, setOfflineReady])
 
   if (!offlineReady && !needRefresh) return null
 

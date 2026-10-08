@@ -1,0 +1,47 @@
+{
+  "sentence": "We found a bug in the ADC. The board ran for forty-eight hours without errors.",
+  "exercises": [
+    {
+      "id": "debug:listen-thirteen",
+      "module": "debug",
+      "prompt": { "text": "Ascolta e scrivi il numero", "speak": "thirteen" },
+      "answer": { "accepted": ["13"], "mode": "type" },
+      "explanation": "-teen (13–19) ha l'accento sulla fine: thir-TEEN. -ty (30, 40…) sull'inizio: THIR-ty."
+    },
+    {
+      "id": "debug:past-run",
+      "module": "debug",
+      "prompt": {
+        "text": "Yesterday I ___ (run) the regression.",
+        "hint": "Passato semplice di run"
+      },
+      "answer": { "accepted": ["ran"], "mode": "type" },
+      "explanation": "run → ran → run: il passato è ran, il participio torna run."
+    },
+    {
+      "id": "debug:choice-resistor",
+      "module": "debug",
+      "prompt": { "text": "Come si legge 47 kΩ?", "speak": "forty-seven kilo-ohms" },
+      "answer": {
+        "accepted": ["forty-seven kilo-ohms"],
+        "mode": "choice",
+        "choices": ["forty-seven kilo-ohms", "four seven kilo", "forty-seven thousand ohm-kilo"]
+      },
+      "explanation": "Si dice il numero intero seguito dall'unità con il prefisso: forty-seven kilo-ohms."
+    },
+    {
+      "id": "debug:speak-firmware",
+      "module": "debug",
+      "prompt": { "text": "Leggi ad alta voce", "speak": "I wrote the test firmware." },
+      "answer": { "accepted": ["I wrote the test firmware"], "mode": "speak" },
+      "explanation": "write → wrote → written. Wrote si pronuncia /rəʊt/, come \"road\" con la t."
+    },
+    {
+      "id": "debug:self-tell-me",
+      "module": "debug",
+      "prompt": { "text": "Come chiedi di ripetere la domanda, in modo cortese?" },
+      "answer": { "accepted": ["Could you repeat the question, please?"], "mode": "selfgrade" },
+      "explanation": "Una frase salvavita: usala senza paura, è normalissima in un colloquio."
+    }
+  ]
+}
