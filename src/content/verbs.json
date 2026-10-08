@@ -1,0 +1,1960 @@
+{
+  "groups": [
+    {
+      "id": "special",
+      "name": "I verbi speciali",
+      "pattern": "be → was/were → been",
+      "description": "Forme tutte diverse, da imparare a memoria. Sono i verbi più usati in assoluto: vale la pena!"
+    },
+    {
+      "id": "same",
+      "name": "Sempre uguali",
+      "pattern": "cut → cut → cut",
+      "description": "Le tre forme sono identiche: i più facili! Attenzione solo a read, che al passato si pronuncia «red»."
+    },
+    {
+      "id": "ee",
+      "name": "La vocale lunga si accorcia",
+      "pattern": "keep → kept → kept",
+      "description": "La ee o ea diventa una e breve, spesso con una -t finale: feel → felt, meet → met."
+    },
+    {
+      "id": "dt",
+      "name": "La -d diventa -t",
+      "pattern": "send → sent → sent",
+      "description": "Basta cambiare la d finale in t: build → built, spend → spent."
+    },
+    {
+      "id": "ought",
+      "name": "Finale in -ought / -aught",
+      "pattern": "bring → brought → brought",
+      "description": "Passato e participio finiscono in -ought o -aught. La gh è muta: si legge «-ot»."
+    },
+    {
+      "id": "old",
+      "name": "tell → told, stand → stood",
+      "pattern": "hold → held → held",
+      "description": "Passato e participio uguali, cambia la vocale: -ell → -old, -and → -ood, -old → -eld."
+    },
+    {
+      "id": "aid",
+      "name": "-ay diventa -aid",
+      "pattern": "pay → paid → paid",
+      "description": "Si aggiunge -id. Attenzione: said si pronuncia «sed»."
+    },
+    {
+      "id": "abb",
+      "name": "Passato = participio",
+      "pattern": "make → made → made",
+      "description": "Ogni verbo ha la sua forma, ma passato e participio coincidono: ne impari una e hai anche l'altra."
+    },
+    {
+      "id": "ind",
+      "name": "-ind diventa -ound",
+      "pattern": "find → found → found",
+      "description": "La i diventa ou: bind → bound, grind → ground."
+    },
+    {
+      "id": "iu",
+      "name": "La vocale diventa u",
+      "pattern": "stick → stuck → stuck",
+      "description": "Passato e participio con la u: hang → hung, dig → dug."
+    },
+    {
+      "id": "iau",
+      "name": "i → a → u",
+      "pattern": "begin → began → begun",
+      "description": "Come una scala: i al presente, a al passato, u al participio. Anche run → ran → run."
+    },
+    {
+      "id": "ew",
+      "name": "-ew e -wn",
+      "pattern": "know → knew → known",
+      "description": "Passato in -ew (si legge «-iu» o «-u»), participio in -wn."
+    },
+    {
+      "id": "oen",
+      "name": "o al passato, -en al participio",
+      "pattern": "write → wrote → written",
+      "description": "Il passato prende una o, il participio finisce in -en: speak → spoke → spoken."
+    },
+    {
+      "id": "en",
+      "name": "Participio in -en / -n",
+      "pattern": "take → took → taken",
+      "description": "Il passato cambia vocale, il participio aggiunge -en o -n: see → saw → seen."
+    },
+    {
+      "id": "ear",
+      "name": "-ear → -ore → -orn",
+      "pattern": "wear → wore → worn",
+      "description": "Uno schema preciso per quattro verbi: wear, tear, bear, swear."
+    },
+    {
+      "id": "edt",
+      "name": "Due forme valide: -ed o -t",
+      "pattern": "learn → learned / learnt",
+      "description": "In americano si usa di più -ed, in britannico anche -t. Vanno bene entrambe."
+    }
+  ],
+  "verbs": [
+    {
+      "base": "be",
+      "past": ["was", "were"],
+      "participle": ["been"],
+      "it": "essere",
+      "group": "special",
+      "frequencyRank": 1,
+      "example": {
+        "en": "The board {was} stable during the whole test.",
+        "it": "La scheda è stata stabile per tutto il test."
+      },
+      "note": "was per io/lui/lei, were per noi/voi/loro. been si legge «bin»."
+    },
+    {
+      "base": "have",
+      "past": ["had"],
+      "participle": ["had"],
+      "it": "avere",
+      "group": "abb",
+      "frequencyRank": 2,
+      "example": {
+        "en": "We {had} a problem with the power supply.",
+        "it": "Abbiamo avuto un problema con l'alimentatore."
+      }
+    },
+    {
+      "base": "do",
+      "past": ["did"],
+      "participle": ["done"],
+      "it": "fare",
+      "group": "special",
+      "frequencyRank": 3,
+      "example": {
+        "en": "I have {done} the characterization of the ADC.",
+        "it": "Ho fatto la caratterizzazione dell'ADC."
+      },
+      "note": "done si legge «dan»."
+    },
+    {
+      "base": "say",
+      "past": ["said"],
+      "participle": ["said"],
+      "it": "dire",
+      "group": "aid",
+      "frequencyRank": 4,
+      "example": {
+        "en": "The datasheet {said} the maximum current was 20 milliamps.",
+        "it": "Il datasheet diceva che la corrente massima era 20 milliampere."
+      },
+      "note": "said si legge «sed», non «seid»."
+    },
+    {
+      "base": "go",
+      "past": ["went"],
+      "participle": ["gone"],
+      "it": "andare",
+      "group": "special",
+      "frequencyRank": 5,
+      "example": {
+        "en": "The test {went} well on all the samples.",
+        "it": "Il test è andato bene su tutti i campioni."
+      }
+    },
+    {
+      "base": "get",
+      "past": ["got"],
+      "participle": ["got", "gotten"],
+      "it": "ottenere, prendere",
+      "group": "abb",
+      "frequencyRank": 6,
+      "example": {
+        "en": "We {got} the same result on three boards.",
+        "it": "Abbiamo ottenuto lo stesso risultato su tre schede."
+      },
+      "note": "Participio: got (UK) o gotten (US)."
+    },
+    {
+      "base": "make",
+      "past": ["made"],
+      "participle": ["made"],
+      "it": "fare, costruire",
+      "group": "abb",
+      "frequencyRank": 7,
+      "example": {
+        "en": "I {made} a script to automate the measurements.",
+        "it": "Ho fatto uno script per automatizzare le misure."
+      }
+    },
+    {
+      "base": "know",
+      "past": ["knew"],
+      "participle": ["known"],
+      "it": "sapere, conoscere",
+      "group": "ew",
+      "frequencyRank": 8,
+      "example": {
+        "en": "I {knew} the problem was in the clock configuration.",
+        "it": "Sapevo che il problema era nella configurazione del clock."
+      },
+      "note": "La k è muta: knew si legge «niu», known «noun»."
+    },
+    {
+      "base": "think",
+      "past": ["thought"],
+      "participle": ["thought"],
+      "it": "pensare",
+      "group": "ought",
+      "frequencyRank": 9,
+      "example": {
+        "en": "I {thought} it was a hardware issue.",
+        "it": "Pensavo fosse un problema hardware."
+      },
+      "note": "thought si legge «thot»: la gh è muta."
+    },
+    {
+      "base": "take",
+      "past": ["took"],
+      "participle": ["taken"],
+      "it": "prendere, richiedere (tempo)",
+      "group": "en",
+      "frequencyRank": 10,
+      "example": {
+        "en": "The measurement {took} two hours.",
+        "it": "La misura ha richiesto due ore."
+      },
+      "note": "took si legge «tuk»."
+    },
+    {
+      "base": "see",
+      "past": ["saw"],
+      "participle": ["seen"],
+      "it": "vedere",
+      "group": "en",
+      "frequencyRank": 11,
+      "example": {
+        "en": "I {saw} a glitch on the oscilloscope.",
+        "it": "Ho visto un glitch sull'oscilloscopio."
+      },
+      "note": "saw si legge «so»."
+    },
+    {
+      "base": "come",
+      "past": ["came"],
+      "participle": ["come"],
+      "it": "venire, arrivare",
+      "group": "special",
+      "frequencyRank": 12,
+      "example": {
+        "en": "The request {came} from the design team.",
+        "it": "La richiesta è arrivata dal team di progettazione."
+      },
+      "note": "Il participio è uguale al presente: come."
+    },
+    {
+      "base": "find",
+      "past": ["found"],
+      "participle": ["found"],
+      "it": "trovare",
+      "group": "ind",
+      "frequencyRank": 13,
+      "example": {
+        "en": "We {found} a bug in the ADC driver.",
+        "it": "Abbiamo trovato un bug nel driver dell'ADC."
+      }
+    },
+    {
+      "base": "give",
+      "past": ["gave"],
+      "participle": ["given"],
+      "it": "dare",
+      "group": "en",
+      "frequencyRank": 14,
+      "example": {
+        "en": "My manager {gave} me the test plan.",
+        "it": "Il mio responsabile mi ha dato il test plan."
+      }
+    },
+    {
+      "base": "tell",
+      "past": ["told"],
+      "participle": ["told"],
+      "it": "dire, raccontare",
+      "group": "old",
+      "frequencyRank": 15,
+      "example": {
+        "en": "I {told} the team about the failure.",
+        "it": "Ho parlato del guasto al team."
+      }
+    },
+    {
+      "base": "become",
+      "past": ["became"],
+      "participle": ["become"],
+      "it": "diventare",
+      "group": "special",
+      "frequencyRank": 16,
+      "example": {
+        "en": "The issue {became} critical before the release.",
+        "it": "Il problema è diventato critico prima del rilascio."
+      }
+    },
+    {
+      "base": "leave",
+      "past": ["left"],
+      "participle": ["left"],
+      "it": "lasciare, partire",
+      "group": "ee",
+      "frequencyRank": 17,
+      "example": {
+        "en": "I {left} the board running overnight.",
+        "it": "Ho lasciato la scheda accesa tutta la notte."
+      }
+    },
+    {
+      "base": "feel",
+      "past": ["felt"],
+      "participle": ["felt"],
+      "it": "sentire, sentirsi",
+      "group": "ee",
+      "frequencyRank": 18,
+      "example": {
+        "en": "I {felt} confident about the results.",
+        "it": "Mi sentivo sicuro dei risultati."
+      }
+    },
+    {
+      "base": "put",
+      "past": ["put"],
+      "participle": ["put"],
+      "it": "mettere",
+      "group": "same",
+      "frequencyRank": 19,
+      "example": {
+        "en": "I {put} the probe on the reset pin.",
+        "it": "Ho messo la sonda sul pin di reset."
+      }
+    },
+    {
+      "base": "bring",
+      "past": ["brought"],
+      "participle": ["brought"],
+      "it": "portare",
+      "group": "ought",
+      "frequencyRank": 20,
+      "example": {
+        "en": "The new silicon revision {brought} a lot of fixes.",
+        "it": "La nuova revisione del silicio ha portato molte correzioni."
+      },
+      "note": "brought si legge «brot»."
+    },
+    {
+      "base": "begin",
+      "past": ["began"],
+      "participle": ["begun"],
+      "it": "cominciare",
+      "group": "iau",
+      "frequencyRank": 21,
+      "example": {
+        "en": "We {began} the validation in January.",
+        "it": "Abbiamo cominciato la validazione a gennaio."
+      }
+    },
+    {
+      "base": "keep",
+      "past": ["kept"],
+      "participle": ["kept"],
+      "it": "tenere, mantenere",
+      "group": "ee",
+      "frequencyRank": 22,
+      "example": {
+        "en": "We {kept} the temperature at 85 degrees.",
+        "it": "Abbiamo mantenuto la temperatura a 85 gradi."
+      }
+    },
+    {
+      "base": "hold",
+      "past": ["held"],
+      "participle": ["held"],
+      "it": "tenere, reggere",
+      "group": "old",
+      "frequencyRank": 23,
+      "example": {
+        "en": "The voltage {held} steady during the load step.",
+        "it": "La tensione è rimasta stabile durante il gradino di carico."
+      }
+    },
+    {
+      "base": "write",
+      "past": ["wrote"],
+      "participle": ["written"],
+      "it": "scrivere",
+      "group": "oen",
+      "frequencyRank": 24,
+      "example": {
+        "en": "I {wrote} the test firmware in C.",
+        "it": "Ho scritto il firmware di test in C."
+      },
+      "note": "La w è muta: wrote si legge «rout», written «ritn»."
+    },
+    {
+      "base": "stand",
+      "past": ["stood"],
+      "participle": ["stood"],
+      "it": "stare in piedi, resistere",
+      "group": "old",
+      "frequencyRank": 25,
+      "example": {
+        "en": "The prototype {stood} up to all the stress tests.",
+        "it": "Il prototipo ha resistito a tutti gli stress test."
+      },
+      "note": "stood si legge «stud»."
+    },
+    {
+      "base": "hear",
+      "past": ["heard"],
+      "participle": ["heard"],
+      "it": "sentire, udire",
+      "group": "abb",
+      "frequencyRank": 26,
+      "example": {
+        "en": "I {heard} about this job from a colleague.",
+        "it": "Ho saputo di questo lavoro da un collega."
+      },
+      "note": "heard si legge «hërd», non «hiird»."
+    },
+    {
+      "base": "let",
+      "past": ["let"],
+      "participle": ["let"],
+      "it": "lasciare, permettere",
+      "group": "same",
+      "frequencyRank": 27,
+      "example": {
+        "en": "My team lead {let} me choose the tools.",
+        "it": "Il mio team leader mi ha lasciato scegliere gli strumenti."
+      }
+    },
+    {
+      "base": "mean",
+      "past": ["meant"],
+      "participle": ["meant"],
+      "it": "significare, intendere",
+      "group": "ee",
+      "frequencyRank": 28,
+      "example": {
+        "en": "The error code {meant} a timeout on the bus.",
+        "it": "Il codice di errore indicava un timeout sul bus."
+      },
+      "note": "meant si legge «ment»."
+    },
+    {
+      "base": "set",
+      "past": ["set"],
+      "participle": ["set"],
+      "it": "impostare",
+      "group": "same",
+      "frequencyRank": 29,
+      "example": {
+        "en": "I {set} the clock to 160 megahertz.",
+        "it": "Ho impostato il clock a 160 megahertz."
+      }
+    },
+    {
+      "base": "meet",
+      "past": ["met"],
+      "participle": ["met"],
+      "it": "incontrare",
+      "group": "ee",
+      "frequencyRank": 30,
+      "example": {
+        "en": "I {met} the design engineers every week.",
+        "it": "Incontravo gli ingegneri di progetto ogni settimana."
+      }
+    },
+    {
+      "base": "run",
+      "past": ["ran"],
+      "participle": ["run"],
+      "it": "eseguire, funzionare, correre",
+      "group": "iau",
+      "frequencyRank": 31,
+      "example": {
+        "en": "The board {ran} for 48 hours without errors.",
+        "it": "La scheda ha funzionato per 48 ore senza errori."
+      },
+      "note": "Attenzione: il participio torna run."
+    },
+    {
+      "base": "pay",
+      "past": ["paid"],
+      "participle": ["paid"],
+      "it": "pagare",
+      "group": "aid",
+      "frequencyRank": 32,
+      "example": {
+        "en": "We {paid} attention to the noise floor.",
+        "it": "Abbiamo fatto attenzione al rumore di fondo."
+      }
+    },
+    {
+      "base": "sit",
+      "past": ["sat"],
+      "participle": ["sat"],
+      "it": "sedersi",
+      "group": "abb",
+      "frequencyRank": 33,
+      "example": {
+        "en": "I {sat} with the firmware team to debug the issue.",
+        "it": "Mi sono seduto con il team firmware per fare il debug del problema."
+      }
+    },
+    {
+      "base": "speak",
+      "past": ["spoke"],
+      "participle": ["spoken"],
+      "it": "parlare",
+      "group": "oen",
+      "frequencyRank": 34,
+      "example": {
+        "en": "I have {spoken} with customers about the errata.",
+        "it": "Ho parlato con i clienti dell'errata."
+      }
+    },
+    {
+      "base": "lead",
+      "past": ["led"],
+      "participle": ["led"],
+      "it": "guidare",
+      "group": "ee",
+      "frequencyRank": 35,
+      "example": {
+        "en": "I {led} the validation of the new USB peripheral.",
+        "it": "Ho guidato la validazione della nuova periferica USB."
+      },
+      "note": "lead (verbo) si legge «liid», led si legge «led».",
+      "say": {
+        "base": "leed"
+      }
+    },
+    {
+      "base": "read",
+      "past": ["read"],
+      "participle": ["read"],
+      "it": "leggere",
+      "group": "same",
+      "frequencyRank": 36,
+      "example": {
+        "en": "I {read} the reference manual carefully.",
+        "it": "Ho letto attentamente il reference manual."
+      },
+      "note": "Si scrive sempre read, ma al passato e al participio si dice «red».",
+      "say": {
+        "base": "reed",
+        "past": "red",
+        "participle": "red"
+      }
+    },
+    {
+      "base": "grow",
+      "past": ["grew"],
+      "participle": ["grown"],
+      "it": "crescere",
+      "group": "ew",
+      "frequencyRank": 37,
+      "example": {
+        "en": "The team {grew} from three to ten people.",
+        "it": "Il team è cresciuto da tre a dieci persone."
+      },
+      "note": "grew si legge «gru»."
+    },
+    {
+      "base": "lose",
+      "past": ["lost"],
+      "participle": ["lost"],
+      "it": "perdere",
+      "group": "abb",
+      "frequencyRank": 38,
+      "example": {
+        "en": "We {lost} the connection with the debugger.",
+        "it": "Abbiamo perso la connessione con il debugger."
+      },
+      "note": "lose si legge «luuz», con la s sonora."
+    },
+    {
+      "base": "fall",
+      "past": ["fell"],
+      "participle": ["fallen"],
+      "it": "cadere, scendere",
+      "group": "en",
+      "frequencyRank": 39,
+      "example": {
+        "en": "The supply voltage {fell} below 1.8 volts.",
+        "it": "La tensione di alimentazione è scesa sotto 1,8 volt."
+      }
+    },
+    {
+      "base": "send",
+      "past": ["sent"],
+      "participle": ["sent"],
+      "it": "inviare",
+      "group": "dt",
+      "frequencyRank": 40,
+      "example": {
+        "en": "I {sent} the report to the customer.",
+        "it": "Ho inviato il report al cliente."
+      }
+    },
+    {
+      "base": "build",
+      "past": ["built"],
+      "participle": ["built"],
+      "it": "costruire, compilare",
+      "group": "dt",
+      "frequencyRank": 41,
+      "example": {
+        "en": "We {built} a new test bench for the automotive line.",
+        "it": "Abbiamo costruito un nuovo banco di test per la linea automotive."
+      },
+      "note": "built si legge «bilt»: la u è muta."
+    },
+    {
+      "base": "understand",
+      "past": ["understood"],
+      "participle": ["understood"],
+      "it": "capire",
+      "group": "old",
+      "frequencyRank": 42,
+      "example": {
+        "en": "I {understood} the root cause after two days.",
+        "it": "Ho capito la causa principale dopo due giorni."
+      }
+    },
+    {
+      "base": "draw",
+      "past": ["drew"],
+      "participle": ["drawn"],
+      "it": "disegnare, assorbire (corrente)",
+      "group": "ew",
+      "frequencyRank": 43,
+      "example": {
+        "en": "The chip {drew} 20 microamps in stop mode.",
+        "it": "Il chip assorbiva 20 microampere in stop mode."
+      },
+      "note": "draw si legge «dro», drew «dru»."
+    },
+    {
+      "base": "break",
+      "past": ["broke"],
+      "participle": ["broken"],
+      "it": "rompere",
+      "group": "oen",
+      "frequencyRank": 44,
+      "example": {
+        "en": "The last commit {broke} the build.",
+        "it": "L'ultimo commit ha rotto la build."
+      },
+      "note": "break si legge «breik»."
+    },
+    {
+      "base": "spend",
+      "past": ["spent"],
+      "participle": ["spent"],
+      "it": "spendere, passare (tempo)",
+      "group": "dt",
+      "frequencyRank": 45,
+      "example": {
+        "en": "I {spent} a week on this bug.",
+        "it": "Ho passato una settimana su questo bug."
+      }
+    },
+    {
+      "base": "cut",
+      "past": ["cut"],
+      "participle": ["cut"],
+      "it": "tagliare, ridurre",
+      "group": "same",
+      "frequencyRank": 46,
+      "example": {
+        "en": "We {cut} the power consumption by 30 percent.",
+        "it": "Abbiamo ridotto il consumo del 30 per cento."
+      }
+    },
+    {
+      "base": "rise",
+      "past": ["rose"],
+      "participle": ["risen"],
+      "it": "salire",
+      "group": "oen",
+      "frequencyRank": 47,
+      "example": {
+        "en": "The temperature {rose} to 125 degrees.",
+        "it": "La temperatura è salita a 125 gradi."
+      },
+      "note": "rise vuol dire «salire». Per «alzare qualcosa» si usa raise, che è regolare."
+    },
+    {
+      "base": "drive",
+      "past": ["drove"],
+      "participle": ["driven"],
+      "it": "guidare, pilotare",
+      "group": "oen",
+      "frequencyRank": 48,
+      "example": {
+        "en": "The GPIO {drove} the LED directly.",
+        "it": "Il GPIO pilotava direttamente il LED."
+      }
+    },
+    {
+      "base": "buy",
+      "past": ["bought"],
+      "participle": ["bought"],
+      "it": "comprare",
+      "group": "ought",
+      "frequencyRank": 49,
+      "example": {
+        "en": "We {bought} a new logic analyzer.",
+        "it": "Abbiamo comprato un nuovo analizzatore logico."
+      },
+      "note": "bought si legge «bot»."
+    },
+    {
+      "base": "wear",
+      "past": ["wore"],
+      "participle": ["worn"],
+      "it": "indossare",
+      "group": "ear",
+      "frequencyRank": 50,
+      "example": {
+        "en": "I {wore} an ESD wrist strap in the lab.",
+        "it": "In laboratorio indossavo un braccialetto antistatico."
+      }
+    },
+    {
+      "base": "choose",
+      "past": ["chose"],
+      "participle": ["chosen"],
+      "it": "scegliere",
+      "group": "oen",
+      "frequencyRank": 51,
+      "example": {
+        "en": "We {chose} this microcontroller for its low power.",
+        "it": "Abbiamo scelto questo microcontrollore per il basso consumo."
+      },
+      "note": "choose si legge «ciuuz», chose «ciouz»."
+    },
+    {
+      "base": "seek",
+      "past": ["sought"],
+      "participle": ["sought"],
+      "it": "cercare",
+      "group": "ought",
+      "frequencyRank": 52,
+      "example": {
+        "en": "We {sought} help from the silicon team.",
+        "it": "Abbiamo chiesto aiuto al team del silicio."
+      },
+      "note": "sought si legge «sot»."
+    },
+    {
+      "base": "throw",
+      "past": ["threw"],
+      "participle": ["thrown"],
+      "it": "lanciare",
+      "group": "ew",
+      "frequencyRank": 53,
+      "example": {
+        "en": "The driver {threw} an exception on the first call.",
+        "it": "Il driver ha lanciato un'eccezione alla prima chiamata."
+      },
+      "note": "threw si legge «thru»."
+    },
+    {
+      "base": "catch",
+      "past": ["caught"],
+      "participle": ["caught"],
+      "it": "prendere, intercettare",
+      "group": "ought",
+      "frequencyRank": 54,
+      "example": {
+        "en": "The watchdog {caught} the deadlock.",
+        "it": "Il watchdog ha intercettato il deadlock."
+      },
+      "note": "caught si legge «cot»."
+    },
+    {
+      "base": "deal",
+      "past": ["dealt"],
+      "participle": ["dealt"],
+      "it": "occuparsi, gestire",
+      "group": "ee",
+      "frequencyRank": 55,
+      "example": {
+        "en": "I {dealt} with customer issues every day.",
+        "it": "Mi occupavo dei problemi dei clienti ogni giorno."
+      },
+      "note": "dealt si legge «delt»."
+    },
+    {
+      "base": "win",
+      "past": ["won"],
+      "participle": ["won"],
+      "it": "vincere",
+      "group": "iu",
+      "frequencyRank": 56,
+      "example": {
+        "en": "Our team {won} the innovation award.",
+        "it": "Il nostro team ha vinto il premio per l'innovazione."
+      },
+      "note": "won si legge come one: «uan»."
+    },
+    {
+      "base": "forget",
+      "past": ["forgot"],
+      "participle": ["forgotten"],
+      "it": "dimenticare",
+      "group": "oen",
+      "frequencyRank": 57,
+      "example": {
+        "en": "I {forgot} to enable the peripheral clock.",
+        "it": "Ho dimenticato di abilitare il clock della periferica."
+      }
+    },
+    {
+      "base": "sell",
+      "past": ["sold"],
+      "participle": ["sold"],
+      "it": "vendere",
+      "group": "old",
+      "frequencyRank": 58,
+      "example": {
+        "en": "The company {sold} millions of these chips.",
+        "it": "L'azienda ha venduto milioni di questi chip."
+      }
+    },
+    {
+      "base": "fight",
+      "past": ["fought"],
+      "participle": ["fought"],
+      "it": "combattere",
+      "group": "ought",
+      "frequencyRank": 59,
+      "example": {
+        "en": "We {fought} with this intermittent failure for weeks.",
+        "it": "Abbiamo combattuto con questo guasto intermittente per settimane."
+      },
+      "note": "fought si legge «fot»."
+    },
+    {
+      "base": "show",
+      "past": ["showed"],
+      "participle": ["shown", "showed"],
+      "it": "mostrare",
+      "group": "ew",
+      "frequencyRank": 60,
+      "example": {
+        "en": "The measurements {showed} a 5 percent error.",
+        "it": "Le misure hanno mostrato un errore del 5 per cento."
+      },
+      "note": "Il passato è regolare (showed), il participio di solito è shown."
+    },
+    {
+      "base": "teach",
+      "past": ["taught"],
+      "participle": ["taught"],
+      "it": "insegnare",
+      "group": "ought",
+      "frequencyRank": 61,
+      "example": {
+        "en": "A senior engineer {taught} me how to use the SMU.",
+        "it": "Un ingegnere senior mi ha insegnato a usare l'SMU."
+      },
+      "note": "taught si legge «tot»."
+    },
+    {
+      "base": "eat",
+      "past": ["ate"],
+      "participle": ["eaten"],
+      "it": "mangiare",
+      "group": "en",
+      "frequencyRank": 62,
+      "example": {
+        "en": "We {ate} pizza in the lab during the tape-out week.",
+        "it": "Abbiamo mangiato pizza in laboratorio durante la settimana del tape-out."
+      },
+      "note": "ate si legge «et» (UK) o «eit» (US)."
+    },
+    {
+      "base": "sleep",
+      "past": ["slept"],
+      "participle": ["slept"],
+      "it": "dormire",
+      "group": "ee",
+      "frequencyRank": 63,
+      "example": {
+        "en": "The MCU {slept} in stop mode between measurements.",
+        "it": "L'MCU dormiva in stop mode tra una misura e l'altra."
+      }
+    },
+    {
+      "base": "hit",
+      "past": ["hit"],
+      "participle": ["hit"],
+      "it": "colpire, raggiungere",
+      "group": "same",
+      "frequencyRank": 64,
+      "example": {
+        "en": "We {hit} the timing limit at 150 megahertz.",
+        "it": "Abbiamo raggiunto il limite di timing a 150 megahertz."
+      }
+    },
+    {
+      "base": "cost",
+      "past": ["cost"],
+      "participle": ["cost"],
+      "it": "costare",
+      "group": "same",
+      "frequencyRank": 65,
+      "example": {
+        "en": "The new probe {cost} three thousand euros.",
+        "it": "La nuova sonda è costata tremila euro."
+      }
+    },
+    {
+      "base": "shut",
+      "past": ["shut"],
+      "participle": ["shut"],
+      "it": "chiudere, spegnere",
+      "group": "same",
+      "frequencyRank": 66,
+      "example": {
+        "en": "We {shut} down the power supply before changing the board.",
+        "it": "Abbiamo spento l'alimentatore prima di cambiare la scheda."
+      }
+    },
+    {
+      "base": "hurt",
+      "past": ["hurt"],
+      "participle": ["hurt"],
+      "it": "ferire, danneggiare",
+      "group": "same",
+      "frequencyRank": 67,
+      "example": {
+        "en": "The extra delay {hurt} the performance.",
+        "it": "Il ritardo in più ha peggiorato le prestazioni."
+      }
+    },
+    {
+      "base": "learn",
+      "past": ["learned", "learnt"],
+      "participle": ["learned", "learnt"],
+      "it": "imparare",
+      "group": "edt",
+      "frequencyRank": 68,
+      "example": {
+        "en": "I {learned} a lot about low-power design.",
+        "it": "Ho imparato molto sulla progettazione a basso consumo."
+      },
+      "note": "learned (US) o learnt (UK): vanno bene entrambi. learned si legge «lërnd»."
+    },
+    {
+      "base": "drink",
+      "past": ["drank"],
+      "participle": ["drunk"],
+      "it": "bere",
+      "group": "iau",
+      "frequencyRank": 69,
+      "example": {
+        "en": "We {drank} a lot of coffee during the bring-up.",
+        "it": "Abbiamo bevuto molto caffè durante il bring-up."
+      }
+    },
+    {
+      "base": "fly",
+      "past": ["flew"],
+      "participle": ["flown"],
+      "it": "volare",
+      "group": "ew",
+      "frequencyRank": 70,
+      "example": {
+        "en": "I {flew} to Munich to meet the customer.",
+        "it": "Sono andato in aereo a Monaco per incontrare il cliente."
+      },
+      "note": "flew si legge «flu»."
+    },
+    {
+      "base": "shoot",
+      "past": ["shot"],
+      "participle": ["shot"],
+      "it": "sparare, riprendere (video)",
+      "group": "abb",
+      "frequencyRank": 71,
+      "example": {
+        "en": "I {shot} a video of the failure for the report.",
+        "it": "Ho girato un video del guasto per il report."
+      }
+    },
+    {
+      "base": "hang",
+      "past": ["hung"],
+      "participle": ["hung"],
+      "it": "appendere, bloccarsi",
+      "group": "iu",
+      "frequencyRank": 72,
+      "example": {
+        "en": "The system {hung} after the third interrupt.",
+        "it": "Il sistema si è bloccato dopo il terzo interrupt."
+      }
+    },
+    {
+      "base": "ride",
+      "past": ["rode"],
+      "participle": ["ridden"],
+      "it": "andare (in bici, in moto)",
+      "group": "oen",
+      "frequencyRank": 73,
+      "example": {
+        "en": "I {rode} my bike to the office every day.",
+        "it": "Andavo in ufficio in bici ogni giorno."
+      }
+    },
+    {
+      "base": "hide",
+      "past": ["hid"],
+      "participle": ["hidden"],
+      "it": "nascondere",
+      "group": "en",
+      "frequencyRank": 74,
+      "example": {
+        "en": "The averaging {hid} the noise spikes.",
+        "it": "La media nascondeva i picchi di rumore."
+      }
+    },
+    {
+      "base": "strike",
+      "past": ["struck"],
+      "participle": ["struck"],
+      "it": "colpire",
+      "group": "iu",
+      "frequencyRank": 75,
+      "example": {
+        "en": "The ESD pulse {struck} the input pin.",
+        "it": "L'impulso ESD ha colpito il pin di ingresso."
+      }
+    },
+    {
+      "base": "spread",
+      "past": ["spread"],
+      "participle": ["spread"],
+      "it": "diffondere, distribuire",
+      "group": "same",
+      "frequencyRank": 76,
+      "example": {
+        "en": "We {spread} the tests over three test benches.",
+        "it": "Abbiamo distribuito i test su tre banchi."
+      },
+      "note": "spread si legge «spred»."
+    },
+    {
+      "base": "quit",
+      "past": ["quit"],
+      "participle": ["quit"],
+      "it": "lasciare, smettere",
+      "group": "same",
+      "frequencyRank": 77,
+      "example": {
+        "en": "I {quit} my previous job to join a bigger company.",
+        "it": "Ho lasciato il lavoro precedente per entrare in un'azienda più grande."
+      }
+    },
+    {
+      "base": "split",
+      "past": ["split"],
+      "participle": ["split"],
+      "it": "dividere",
+      "group": "same",
+      "frequencyRank": 78,
+      "example": {
+        "en": "We {split} the test plan into four parts.",
+        "it": "Abbiamo diviso il test plan in quattro parti."
+      }
+    },
+    {
+      "base": "lend",
+      "past": ["lent"],
+      "participle": ["lent"],
+      "it": "prestare",
+      "group": "dt",
+      "frequencyRank": 79,
+      "example": {
+        "en": "The other team {lent} us their climatic chamber.",
+        "it": "L'altro team ci ha prestato la camera climatica."
+      }
+    },
+    {
+      "base": "bend",
+      "past": ["bent"],
+      "participle": ["bent"],
+      "it": "piegare",
+      "group": "dt",
+      "frequencyRank": 80,
+      "example": {
+        "en": "I {bent} a pin when I inserted the chip.",
+        "it": "Ho piegato un pin quando ho inserito il chip."
+      }
+    },
+    {
+      "base": "feed",
+      "past": ["fed"],
+      "participle": ["fed"],
+      "it": "alimentare, nutrire",
+      "group": "ee",
+      "frequencyRank": 81,
+      "example": {
+        "en": "We {fed} the ADC with a precision voltage reference.",
+        "it": "Abbiamo alimentato l'ADC con un riferimento di tensione di precisione."
+      }
+    },
+    {
+      "base": "sing",
+      "past": ["sang"],
+      "participle": ["sung"],
+      "it": "cantare",
+      "group": "iau",
+      "frequencyRank": 82,
+      "example": {
+        "en": "The whole team {sang} when the chip finally booted.",
+        "it": "Tutto il team ha cantato quando il chip finalmente si è avviato."
+      }
+    },
+    {
+      "base": "swim",
+      "past": ["swam"],
+      "participle": ["swum"],
+      "it": "nuotare",
+      "group": "iau",
+      "frequencyRank": 83,
+      "example": {
+        "en": "I {swam} twice a week to relax.",
+        "it": "Nuotavo due volte a settimana per rilassarmi."
+      }
+    },
+    {
+      "base": "ring",
+      "past": ["rang"],
+      "participle": ["rung"],
+      "it": "suonare, oscillare (ringing)",
+      "group": "iau",
+      "frequencyRank": 84,
+      "example": {
+        "en": "The signal {rang} after every fast edge.",
+        "it": "Il segnale oscillava (ringing) dopo ogni fronte veloce."
+      }
+    },
+    {
+      "base": "shake",
+      "past": ["shook"],
+      "participle": ["shaken"],
+      "it": "scuotere",
+      "group": "en",
+      "frequencyRank": 85,
+      "example": {
+        "en": "The vibration test {shook} the board for two hours.",
+        "it": "Il test di vibrazione ha scosso la scheda per due ore."
+      },
+      "note": "shook si legge «shuk»."
+    },
+    {
+      "base": "steal",
+      "past": ["stole"],
+      "participle": ["stolen"],
+      "it": "rubare",
+      "group": "oen",
+      "frequencyRank": 86,
+      "example": {
+        "en": "Someone {stole} my favourite probe from the lab!",
+        "it": "Qualcuno mi ha rubato la sonda preferita dal laboratorio!"
+      }
+    },
+    {
+      "base": "freeze",
+      "past": ["froze"],
+      "participle": ["frozen"],
+      "it": "congelare, bloccarsi",
+      "group": "oen",
+      "frequencyRank": 87,
+      "example": {
+        "en": "The debugger {froze} when I set the breakpoint.",
+        "it": "Il debugger si è bloccato quando ho messo il breakpoint."
+      }
+    },
+    {
+      "base": "wake",
+      "past": ["woke"],
+      "participle": ["woken"],
+      "it": "svegliare",
+      "group": "oen",
+      "frequencyRank": 88,
+      "example": {
+        "en": "The RTC interrupt {woke} the MCU from standby.",
+        "it": "L'interrupt dell'RTC ha svegliato l'MCU dallo standby."
+      }
+    },
+    {
+      "base": "burn",
+      "past": ["burned", "burnt"],
+      "participle": ["burned", "burnt"],
+      "it": "bruciare",
+      "group": "edt",
+      "frequencyRank": 89,
+      "example": {
+        "en": "We {burned} a resistor during the first power-up.",
+        "it": "Abbiamo bruciato una resistenza alla prima accensione."
+      }
+    },
+    {
+      "base": "dream",
+      "past": ["dreamed", "dreamt"],
+      "participle": ["dreamed", "dreamt"],
+      "it": "sognare",
+      "group": "edt",
+      "frequencyRank": 90,
+      "example": {
+        "en": "I always {dreamed} of working on chip design.",
+        "it": "Ho sempre sognato di lavorare nella progettazione di chip."
+      },
+      "note": "dreamt si legge «dremt»."
+    },
+    {
+      "base": "spell",
+      "past": ["spelled", "spelt"],
+      "participle": ["spelled", "spelt"],
+      "it": "fare lo spelling",
+      "group": "edt",
+      "frequencyRank": 91,
+      "example": {
+        "en": "I {spelled} my surname for the receptionist.",
+        "it": "Ho fatto lo spelling del mio cognome alla reception."
+      }
+    },
+    {
+      "base": "stick",
+      "past": ["stuck"],
+      "participle": ["stuck"],
+      "it": "attaccare, restare bloccato",
+      "group": "iu",
+      "frequencyRank": 92,
+      "example": {
+        "en": "The bit was {stuck} at one.",
+        "it": "Il bit era bloccato a uno (stuck-at)."
+      }
+    },
+    {
+      "base": "blow",
+      "past": ["blew"],
+      "participle": ["blown"],
+      "it": "soffiare, bruciare (fusibile)",
+      "group": "ew",
+      "frequencyRank": 93,
+      "example": {
+        "en": "The short circuit {blew} the fuse.",
+        "it": "Il cortocircuito ha bruciato il fusibile."
+      },
+      "note": "blew si legge «blu»."
+    },
+    {
+      "base": "bite",
+      "past": ["bit"],
+      "participle": ["bitten"],
+      "it": "mordere",
+      "group": "en",
+      "frequencyRank": 94,
+      "example": {
+        "en": "This bug has {bitten} us three times.",
+        "it": "Questo bug ci ha già fregato tre volte."
+      }
+    },
+    {
+      "base": "light",
+      "past": ["lit", "lighted"],
+      "participle": ["lit", "lighted"],
+      "it": "accendere, illuminare",
+      "group": "abb",
+      "frequencyRank": 95,
+      "example": {
+        "en": "The status LED {lit} up after the reset.",
+        "it": "Il LED di stato si è acceso dopo il reset."
+      }
+    },
+    {
+      "base": "dig",
+      "past": ["dug"],
+      "participle": ["dug"],
+      "it": "scavare",
+      "group": "iu",
+      "frequencyRank": 96,
+      "example": {
+        "en": "I {dug} into the assembly code to find the problem.",
+        "it": "Ho scavato nel codice assembly per trovare il problema."
+      }
+    },
+    {
+      "base": "lay",
+      "past": ["laid"],
+      "participle": ["laid"],
+      "it": "posare, disporre",
+      "group": "aid",
+      "frequencyRank": 97,
+      "example": {
+        "en": "We {laid} out the test points on the PCB.",
+        "it": "Abbiamo disposto i test point sul PCB."
+      },
+      "note": "Non confonderlo con lie (stare sdraiato), il cui passato è proprio lay."
+    },
+    {
+      "base": "arise",
+      "past": ["arose"],
+      "participle": ["arisen"],
+      "it": "sorgere, presentarsi",
+      "group": "oen",
+      "frequencyRank": 98,
+      "example": {
+        "en": "A new problem {arose} at low temperature.",
+        "it": "Un nuovo problema si è presentato a bassa temperatura."
+      }
+    },
+    {
+      "base": "bind",
+      "past": ["bound"],
+      "participle": ["bound"],
+      "it": "legare, collegare",
+      "group": "ind",
+      "frequencyRank": 99,
+      "example": {
+        "en": "I {bound} the interrupt handler to the timer event.",
+        "it": "Ho collegato l'handler dell'interrupt all'evento del timer."
+      }
+    },
+    {
+      "base": "overcome",
+      "past": ["overcame"],
+      "participle": ["overcome"],
+      "it": "superare",
+      "group": "special",
+      "frequencyRank": 100,
+      "example": {
+        "en": "We {overcame} the noise problem with better grounding.",
+        "it": "Abbiamo superato il problema del rumore con una massa migliore."
+      }
+    },
+    {
+      "base": "undergo",
+      "past": ["underwent"],
+      "participle": ["undergone"],
+      "it": "subire, essere sottoposto",
+      "group": "special",
+      "frequencyRank": 101,
+      "example": {
+        "en": "The parts {underwent} 1000 hours of burn-in.",
+        "it": "I componenti sono stati sottoposti a 1000 ore di burn-in."
+      }
+    },
+    {
+      "base": "withdraw",
+      "past": ["withdrew"],
+      "participle": ["withdrawn"],
+      "it": "ritirare",
+      "group": "ew",
+      "frequencyRank": 102,
+      "example": {
+        "en": "The supplier {withdrew} the old part number.",
+        "it": "Il fornitore ha ritirato il vecchio codice prodotto."
+      }
+    },
+    {
+      "base": "upset",
+      "past": ["upset"],
+      "participle": ["upset"],
+      "it": "turbare, sconvolgere",
+      "group": "same",
+      "frequencyRank": 103,
+      "example": {
+        "en": "The delay {upset} the whole schedule.",
+        "it": "Il ritardo ha sconvolto tutta la pianificazione."
+      }
+    },
+    {
+      "base": "bet",
+      "past": ["bet"],
+      "participle": ["bet"],
+      "it": "scommettere",
+      "group": "same",
+      "frequencyRank": 104,
+      "example": {
+        "en": "I {bet} the problem was in the clock tree, and I was right.",
+        "it": "Ho scommesso che il problema fosse nel clock tree, e avevo ragione."
+      }
+    },
+    {
+      "base": "beat",
+      "past": ["beat"],
+      "participle": ["beaten"],
+      "it": "battere",
+      "group": "en",
+      "frequencyRank": 105,
+      "example": {
+        "en": "Our chip {beat} the competitor on power consumption.",
+        "it": "Il nostro chip ha battuto il concorrente sul consumo."
+      }
+    },
+    {
+      "base": "forgive",
+      "past": ["forgave"],
+      "participle": ["forgiven"],
+      "it": "perdonare",
+      "group": "en",
+      "frequencyRank": 106,
+      "example": {
+        "en": "The customer {forgave} the delay because we found the root cause.",
+        "it": "Il cliente ci ha perdonato il ritardo perché abbiamo trovato la causa."
+      }
+    },
+    {
+      "base": "mistake",
+      "past": ["mistook"],
+      "participle": ["mistaken"],
+      "it": "scambiare, confondere",
+      "group": "en",
+      "frequencyRank": 107,
+      "example": {
+        "en": "I {mistook} the ground pin for the supply pin.",
+        "it": "Ho scambiato il pin di massa per quello di alimentazione."
+      }
+    },
+    {
+      "base": "undertake",
+      "past": ["undertook"],
+      "participle": ["undertaken"],
+      "it": "intraprendere",
+      "group": "en",
+      "frequencyRank": 108,
+      "example": {
+        "en": "We {undertook} a full characterization of the new PLL.",
+        "it": "Abbiamo intrapreso una caratterizzazione completa del nuovo PLL."
+      }
+    },
+    {
+      "base": "foresee",
+      "past": ["foresaw"],
+      "participle": ["foreseen"],
+      "it": "prevedere",
+      "group": "en",
+      "frequencyRank": 109,
+      "example": {
+        "en": "Nobody {foresaw} this corner case.",
+        "it": "Nessuno aveva previsto questo corner case."
+      }
+    },
+    {
+      "base": "forbid",
+      "past": ["forbade"],
+      "participle": ["forbidden"],
+      "it": "vietare",
+      "group": "en",
+      "frequencyRank": 110,
+      "example": {
+        "en": "The safety rules {forbade} working alone in the high-voltage lab.",
+        "it": "Le regole di sicurezza vietavano di lavorare da soli nel laboratorio ad alta tensione."
+      },
+      "note": "forbade si legge «forbéd»."
+    },
+    {
+      "base": "tear",
+      "past": ["tore"],
+      "participle": ["torn"],
+      "it": "strappare",
+      "group": "ear",
+      "frequencyRank": 111,
+      "example": {
+        "en": "I {tore} the ribbon cable by mistake.",
+        "it": "Ho strappato il cavo piatto per errore."
+      },
+      "note": "tear (strappare) si legge «tèr», come bear. tear (lacrima) invece si legge «tiir».",
+      "say": {
+        "base": "tare"
+      }
+    },
+    {
+      "base": "bear",
+      "past": ["bore"],
+      "participle": ["borne"],
+      "it": "sopportare, sostenere",
+      "group": "ear",
+      "frequencyRank": 112,
+      "example": {
+        "en": "The customer {bore} the cost of the extra tests.",
+        "it": "Il cliente ha sostenuto il costo dei test aggiuntivi."
+      }
+    },
+    {
+      "base": "swear",
+      "past": ["swore"],
+      "participle": ["sworn"],
+      "it": "giurare",
+      "group": "ear",
+      "frequencyRank": 113,
+      "example": {
+        "en": "I {swore} I had flashed the right firmware!",
+        "it": "Giuravo di aver programmato il firmware giusto!"
+      }
+    },
+    {
+      "base": "spin",
+      "past": ["spun"],
+      "participle": ["spun"],
+      "it": "girare",
+      "group": "iu",
+      "frequencyRank": 114,
+      "example": {
+        "en": "The fan {spun} at full speed during the thermal test.",
+        "it": "La ventola girava al massimo durante il test termico."
+      }
+    },
+    {
+      "base": "swing",
+      "past": ["swung"],
+      "participle": ["swung"],
+      "it": "oscillare",
+      "group": "iu",
+      "frequencyRank": 115,
+      "example": {
+        "en": "The output {swung} from rail to rail.",
+        "it": "L'uscita oscillava da un'alimentazione all'altra (rail-to-rail)."
+      }
+    },
+    {
+      "base": "slide",
+      "past": ["slid"],
+      "participle": ["slid"],
+      "it": "scivolare, slittare",
+      "group": "abb",
+      "frequencyRank": 116,
+      "example": {
+        "en": "The schedule {slid} by two weeks.",
+        "it": "La pianificazione è slittata di due settimane."
+      }
+    },
+    {
+      "base": "sink",
+      "past": ["sank"],
+      "participle": ["sunk"],
+      "it": "affondare, assorbire (corrente)",
+      "group": "iau",
+      "frequencyRank": 117,
+      "example": {
+        "en": "The pin {sank} 8 milliamps without problems.",
+        "it": "Il pin ha assorbito 8 milliampere senza problemi."
+      }
+    },
+    {
+      "base": "shrink",
+      "past": ["shrank"],
+      "participle": ["shrunk"],
+      "it": "ridursi",
+      "group": "iau",
+      "frequencyRank": 118,
+      "example": {
+        "en": "The die {shrank} by 20 percent in the new process.",
+        "it": "Il die si è ridotto del 20 per cento con il nuovo processo."
+      }
+    },
+    {
+      "base": "grind",
+      "past": ["ground"],
+      "participle": ["ground"],
+      "it": "macinare, smerigliare",
+      "group": "ind",
+      "frequencyRank": 119,
+      "example": {
+        "en": "We {ground} the package to look at the die.",
+        "it": "Abbiamo smerigliato il package per guardare il die."
+      },
+      "note": "ground (passato di grind) si scrive come ground (massa)."
+    },
+    {
+      "base": "sweep",
+      "past": ["swept"],
+      "participle": ["swept"],
+      "it": "spazzare, fare uno sweep",
+      "group": "ee",
+      "frequencyRank": 120,
+      "example": {
+        "en": "We {swept} the supply voltage from 1.6 to 3.6 volts.",
+        "it": "Abbiamo fatto uno sweep della tensione da 1,6 a 3,6 volt."
+      }
+    },
+    {
+      "base": "bleed",
+      "past": ["bled"],
+      "participle": ["bled"],
+      "it": "sanguinare, scaricarsi lentamente",
+      "group": "ee",
+      "frequencyRank": 121,
+      "example": {
+        "en": "The capacitor {bled} through the leakage path.",
+        "it": "Il condensatore si è scaricato attraverso il percorso di perdita."
+      }
+    },
+    {
+      "base": "flee",
+      "past": ["fled"],
+      "participle": ["fled"],
+      "it": "fuggire",
+      "group": "ee",
+      "frequencyRank": 122,
+      "example": {
+        "en": "The intern almost {fled} when he saw the test plan!",
+        "it": "Lo stagista è quasi scappato quando ha visto il test plan!"
+      }
+    },
+    {
+      "base": "mislead",
+      "past": ["misled"],
+      "participle": ["misled"],
+      "it": "fuorviare",
+      "group": "ee",
+      "frequencyRank": 123,
+      "example": {
+        "en": "The first measurement {misled} us: the probe was faulty.",
+        "it": "La prima misura ci ha fuorviato: la sonda era difettosa."
+      }
+    },
+    {
+      "base": "misunderstand",
+      "past": ["misunderstood"],
+      "participle": ["misunderstood"],
+      "it": "fraintendere",
+      "group": "old",
+      "frequencyRank": 124,
+      "example": {
+        "en": "I {misunderstood} the requirement at first.",
+        "it": "All'inizio ho frainteso il requisito."
+      }
+    },
+    {
+      "base": "withstand",
+      "past": ["withstood"],
+      "participle": ["withstood"],
+      "it": "resistere a",
+      "group": "old",
+      "frequencyRank": 125,
+      "example": {
+        "en": "The device {withstood} 8 kilovolts of ESD.",
+        "it": "Il dispositivo ha resistito a 8 kilovolt di ESD."
+      }
+    },
+    {
+      "base": "uphold",
+      "past": ["upheld"],
+      "participle": ["upheld"],
+      "it": "mantenere, sostenere",
+      "group": "old",
+      "frequencyRank": 126,
+      "example": {
+        "en": "We {upheld} the quality standards despite the deadline.",
+        "it": "Abbiamo mantenuto gli standard di qualità nonostante la scadenza."
+      }
+    },
+    {
+      "base": "rebuild",
+      "past": ["rebuilt"],
+      "participle": ["rebuilt"],
+      "it": "ricostruire, ricompilare",
+      "group": "dt",
+      "frequencyRank": 127,
+      "example": {
+        "en": "I {rebuilt} the project with the new toolchain.",
+        "it": "Ho ricompilato il progetto con la nuova toolchain."
+      }
+    },
+    {
+      "base": "rewrite",
+      "past": ["rewrote"],
+      "participle": ["rewritten"],
+      "it": "riscrivere",
+      "group": "oen",
+      "frequencyRank": 128,
+      "example": {
+        "en": "I {rewrote} the driver to use DMA.",
+        "it": "Ho riscritto il driver per usare il DMA."
+      }
+    },
+    {
+      "base": "overwrite",
+      "past": ["overwrote"],
+      "participle": ["overwritten"],
+      "it": "sovrascrivere",
+      "group": "oen",
+      "frequencyRank": 129,
+      "example": {
+        "en": "The bootloader {overwrote} the calibration data.",
+        "it": "Il bootloader ha sovrascritto i dati di calibrazione."
+      }
+    },
+    {
+      "base": "override",
+      "past": ["overrode"],
+      "participle": ["overridden"],
+      "it": "scavalcare, avere la precedenza",
+      "group": "oen",
+      "frequencyRank": 130,
+      "example": {
+        "en": "The debug setting {overrode} the default configuration.",
+        "it": "L'impostazione di debug ha scavalcato la configurazione di default."
+      }
+    },
+    {
+      "base": "reset",
+      "past": ["reset"],
+      "participle": ["reset"],
+      "it": "resettare",
+      "group": "same",
+      "frequencyRank": 131,
+      "example": {
+        "en": "The watchdog {reset} the MCU after 500 milliseconds.",
+        "it": "Il watchdog ha resettato l'MCU dopo 500 millisecondi."
+      }
+    },
+    {
+      "base": "rerun",
+      "past": ["reran"],
+      "participle": ["rerun"],
+      "it": "rieseguire",
+      "group": "iau",
+      "frequencyRank": 132,
+      "example": {
+        "en": "We {reran} the regression after the fix.",
+        "it": "Abbiamo rieseguito la regressione dopo la correzione."
+      }
+    },
+    {
+      "base": "undo",
+      "past": ["undid"],
+      "participle": ["undone"],
+      "it": "annullare",
+      "group": "special",
+      "frequencyRank": 133,
+      "example": {
+        "en": "I {undid} the last change and the bug disappeared.",
+        "it": "Ho annullato l'ultima modifica e il bug è sparito."
+      }
+    },
+    {
+      "base": "redo",
+      "past": ["redid"],
+      "participle": ["redone"],
+      "it": "rifare",
+      "group": "special",
+      "frequencyRank": 134,
+      "example": {
+        "en": "We {redid} the measurements with a better probe.",
+        "it": "Abbiamo rifatto le misure con una sonda migliore."
+      }
+    },
+    {
+      "base": "input",
+      "past": ["input", "inputted"],
+      "participle": ["input", "inputted"],
+      "it": "inserire (dati)",
+      "group": "same",
+      "frequencyRank": 135,
+      "example": {
+        "en": "I {input} the parameters into the test script.",
+        "it": "Ho inserito i parametri nello script di test."
+      }
+    },
+    {
+      "base": "output",
+      "past": ["output", "outputted"],
+      "participle": ["output", "outputted"],
+      "it": "produrre in uscita",
+      "group": "same",
+      "frequencyRank": 136,
+      "example": {
+        "en": "The DAC {output} a clean sine wave.",
+        "it": "Il DAC ha prodotto in uscita una sinusoide pulita."
+      }
+    },
+    {
+      "base": "broadcast",
+      "past": ["broadcast"],
+      "participle": ["broadcast"],
+      "it": "trasmettere",
+      "group": "same",
+      "frequencyRank": 137,
+      "example": {
+        "en": "The node {broadcast} its status on the CAN bus.",
+        "it": "Il nodo ha trasmesso il suo stato sul bus CAN."
+      }
+    },
+    {
+      "base": "forecast",
+      "past": ["forecast"],
+      "participle": ["forecast"],
+      "it": "prevedere",
+      "group": "same",
+      "frequencyRank": 138,
+      "example": {
+        "en": "Marketing {forecast} high demand for the new MCU.",
+        "it": "Il marketing ha previsto una forte domanda per il nuovo MCU."
+      }
+    },
+    {
+      "base": "fit",
+      "past": ["fit", "fitted"],
+      "participle": ["fit", "fitted"],
+      "it": "adattarsi, starci",
+      "group": "same",
+      "frequencyRank": 139,
+      "example": {
+        "en": "The new board {fit} perfectly in the old enclosure.",
+        "it": "La nuova scheda entrava perfettamente nel vecchio contenitore."
+      },
+      "note": "fit (US) o fitted (UK)."
+    },
+    {
+      "base": "burst",
+      "past": ["burst"],
+      "participle": ["burst"],
+      "it": "scoppiare",
+      "group": "same",
+      "frequencyRank": 140,
+      "example": {
+        "en": "A capacitor {burst} during the overvoltage test.",
+        "it": "Un condensatore è scoppiato durante il test di sovratensione."
+      }
+    },
+    {
+      "base": "cast",
+      "past": ["cast"],
+      "participle": ["cast"],
+      "it": "convertire (tipo), lanciare",
+      "group": "same",
+      "frequencyRank": 141,
+      "example": {
+        "en": "I {cast} the pointer to a 32-bit integer.",
+        "it": "Ho convertito il puntatore in un intero a 32 bit."
+      }
+    },
+    {
+      "base": "smell",
+      "past": ["smelled", "smelt"],
+      "participle": ["smelled", "smelt"],
+      "it": "sentire odore",
+      "group": "edt",
+      "frequencyRank": 142,
+      "example": {
+        "en": "We {smelled} something burning on the bench.",
+        "it": "Abbiamo sentito odore di bruciato sul banco."
+      }
+    },
+    {
+      "base": "spill",
+      "past": ["spilled", "spilt"],
+      "participle": ["spilled", "spilt"],
+      "it": "versare",
+      "group": "edt",
+      "frequencyRank": 143,
+      "example": {
+        "en": "Someone {spilled} coffee on the keyboard.",
+        "it": "Qualcuno ha versato il caffè sulla tastiera."
+      }
+    },
+    {
+      "base": "spoil",
+      "past": ["spoiled", "spoilt"],
+      "participle": ["spoiled", "spoilt"],
+      "it": "rovinare",
+      "group": "edt",
+      "frequencyRank": 144,
+      "example": {
+        "en": "A loose ground wire {spoiled} the whole measurement.",
+        "it": "Un filo di massa allentato ha rovinato tutta la misura."
+      }
+    },
+    {
+      "base": "leap",
+      "past": ["leaped", "leapt"],
+      "participle": ["leaped", "leapt"],
+      "it": "saltare",
+      "group": "edt",
+      "frequencyRank": 145,
+      "example": {
+        "en": "The current {leaped} to 2 amps at power-up.",
+        "it": "La corrente è saltata a 2 ampere all'accensione."
+      },
+      "note": "leapt si legge «lept»."
+    },
+    {
+      "base": "withhold",
+      "past": ["withheld"],
+      "participle": ["withheld"],
+      "it": "trattenere, rimandare",
+      "group": "old",
+      "frequencyRank": 146,
+      "example": {
+        "en": "We {withheld} the release until the fix was verified.",
+        "it": "Abbiamo rimandato il rilascio finché la correzione non è stata verificata."
+      }
+    },
+    {
+      "base": "speed",
+      "past": ["sped", "speeded"],
+      "participle": ["sped", "speeded"],
+      "it": "accelerare",
+      "group": "ee",
+      "frequencyRank": 147,
+      "example": {
+        "en": "The new script {sped} up the tests by a factor of ten.",
+        "it": "Il nuovo script ha accelerato i test di un fattore dieci."
+      }
+    },
+    {
+      "base": "oversee",
+      "past": ["oversaw"],
+      "participle": ["overseen"],
+      "it": "supervisionare",
+      "group": "en",
+      "frequencyRank": 148,
+      "example": {
+        "en": "I {oversaw} the validation of two products.",
+        "it": "Ho supervisionato la validazione di due prodotti."
+      }
+    },
+    {
+      "base": "overhear",
+      "past": ["overheard"],
+      "participle": ["overheard"],
+      "it": "sentire per caso",
+      "group": "abb",
+      "frequencyRank": 149,
+      "example": {
+        "en": "I {overheard} that the team needed a validation engineer.",
+        "it": "Ho sentito per caso che il team cercava un validation engineer."
+      }
+    },
+    {
+      "base": "shine",
+      "past": ["shone", "shined"],
+      "participle": ["shone", "shined"],
+      "it": "brillare",
+      "group": "abb",
+      "frequencyRank": 150,
+      "example": {
+        "en": "The LED {shone} too brightly, so we changed the resistor.",
+        "it": "Il LED era troppo luminoso, quindi abbiamo cambiato la resistenza."
+      },
+      "note": "shone si legge «shon» (UK) o «shoun» (US)."
+    }
+  ]
+}

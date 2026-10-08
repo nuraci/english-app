@@ -5,6 +5,8 @@ import { TrainingScreen } from './screens/TrainingScreen'
 import { ProgressScreen } from './screens/ProgressScreen'
 import { SettingsScreen } from './screens/SettingsScreen'
 import { DebugScreen } from './screens/DebugScreen'
+import { VerbsScreen } from '../modules/verbs/VerbsScreen'
+import { VerbSessionScreen } from '../modules/verbs/VerbSessionScreen'
 
 export function App() {
   return (
@@ -12,6 +14,8 @@ export function App() {
       <Route element={<Layout />}>
         <Route index element={<TodayScreen />} />
         <Route path="allenamenti" element={<TrainingScreen />} />
+        <Route path="allenamenti/verbi" element={<VerbsScreen />} />
+        <Route path="allenamenti/verbi/sessione" element={<VerbSessionScreen />} />
         <Route path="progressi" element={<ProgressScreen />} />
         <Route path="impostazioni" element={<SettingsScreen />} />
         <Route path="prova" element={<DebugScreen />} />

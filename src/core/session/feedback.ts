@@ -55,7 +55,7 @@ export function buildFeedback(evaluation: Evaluation, seed = 0): FeedbackMessage
     case 'wrong':
       return {
         tone: 'retry',
-        title: evaluation.given.trim() ? 'Non ancora, ma ci sei vicino.' : 'Ecco la risposta.',
+        title: evaluation.given.trim() ? 'Non ancora, ma ci arriverai!' : 'Ecco la risposta.',
         detail: describeDiffs(evaluation) ?? `La risposta era «${evaluation.expected}».`,
       }
   }

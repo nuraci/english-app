@@ -60,12 +60,12 @@ Ogni fase ha: **Obiettivo**, **Task**, **Criteri di accettazione**.
 
 **Obiettivo:** chiudere la lacuna sui verbi, partendo dai più usati sul lavoro.
 
-- [ ] Dataset `verbs.json` (~150 verbi): `base, past, participle, it, group, frequencyRank, example`
+- [x] Dataset `verbs.json` (~150 verbi): `base, past, participle, it, group, frequencyRank, example`
   - Esempi dal mondo validation/firmware: "I **wrote** the test firmware", "We **found** a bug in the ADC", "The board **ran** for 48 hours"
-- [ ] Gruppi per somiglianza (sing/sang/sung, keep/kept/kept, cut/cut/cut, ecc.): si impara un gruppo alla volta
-- [ ] Modalità: flashcard · scrivi le forme · ascolta e riconosci · completa la frase ("Yesterday I ___ (run) the regression")
-- [ ] Prima i 50 più frequenti, poi sblocco progressivo
-- [ ] Pronuncia di ogni forma via TTS (attenzione a read/read, -ed vs irregolari)
+- [x] Gruppi per somiglianza (sing/sang/sung, keep/kept/kept, cut/cut/cut, ecc.): si impara un gruppo alla volta
+- [x] Modalità: flashcard · scrivi le forme · ascolta e riconosci · completa la frase ("Yesterday I ___ (run) the regression")
+- [x] Prima i 50 più frequenti, poi sblocco progressivo
+- [x] Pronuncia di ogni forma via TTS (attenzione a read/read, -ed vs irregolari)
 
 **Accettazione:** sessione di 10 minuti che mescola ripasso SRS e verbi nuovi del gruppo corrente.
 

@@ -6,6 +6,7 @@ import {
   currentExercise,
   evaluate,
   isFinished,
+  itemIdOf,
   sessionReducer,
   sessionScore,
   type Exercise,
@@ -129,5 +130,27 @@ describe('sessionReducer', () => {
 
     s = sessionReducer(s, { type: 'restart', now: 1 })
     expect(s).toMatchObject({ index: 0, results: [], startedAt: 1 })
+  })
+})
+
+describe('ripasso degli errori a fine sessione', () => {
+  it('ripropone una sola volta l’esercizio sbagliato e non lo conta nel punteggio', () => {
+    const exercises = [ex('verbs:go#past', ['went'])]
+    let s = createSession(exercises, 0)
+    s = sessionReducer(s, {
+      type: 'answer',
+      evaluation: evaluate(exercises[0] as Exercise, { kind: 'text', value: 'goed' }),
+    })
+    s = sessionReducer(s, { type: 'next', retry: true })
+    expect(currentExercise(s)?.id).toBe('verbs:go#past#retry')
+    expect(itemIdOf(currentExercise(s) as Exercise)).toBe('verbs:go')
+
+    s = sessionReducer(s, {
+      type: 'answer',
+      evaluation: evaluate(currentExercise(s) as Exercise, { kind: 'text', value: 'went' }),
+    })
+    s = sessionReducer(s, { type: 'next', retry: true })
+    expect(isFinished(s)).toBe(true)
+    expect(sessionScore(s)).toEqual({ total: 1, correct: 0 })
   })
 })

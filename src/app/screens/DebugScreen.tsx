@@ -1,5 +1,4 @@
 import { useEffect, useReducer, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { db } from '../../core/db/db'
 import {
   buildFeedback,
@@ -23,6 +22,7 @@ import {
 import { useSettings } from '../../core/db/settings'
 import { getDueItems } from '../../core/srs'
 import { debugExercises, debugSentence } from '../../content'
+import { BackLink } from '../../ui/BackLink'
 import { Button } from '../../ui/Button'
 import { ExerciseCard } from '../../ui/exercise/ExerciseCard'
 import { Feedback } from '../../ui/Feedback'
@@ -33,12 +33,7 @@ import { Card, Screen } from '../../ui/Screen'
 export function DebugScreen() {
   return (
     <Screen title="Prova voce e microfono">
-      <Link
-        to="/impostazioni"
-        className="-mt-4 inline-flex min-h-11 items-center gap-1 text-teal-700 dark:text-teal-300"
-      >
-        <Icon name="back" className="size-5" /> Impostazioni
-      </Link>
+      <BackLink to="/impostazioni" label="Impostazioni" />
       <TtsTest />
       <SttTest />
       <SessionTest />

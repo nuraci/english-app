@@ -1,6 +1,7 @@
 import type { FeedbackMessage } from '../core/session'
 import { Button } from './Button'
 import { Icon } from './Icon'
+import { SpeakButton } from './exercise/SpeakButton'
 
 const TONE_STYLES = {
   success:
@@ -17,10 +18,18 @@ type Props = {
   explanation?: string
   onContinue?: () => void
   continueLabel?: string
+  /** Testo da riascoltare (es. le tre forme del verbo). */
+  speak?: string
 }
 
 /** Feedback incoraggiante: titolo, dettaglio sull'errore e spiegazione. */
-export function Feedback({ message, explanation, onContinue, continueLabel = 'Continua' }: Props) {
+export function Feedback({
+  message,
+  explanation,
+  onContinue,
+  continueLabel = 'Continua',
+  speak,
+}: Props) {
   return (
     <div
       role="status"
@@ -33,6 +42,11 @@ export function Feedback({ message, explanation, onContinue, continueLabel = 'Co
       </p>
       {message.detail && <p className="mt-1">{message.detail}</p>}
       {explanation && <p className="mt-3 text-sm opacity-90">💡 {explanation}</p>}
+      {speak && (
+        <div className="mt-3">
+          <SpeakButton text={speak} />
+        </div>
+      )}
       {onContinue && (
         <Button className="mt-4 w-full" onClick={onContinue} autoFocus>
           {continueLabel}

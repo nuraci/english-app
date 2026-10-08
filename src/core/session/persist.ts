@@ -1,7 +1,7 @@
 import { db as defaultDb, type AppDatabase } from '../db/db'
 import { recordReview } from '../srs'
 import type { Evaluation } from './evaluate'
-import type { Exercise } from './types'
+import { itemIdOf, type Exercise } from './types'
 
 /** Salva l'esito di un esercizio nel motore di ripasso. */
 export async function saveAnswer(
@@ -11,7 +11,7 @@ export async function saveAnswer(
   database: AppDatabase = defaultDb,
 ) {
   return recordReview(
-    exercise.id,
+    itemIdOf(exercise),
     exercise.module,
     evaluation.grade,
     { correct: evaluation.correct, answer: evaluation.given || undefined, now },

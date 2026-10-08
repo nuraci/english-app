@@ -196,6 +196,7 @@ const SELF_GRADE_BUTTONS: { grade: SelfGrade; label: string }[] = [
 function SelfGradeAnswer({ exercise, answered, onAnswer }: Props) {
   const [revealed, setRevealed] = useState(false)
   const answer = exercise.answer.accepted[0] ?? ''
+  const say = exercise.say ?? answer
   if (!revealed) {
     return (
       <Button variant="secondary" className="w-full" onClick={() => setRevealed(true)}>
@@ -208,7 +209,7 @@ function SelfGradeAnswer({ exercise, answered, onAnswer }: Props) {
       <p lang="en" className="rounded-xl bg-slate-100 p-3 text-lg font-medium dark:bg-slate-800">
         {answer}
       </p>
-      <SpeakButton text={answer} />
+      <SpeakButton text={say} />
       <p className="text-sm text-slate-600 dark:text-slate-300">Com’è andata?</p>
       <div className="grid grid-cols-2 gap-2">
         {SELF_GRADE_BUTTONS.map(({ grade, label }) => (

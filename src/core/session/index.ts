@@ -1,4 +1,5 @@
 export type { AnswerMode, Exercise, Response, SelfGrade } from './types'
+export { isRetry, itemIdOf, retryOf } from './types'
 export { evaluate } from './evaluate'
 export type { Evaluation } from './evaluate'
 export { buildFeedback } from './feedback'
