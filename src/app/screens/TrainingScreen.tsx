@@ -38,6 +38,12 @@ const MODULES = [
     subtitle: 'Ascolta, ripeti, registrati · modalità auto 🚗',
     emoji: '🎧',
   },
+  {
+    to: '/allenamenti/tutor',
+    title: 'Tutor AI',
+    subtitle: 'Colloquio e conversazione a voce · serve la rete',
+    emoji: '🤖',
+  },
 ]
 
 export function TrainingScreen() {

@@ -4,3 +4,6 @@ public
 playwright-report
 test-results
 package-lock.json
+worker/node_modules
+worker/dist
+worker/.wrangler

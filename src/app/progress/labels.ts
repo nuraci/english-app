@@ -8,6 +8,7 @@ export const MODULE_NAMES: Record<string, string> = {
   vocab: 'Vocabolario',
   interview: 'Colloquio',
   shadowing: 'Shadowing',
+  tutor: 'Tutor AI',
 }
 
 const NUMBER_KINDS: Record<string, string> = {

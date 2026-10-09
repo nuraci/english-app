@@ -1,0 +1,39 @@
+{
+  "topics": [
+    {
+      "id": "work",
+      "label": "Il mio lavoro",
+      "topic": "the user's job as a validation engineer: daily tasks, tools, team, projects"
+    },
+    {
+      "id": "electronics",
+      "label": "Progetti di elettronica",
+      "topic": "electronics projects and hobbies: boards, microcontrollers, measurements, tinkering"
+    },
+    {
+      "id": "free-time",
+      "label": "Hobby e tempo libero",
+      "topic": "hobbies, free time, sport, family and weekends"
+    },
+    {
+      "id": "travel",
+      "label": "Viaggi",
+      "topic": "travel, places the user has visited, Sicily and Italy"
+    },
+    {
+      "id": "tech",
+      "label": "Tecnologia e AI",
+      "topic": "technology news, semiconductors and artificial intelligence"
+    }
+  ],
+  "modes": {
+    "interview": {
+      "title": "Colloquio realistico",
+      "description": "Il tutor fa il selezionatore per un ruolo da Validation Engineer: una domanda alla volta, con domande di approfondimento tecniche. Circa 15 minuti."
+    },
+    "conversation": {
+      "title": "Conversazione libera",
+      "description": "Chiacchiera in inglese su un argomento a tua scelta, senza pressione."
+    }
+  }
+}

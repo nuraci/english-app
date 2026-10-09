@@ -169,15 +169,15 @@ Ogni fase ha: **Obiettivo**, **Task**, **Criteri di accettazione**.
 
 **Obiettivo:** conversare davvero e ricevere correzioni, anche in voce.
 
-- [ ] Backend minimo (es. Cloudflare Worker) che fa da proxy verso l'API di Anthropic: chiave solo lato server, limite di richieste e di token per utente
-- [ ] Verifica sulla documentazione ufficiale (docs.claude.com) modello e parametri attuali, non hardcodare nomi a memoria
-- [ ] Modalità:
+- [x] Backend minimo (es. Cloudflare Worker) che fa da proxy verso l'API di Anthropic: chiave solo lato server, limite di richieste e di token per utente — codice in `worker/`, da pubblicare sul tuo account Cloudflare (vedi `worker/README.md`)
+- [x] Verifica sulla documentazione ufficiale (docs.claude.com) modello e parametri attuali, non hardcodare nomi a memoria
+- [x] Modalità:
   - **Colloquio realistico**: il tutor fa il selezionatore per un ruolo da Validation Engineer, una domanda alla volta, con follow-up tecnici
   - **Conversazione libera** su temi scelti (lavoro, hobby, progetti di elettronica)
   - **Correzione gentile**: a fine turno 1–3 correzioni spiegate in italiano, non di più
-- [ ] Ciclo vocale: STT → tutor → TTS, con pulsante "parla" stile walkie-talkie
-- [ ] Gli errori rilevati dal tutor diventano item SRS nei moduli corrispondenti
-- [ ] Controllo costi: contatore di utilizzo visibile all'utente
+- [x] Ciclo vocale: STT → tutor → TTS, con pulsante "parla" stile walkie-talkie
+- [x] Gli errori rilevati dal tutor diventano item SRS nei moduli corrispondenti
+- [x] Controllo costi: contatore di utilizzo visibile all'utente
 
 **Accettazione:** colloquio simulato da 15 minuti interamente in voce, con riepilogo finale degli errori salvato.
 

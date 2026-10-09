@@ -21,6 +21,12 @@ export type Settings = {
   reminderEnabled: boolean
   /** Ora del promemoria (0–23). */
   reminderHour: number
+  /** Indirizzo del backend del Tutor AI (Cloudflare Worker). */
+  tutorUrl: string
+  /** Codice di accesso al tutor: lo inserisce l'utente, non è nel codice dell'app. */
+  tutorCode: string
+  /** Identificativo anonimo del dispositivo, per i limiti di utilizzo. */
+  deviceId: string
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -33,6 +39,9 @@ export const DEFAULT_SETTINGS: Settings = {
   weeklyGoalDays: 5,
   reminderEnabled: false,
   reminderHour: 19,
+  tutorUrl: '',
+  tutorCode: '',
+  deviceId: '',
 }
 
 export async function getSettings(database = db): Promise<Settings> {

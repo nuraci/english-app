@@ -1,0 +1,25 @@
+name = "techtalk-tutor"
+main = "src/index.ts"
+compatibility_date = "2026-09-15"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# Il sito dell'app: solo da qui il browser può chiamare il tutor.
+ALLOWED_ORIGINS = "https://nuraci.github.io,http://localhost:5173,http://localhost:4173"
+MODEL = "claude-opus-5-5"
+EFFORT = "low"
+DAILY_REQUESTS = "150"
+DAILY_TOKENS = "400000"
+DAILY_COST_CAP_USD = "3"
+PRICE_INPUT_PER_MTOK = "4"
+PRICE_OUTPUT_PER_MTOK = "20"
+
+# Contatori di utilizzo: crea il namespace con `npx wrangler kv namespace create USAGE`
+# e incolla qui l'id restituito.
+[[kv_namespaces]]
+binding = "USAGE"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+# Segreti (mai nel codice né nell'app):
+#   npx wrangler secret put ANTHROPIC_API_KEY
+#   npx wrangler secret put ACCESS_CODES      (es. un codice lungo a caso; più codici separati da virgola)

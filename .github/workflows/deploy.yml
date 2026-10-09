@@ -27,6 +27,9 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm test
+      - name: Test del backend del tutor
+        working-directory: worker
+        run: npm ci && npm run typecheck && npm test
       - run: npx playwright install --with-deps chromium
       - run: npm run e2e
 

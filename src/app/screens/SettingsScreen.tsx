@@ -3,6 +3,7 @@ import { Card, Screen } from '../../ui/Screen'
 import { useOnlineStatus } from '../../ui/useOnlineStatus'
 import { VoiceSettings } from '../../ui/VoiceSettings'
 import { GoalSettings } from '../../ui/GoalSettings'
+import { TutorSettings } from '../../ui/TutorSettings'
 
 export function SettingsScreen() {
   const online = useOnlineStatus()
@@ -15,6 +16,10 @@ export function SettingsScreen() {
       <Card>
         <h2 className="mb-4 text-lg font-bold">Obiettivi e promemoria</h2>
         <GoalSettings />
+      </Card>
+      <Card>
+        <h2 className="mb-4 text-lg font-bold">Tutor AI</h2>
+        <TutorSettings />
       </Card>
       <Link
         to="/prova"

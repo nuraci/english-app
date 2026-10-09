@@ -23,6 +23,8 @@ import { PhrasesScreen } from '../modules/interview/PhrasesScreen'
 import { ShadowingScreen } from '../modules/shadowing/ShadowingScreen'
 import { PlayerScreen } from '../modules/shadowing/PlayerScreen'
 import { AutoScreen } from '../modules/shadowing/AutoScreen'
+import { TutorScreen } from '../modules/tutor/TutorScreen'
+import { TutorChatScreen } from '../modules/tutor/TutorChatScreen'
 
 export function App() {
   return (
@@ -49,6 +51,8 @@ export function App() {
         <Route path="allenamenti/shadowing" element={<ShadowingScreen />} />
         <Route path="allenamenti/shadowing/player" element={<PlayerScreen />} />
         <Route path="allenamenti/shadowing/auto" element={<AutoScreen />} />
+        <Route path="allenamenti/tutor" element={<TutorScreen />} />
+        <Route path="allenamenti/tutor/chat" element={<TutorChatScreen />} />
         <Route path="progressi" element={<ProgressScreen />} />
         <Route path="impostazioni" element={<SettingsScreen />} />
         <Route path="prova" element={<DebugScreen />} />
