@@ -75,3 +75,9 @@ test('la voce britannica è predefinita e la scelta si salva', async ({ page }) 
     'true',
   )
 })
+
+test('aiuto: come avere voci migliori', async ({ page }) => {
+  await page.goto('/impostazioni')
+  await page.getByText('Come avere voci migliori').click()
+  await expect(page.getByTestId('voice-help')).toContainText('Installa dati vocali')
+})

@@ -106,6 +106,8 @@ export function VoiceSettings() {
         Prova la voce
       </Button>
 
+      <VoiceHelp />
+
       <label className="block">
         <span className="mb-2 block font-semibold">Se il microfono non funziona</span>
         <select
@@ -121,5 +123,44 @@ export function VoiceSettings() {
         </select>
       </label>
     </div>
+  )
+}
+
+/** Come scaricare voci migliori sul telefono: l'app usa quelle installate nel sistema. */
+function VoiceHelp() {
+  return (
+    <details
+      className="rounded-xl bg-slate-100 p-3 text-sm dark:bg-slate-800"
+      data-testid="voice-help"
+    >
+      <summary className="flex min-h-11 cursor-pointer items-center font-semibold">
+        💡 Come avere voci migliori
+      </summary>
+      <p className="mt-1">
+        L’app usa le voci installate sul telefono. Su Android le migliori si scaricano a parte:
+      </p>
+      <ol className="mt-2 list-decimal space-y-1 pl-5">
+        <li>
+          Apri le <strong>Impostazioni di Android</strong> → <em>Sistema</em> → <em>Lingue</em> →{' '}
+          <strong>Output sintesi vocale</strong> (oppure cerca «sintesi vocale» nelle impostazioni).
+        </li>
+        <li>
+          Accanto a <strong>Google</strong> tocca l’ingranaggio →{' '}
+          <strong>Installa dati vocali</strong> → <strong>English (United Kingdom)</strong> (o
+          United States).
+        </li>
+        <li>
+          Ascolta le voci disponibili, maschili e femminili, e scarica quelle che ti piacciono.
+        </li>
+        <li>
+          Torna qui: se ci sono più voci compare il menu <strong>Voce</strong> per sceglierla, e
+          «Prova la voce» te la fa sentire.
+        </li>
+      </ol>
+      <p className="mt-2">
+        Le voci con «(online)» spesso suonano più naturali, ma funzionano solo con la rete. Le altre
+        funzionano anche offline.
+      </p>
+    </details>
   )
 }
