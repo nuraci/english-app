@@ -20,6 +20,9 @@ import { HistoryScreen } from '../modules/interview/HistoryScreen'
 import { TellMeScreen } from '../modules/interview/TellMeScreen'
 import { AnswerEditorScreen, AnswersScreen } from '../modules/interview/AnswersScreen'
 import { PhrasesScreen } from '../modules/interview/PhrasesScreen'
+import { ShadowingScreen } from '../modules/shadowing/ShadowingScreen'
+import { PlayerScreen } from '../modules/shadowing/PlayerScreen'
+import { AutoScreen } from '../modules/shadowing/AutoScreen'
 
 export function App() {
   return (
@@ -43,6 +46,9 @@ export function App() {
         <Route path="allenamenti/colloquio/risposte" element={<AnswersScreen />} />
         <Route path="allenamenti/colloquio/risposte/:id" element={<AnswerEditorScreen />} />
         <Route path="allenamenti/colloquio/frasi" element={<PhrasesScreen />} />
+        <Route path="allenamenti/shadowing" element={<ShadowingScreen />} />
+        <Route path="allenamenti/shadowing/player" element={<PlayerScreen />} />
+        <Route path="allenamenti/shadowing/auto" element={<AutoScreen />} />
         <Route path="progressi" element={<ProgressScreen />} />
         <Route path="impostazioni" element={<SettingsScreen />} />
         <Route path="prova" element={<DebugScreen />} />

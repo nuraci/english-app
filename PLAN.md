@@ -141,10 +141,10 @@ Ogni fase ha: **Obiettivo**, **Task**, **Criteri di accettazione**.
 
 **Obiettivo:** sbloccare la bocca imitando ritmo e intonazione.
 
-- [ ] Player frase per frase: play · ripeti N volte · rallenta · registra la tua voce (MediaRecorder) · confronta
-- [ ] Sorgenti: frasi dei moduli, risposte del colloquio scritte dall'utente
-- [ ] **Import di sottotitoli `.srt`**: da un episodio di una serie (es. The IT Crowd) l'app crea una sessione di shadowing con le frasi
-- [ ] **Modalità auto**: playlist solo audio, a mani libere, per il tragitto in macchina (frase in inglese → pausa per ripetere → traduzione)
+- [x] Player frase per frase: play · ripeti N volte · rallenta · registra la tua voce (MediaRecorder) · confronta
+- [x] Sorgenti: frasi dei moduli, risposte del colloquio scritte dall'utente
+- [x] **Import di sottotitoli `.srt`**: da un episodio di una serie (es. The IT Crowd) l'app crea una sessione di shadowing con le frasi
+- [x] **Modalità auto**: playlist solo audio, a mani libere, per il tragitto in macchina (frase in inglese → pausa per ripetere → traduzione)
 
 **Accettazione:** un file `.srt` importato diventa una sessione di shadowing funzionante; modalità auto utilizzabile a schermo spento.
 

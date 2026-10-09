@@ -69,6 +69,7 @@ class FakeSynth {
 class FakeUtterance {
   lang = ''
   rate = 1
+  volume = 1
   voice: SpeechSynthesisVoice | null = null
   onend: ((e: unknown) => void) | null = null
   onerror: ((e: unknown) => void) | null = null
@@ -257,5 +258,53 @@ describe('TtsQueue: attesa delle voci', () => {
     await vi.advanceTimersByTimeAsync(0)
     expect(synth.spoken).toHaveLength(2)
     vi.useRealTimers()
+  })
+})
+
+describe('speakBatch', () => {
+  afterEach(() => vi.unstubAllGlobals())
+
+  it('consegna subito tutti i segmenti al sistema, con lingua, volume e voce giusti', async () => {
+    vi.stubGlobal('SpeechSynthesisUtterance', FakeUtterance)
+    const { speakBatch } = await import('.')
+    const synth = new FakeSynth()
+    synth.getVoices = () => [
+      voice('en-GB', { localService: true }),
+      voice('it-IT', { localService: true }),
+    ]
+    const started: number[] = []
+    const { done } = await speakBatch(
+      [
+        { text: 'Hello', item: 0 },
+        { text: 'Hello', volume: 0, rate: 0.5, item: 0 },
+        { text: 'Ciao', lang: 'it-IT', item: 0 },
+      ],
+      { accent: 'en-GB', rate: 1, onSegment: (i) => started.push(i) },
+      synth as unknown as SpeechSynthesis,
+    )
+    expect(synth.spoken.map((u) => u.text)).toEqual(['Hello', 'Hello', 'Ciao'])
+    const [a, b, c] = synth.spoken as unknown as (FakeUtterance & {
+      volume: number
+      onstart?: () => void
+    })[]
+    expect(a?.voice?.lang).toBe('en-GB')
+    expect(b?.volume).toBe(0)
+    expect(b?.rate).toBe(0.5)
+    expect(c?.lang).toBe('it-IT')
+    expect(c?.voice?.lang).toBe('it-IT')
+    a?.onstart?.()
+    c?.onstart?.()
+    expect(started).toEqual([0, 2])
+    c?.onend?.({})
+    expect(await done).toBe(true)
+  })
+})
+
+describe('silentWav', () => {
+  it('produce un WAV valido di silenzio', async () => {
+    const { silentWav } = await import('.')
+    const blob = silentWav(1)
+    expect(blob.type).toBe('audio/wav')
+    expect(blob.size).toBe(44 + 8000)
   })
 })

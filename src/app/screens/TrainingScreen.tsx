@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Card, Screen } from '../../ui/Screen'
+import { Screen } from '../../ui/Screen'
 
 const MODULES = [
   {
@@ -32,9 +32,13 @@ const MODULES = [
     subtitle: 'Tell me about yourself…',
     emoji: '🎤',
   },
+  {
+    to: '/allenamenti/shadowing',
+    title: 'Shadowing e ascolto',
+    subtitle: 'Ascolta, ripeti, registrati · modalità auto 🚗',
+    emoji: '🎧',
+  },
 ]
-
-const COMING = ['Shadowing e ascolto']
 
 export function TrainingScreen() {
   return (
@@ -57,10 +61,6 @@ export function TrainingScreen() {
           <span aria-hidden="true">›</span>
         </Link>
       ))}
-      <Card>
-        <p className="font-semibold">In arrivo</p>
-        <p className="mt-1 text-slate-600 dark:text-slate-300">{COMING.join(' · ')}</p>
-      </Card>
     </Screen>
   )
 }

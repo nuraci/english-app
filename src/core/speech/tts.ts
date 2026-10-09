@@ -176,5 +176,85 @@ export class TtsQueue {
   }
 }
 
+/** Un pezzo di una lettura in blocco: una frase, una traduzione o una pausa silenziosa. */
+export type BatchSegment = {
+  text: string
+  /** Lingua del segmento: "en-US", "en-GB" o un'altra (es. "it-IT" per le traduzioni). */
+  lang?: string
+  rate?: number
+  /** 0 = pausa: il testo viene "letto" in silenzio e dura quanto servirebbe per dirlo. */
+  volume?: number
+  /** Indice dell'elemento della playlist a cui appartiene il segmento. */
+  item?: number
+}
+
+/** Voce per una lingua qualsiasi: le voci locali prima, perché funzionano offline. */
+export function pickVoiceForLang(
+  voices: readonly SpeechSynthesisVoice[],
+  lang: string,
+): SpeechSynthesisVoice | undefined {
+  const prefix = lang.slice(0, 2).toLowerCase()
+  const matching = voices.filter((v) => v.lang.replace('_', '-').toLowerCase().startsWith(prefix))
+  const exact = matching.filter(
+    (v) => v.lang.replace('_', '-').toLowerCase() === lang.toLowerCase(),
+  )
+  const pool = exact.length ? exact : matching
+  return [...pool].sort((a, b) => Number(b.localService) - Number(a.localService))[0]
+}
+
+export type BatchOptions = SpeakOptions & {
+  /** Chiamata quando inizia ogni segmento (per evidenziare la frase). */
+  onSegment?: (index: number, segment: BatchSegment) => void
+}
+
+/**
+ * Lettura in blocco: tutti i segmenti vengono consegnati subito alla coda del sistema.
+ * Così la lettura prosegue anche quando il browser rallenta la pagina (schermo spento):
+ * non serve il codice JavaScript per passare da una frase all'altra.
+ * Restituisce una funzione per fermare tutto e una promise che si risolve alla fine.
+ */
+export async function speakBatch(
+  segments: readonly BatchSegment[],
+  options: BatchOptions = {},
+  synth: SpeechSynthesis | null = isTtsSupported() ? window.speechSynthesis : null,
+): Promise<{ done: Promise<boolean>; cancel: () => void }> {
+  if (!synth || segments.length === 0) return { done: Promise.resolve(false), cancel: () => {} }
+  tts.cancel()
+  synth.cancel()
+  const voices = await loadVoices(synth)
+  const accent = options.accent ?? 'en-US'
+  const english = pickVoice(voices, accent, options.voiceURI)
+  let cancelled = false
+  // Riferimenti tenuti vivi fino alla fine: Chrome perde gli eventi delle utterance raccolte dal GC.
+  const utterances: SpeechSynthesisUtterance[] = []
+
+  const done = new Promise<boolean>((resolve) => {
+    segments.forEach((segment, index) => {
+      const u = new SpeechSynthesisUtterance(segment.text)
+      const lang = segment.lang ?? accent
+      u.lang = lang
+      u.rate = clampRate((options.rate ?? 1) * (segment.rate ?? 1), SPEECH_RATE_LIMITS)
+      u.volume = segment.volume ?? 1
+      const voice = lang.startsWith('en') ? english : pickVoiceForLang(voices, lang)
+      if (voice) u.voice = voice
+      u.onstart = () => options.onSegment?.(index, segment)
+      if (index === segments.length - 1) {
+        u.onend = () => resolve(!cancelled)
+        u.onerror = () => resolve(false)
+      }
+      utterances.push(u)
+      synth.speak(u)
+    })
+  })
+
+  return {
+    done: done.finally(() => utterances.splice(0)),
+    cancel: () => {
+      cancelled = true
+      synth.cancel()
+    },
+  }
+}
+
 /** Coda condivisa da tutta l'app: una sola voce alla volta. */
 export const tts = new TtsQueue()

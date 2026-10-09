@@ -61,7 +61,9 @@ test('prova completa di 10 domande: trascrizioni e audio salvati e riascoltabili
     await page.getByRole('button', { name: 'Ho finito' }).click()
 
     await expect(page.getByTestId('transcript')).toContainText('corner cases')
-    await expect(page.getByText(/Parole chiave usate|Nessuna parola chiave riconosciuta/)).toBeVisible()
+    await expect(
+      page.getByText(/Parole chiave usate|Nessuna parola chiave riconosciuta/),
+    ).toBeVisible()
     await expect(page.getByLabel('Riascolta la tua risposta')).toBeVisible()
     await page.getByLabel('Ero chiaro e in ordine (inizio, sviluppo, fine)').check()
     await page.getByRole('button', { name: i < 10 ? 'Prossima' : 'Fine' }).click()
