@@ -37,6 +37,16 @@ export function SettingsScreen() {
             <dt className="text-slate-600 dark:text-slate-300">Connessione</dt>
             <dd className="font-medium">{online ? 'Online' : 'Offline'}</dd>
           </div>
+          <div className="flex justify-between gap-4">
+            <dt className="text-slate-600 dark:text-slate-300">Autori</dt>
+            <dd className="text-right font-medium" data-testid="credits">
+              Nunzio Raciti
+              <br />
+              <span className="font-normal text-slate-600 dark:text-slate-300">
+                con Claude (Anthropic)
+              </span>
+            </dd>
+          </div>
         </dl>
       </Card>
     </Screen>

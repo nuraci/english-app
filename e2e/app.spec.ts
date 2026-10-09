@@ -58,3 +58,9 @@ test('funziona offline dopo la prima visita (modalità aereo)', async ({ page, c
   await expect(page.getByRole('status')).toContainText('Sei offline')
   await context.setOffline(false)
 })
+
+test('le impostazioni mostrano versione e autori', async ({ page }) => {
+  await page.goto('/impostazioni')
+  await expect(page.getByTestId('credits')).toContainText('Nunzio Raciti')
+  await expect(page.getByTestId('credits')).toContainText('con Claude (Anthropic)')
+})

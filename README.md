@@ -20,3 +20,6 @@ Contesto e regole in `CLAUDE.md`, roadmap in `PLAN.md`.
 
 Sul telefono (Chrome Android) apri l'indirizzo, poi menu ⋮ → **Installa app**.
 Nota: microfono e installazione richiedono HTTPS, quindi il dev server in LAN (HTTP) non basta per provarli.
+
+## Autori
+Ideata e sviluppata da **Nunzio Raciti** insieme a **Claude** (Anthropic), con Claude Code.
