@@ -1,13 +1,11 @@
 import { NavLink } from 'react-router-dom'
 import { Icon } from '../ui/Icon'
-import { useT } from '../i18n'
 import { navItems } from './navItems'
 
 export function BottomNav() {
-  const t = useT()
   return (
     <nav
-      aria-label={t('nav.label')}
+      aria-label="Navigazione principale"
       className="fixed inset-x-0 bottom-0 z-10 border-t border-slate-200 bg-white/95 pb-[env(safe-area-inset-bottom)] backdrop-blur dark:border-slate-800 dark:bg-slate-900/95"
     >
       <ul className="mx-auto grid max-w-xl grid-cols-4">
@@ -25,7 +23,7 @@ export function BottomNav() {
               }
             >
               <Icon name={item.icon} className="size-6" />
-              {t(item.labelKey)}
+              {item.label}
             </NavLink>
           </li>
         ))}

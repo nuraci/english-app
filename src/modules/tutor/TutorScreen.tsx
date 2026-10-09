@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useSettings } from '../../core/db/settings'
 import { BackLink } from '../../ui/BackLink'
-import { PremiumBadge } from '../../ui/PremiumBadge'
 import { Card, Screen } from '../../ui/Screen'
 import { fetchUsage, type Quota } from './client'
 import { modes, topics } from './data'
@@ -41,9 +40,6 @@ export function TutorScreen() {
   return (
     <Screen title="Tutor AI">
       <BackLink to="/allenamenti" label="Allenamenti" />
-      <p className="-mt-2">
-        <PremiumBadge />
-      </p>
       {!configured ? (
         <Card>
           <p className="font-semibold">Il tutor va collegato una volta sola.</p>

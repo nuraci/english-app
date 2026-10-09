@@ -1,8 +1,7 @@
 import { updateSettings, useSettings } from '../core/db/settings'
-import { BASE_PACK, hasAccess, packs, PLAN_LABELS } from '../core/plan'
-import { PremiumBadge } from './PremiumBadge'
+import { BASE_PACK, packs } from '../core/packs'
 
-/** Piano e pacchetti di contenuti di settore. */
+/** Pacchetti di contenuti di settore. */
 export function PackSettings() {
   const settings = useSettings()
   const toggle = (id: string, on: boolean) => {
@@ -13,17 +12,12 @@ export function PackSettings() {
   }
   return (
     <div className="space-y-3">
-      <p className="text-sm text-slate-600 dark:text-slate-300">
-        Piano: <strong>{PLAN_LABELS[settings.plan]}</strong>
-      </p>
       {packs.map((p) => {
-        const locked = !hasAccess(`pack:${p.id}`, settings.plan)
         const base = p.id === BASE_PACK
         return (
           <label key={p.id} className="flex items-start justify-between gap-3">
             <span>
               <span className="font-semibold">{p.name}</span>
-              {p.premium && <PremiumBadge />}
               <span className="block text-sm text-slate-600 dark:text-slate-300">
                 {p.description}
               </span>
@@ -32,7 +26,7 @@ export function PackSettings() {
               type="checkbox"
               className="mt-1 size-6 shrink-0 accent-teal-700"
               checked={base || settings.activePacks.includes(p.id)}
-              disabled={base || locked}
+              disabled={base}
               onChange={(e) => toggle(p.id, e.target.checked)}
               aria-label={`Pacchetto ${p.name}`}
             />

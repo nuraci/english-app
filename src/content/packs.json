@@ -3,14 +3,12 @@
     {
       "id": "semiconductors",
       "name": "Semiconduttori e microcontrollori",
-      "description": "Validazione di chip, misure di laboratorio, firmware e debug. Il pacchetto di base.",
-      "premium": false
+      "description": "Validazione di chip, misure di laboratorio, firmware e debug. Il pacchetto di base."
     },
     {
       "id": "embedded-iot",
       "name": "Embedded e IoT",
-      "description": "Radio e BLE, basso consumo, aggiornamenti OTA, sicurezza e cloud dei dispositivi connessi.",
-      "premium": true
+      "description": "Radio e BLE, basso consumo, aggiornamenti OTA, sicurezza e cloud dei dispositivi connessi."
     }
   ]
 }

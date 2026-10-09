@@ -44,13 +44,6 @@ export function PrivacyScreen() {
           anonimo del dispositivo. Il riepilogo della sessione resta sul telefono.
         </p>
       </Card>
-      <Card>
-        <h2 className="text-lg font-bold">Suggerimenti</h2>
-        <p className="mt-1">
-          I suggerimenti che scrivi restano sul telefono e, se il tutor è collegato, arrivano al
-          server con la versione dell’app. Non scrivere dati personali nei suggerimenti.
-        </p>
-      </Card>
     </Screen>
   )
 }

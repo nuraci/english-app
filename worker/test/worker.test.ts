@@ -10,10 +10,6 @@ function memoryKV() {
     store,
     get: async (key: string) => store.get(key) ?? null,
     put: async (key: string, value: string) => void store.set(key, value),
-    list: async ({ prefix }: { prefix: string }) => ({
-      keys: [...store.keys()].filter((k) => k.startsWith(prefix)).map((name) => ({ name })),
-      list_complete: true,
-    }),
   }
 }
 
@@ -199,39 +195,5 @@ describe('prompt', () => {
   it('validateBody limita lunghezza e alternanza dei turni', () => {
     expect(typeof validateBody({ mode: 'interview', messages: [{ role: 'user', content: 'x'.repeat(5000) }] })).toBe('string')
     expect(validateBody({ mode: 'conversation', topic: 'x'.repeat(500), messages: [] })).toMatchObject({ topic: 'x'.repeat(120) })
-  })
-})
-
-describe('beta: suggerimenti e lista d’attesa', () => {
-  const json = (path: string, body: unknown, headers: Record<string, string> = {}) =>
-    new Request(`https://tutor.example${path}`, { method: 'POST', headers: { 'Content-Type': 'application/json', ...headers }, body: JSON.stringify(body) })
-
-  it('suggerimenti solo con il codice dei beta tester', async () => {
-    const { handle, kv } = setup()
-    expect((await handle(json('/api/feedback', { text: 'Bella app!' }), env())).status).toBe(401)
-    const ok = await handle(json('/api/feedback', { text: 'Bella app!', page: 'impostazioni', version: '0.11.0' }, { Authorization: 'Bearer secret-code-1', 'X-Device-Id': 'device-1234-abcd' }), env())
-    expect(ok.status).toBe(200)
-    expect([...kv.store.keys()].some((k) => k.startsWith('feedback:'))).toBe(true)
-  })
-
-  it('lista d’attesa: pubblica, con consenso obbligatorio e limite per IP', async () => {
-    const { handle, kv } = setup()
-    expect((await handle(json('/api/waitlist', { email: 'a@b.it' }), env())).status).toBe(400)
-    expect((await handle(json('/api/waitlist', { email: 'non-email', consent: true }), env())).status).toBe(400)
-    const ok = await handle(json('/api/waitlist', { email: 'Mario.Rossi@Example.com', consent: true, role: 'Validation engineer' }, { 'CF-Connecting-IP': '1.2.3.4' }), env())
-    expect(ok.status).toBe(200)
-    expect(JSON.parse(kv.store.get('waitlist:mario.rossi@example.com') ?? '{}')).toMatchObject({ consent: true, role: 'Validation engineer' })
-    for (let i = 0; i < 4; i++) await handle(json('/api/waitlist', { email: `x${i}@y.it`, consent: true }, { 'CF-Connecting-IP': '1.2.3.4' }), env())
-    expect((await handle(json('/api/waitlist', { email: 'z@y.it', consent: true }, { 'CF-Connecting-IP': '1.2.3.4' }), env())).status).toBe(429)
-  })
-
-  it('esportazione solo con il codice amministratore', async () => {
-    const { handle } = setup()
-    await handle(json('/api/waitlist', { email: 'a@b.it', consent: true }), env())
-    const get = (code?: string) => new Request('https://tutor.example/api/admin/export', { headers: code ? { Authorization: `Bearer ${code}` } : {} })
-    expect((await handle(get('admin-xyz'), env())).status).toBe(401)
-    expect((await handle(get('secret-code-1'), env({ ADMIN_CODE: 'admin-xyz' }))).status).toBe(401)
-    const res = await handle(get('admin-xyz'), env({ ADMIN_CODE: 'admin-xyz' }))
-    expect(await res.json()).toMatchObject({ waitlist: [{ email: 'a@b.it' }], feedback: [] })
   })
 })

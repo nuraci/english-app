@@ -1,8 +1,7 @@
 import { useSettings } from './db/settings'
-import { usablePacks } from './plan'
+import { activePacksOf } from './packs'
 
-/** I pacchetti di contenuti utilizzabili adesso (attivi e accessibili con il piano). */
+/** I pacchetti di contenuti attivi adesso. */
 export function usePacks(): string[] {
-  const settings = useSettings()
-  return usablePacks(settings.activePacks, settings.plan)
+  return activePacksOf(useSettings().activePacks)
 }

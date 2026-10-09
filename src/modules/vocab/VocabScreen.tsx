@@ -6,8 +6,6 @@ import { BackLink } from '../../ui/BackLink'
 import { Icon } from '../../ui/Icon'
 import { Card, Screen } from '../../ui/Screen'
 import { usePacks } from '../../core/usePacks'
-import { packs as allPacks } from '../../core/plan'
-import { PremiumBadge } from '../../ui/PremiumBadge'
 import { decksFor, MODULE, speechOf, trapList, type Term } from './data'
 import { deckStatus } from './session'
 
@@ -42,10 +40,7 @@ export function VocabScreen() {
         const status = deckStatus(deck, items)
         return (
           <Card key={deck.id}>
-            <h2 className="text-lg font-bold">
-              {deck.name}
-              {allPacks.find((p) => p.id === deck.pack)?.premium && <PremiumBadge />}
-            </h2>
+            <h2 className="text-lg font-bold">{deck.name}</h2>
             <p className="mt-1 text-slate-600 dark:text-slate-300">{deck.description}</p>
             <div
               className="mt-3 h-2 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800"

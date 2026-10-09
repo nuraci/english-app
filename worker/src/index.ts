@@ -1,6 +1,5 @@
 import Anthropic from '@anthropic-ai/sdk'
-import { exportPrefix, joinWaitlist, saveFeedback, validateFeedback, validateWaitlist, type ListableKV } from './beta'
-import { checkQuota, estimateCost, getQuota, recordUsage, type Limits, type Prices } from './quota'
+import { checkQuota, estimateCost, getQuota, recordUsage, type KV, type Limits, type Prices } from './quota'
 import { callTutor, TutorRefusal, type ChatTurn, type TutorConfig, type TutorRequest } from './tutor'
 
 export type Env = {
@@ -9,8 +8,6 @@ export type Env = {
   ACCESS_CODES: string
   ALLOWED_ORIGINS: string
   USAGE: KVNamespace
-  /** Codice per leggere suggerimenti e lista d'attesa (facoltativo: senza, l'esportazione è disattivata). */
-  ADMIN_CODE?: string
   MODEL?: string
   EFFORT?: string
   DAILY_REQUESTS?: string
@@ -23,7 +20,7 @@ export type Env = {
 export type Deps = {
   client: (env: Env) => Anthropic
   now: () => number
-  kv: (env: Env) => ListableKV
+  kv: (env: Env) => KV
 }
 
 const MAX_TURNS = 80
@@ -68,12 +65,8 @@ function safeEqual(a: string, b: string): boolean {
   return diff === 0
 }
 
-function bearer(request: Request): string {
-  return (request.headers.get('Authorization') ?? '').replace(/^Bearer\s+/i, '')
-}
-
 function authorized(env: Env, request: Request): boolean {
-  const token = bearer(request)
+  const token = (request.headers.get('Authorization') ?? '').replace(/^Bearer\s+/i, '')
   if (!token) return false
   return env.ACCESS_CODES.split(',')
     .map((c) => c.trim())
@@ -113,35 +106,11 @@ export function createHandler(deps: Deps) {
 
     if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: cors })
     const url = new URL(request.url)
-
-    // Lista d'attesa: pubblica (pagina di presentazione), con consenso esplicito e limite per IP.
-    if (url.pathname === '/api/waitlist' && request.method === 'POST') {
-      const body = validateWaitlist(await request.json().catch(() => null))
-      if (!body) return json({ error: 'bad_request' }, 400)
-      const ip = request.headers.get('CF-Connecting-IP') ?? 'unknown'
-      const result = await joinWaitlist(deps.kv(env), ip, body, deps.now())
-      return result === 'ok' ? json({ ok: true }) : json({ error: 'limit' }, 429)
-    }
-
-    // Esportazione per l'amministratore: suggerimenti e lista d'attesa.
-    if (url.pathname === '/api/admin/export' && request.method === 'GET') {
-      if (!env.ADMIN_CODE || !safeEqual(env.ADMIN_CODE, bearer(request))) return json({ error: 'unauthorized' }, 401)
-      const kv = deps.kv(env)
-      return json({ feedback: await exportPrefix(kv, 'feedback:'), waitlist: await exportPrefix(kv, 'waitlist:') })
-    }
-
     if (!authorized(env, request)) return json({ error: 'unauthorized' }, 401)
     const device = deviceOf(request)
     if (!device) return json({ error: 'device' }, 400)
     const kv = deps.kv(env)
     const limits = limitsOf(env)
-
-    if (url.pathname === '/api/feedback' && request.method === 'POST') {
-      const body = validateFeedback(await request.json().catch(() => null))
-      if (!body) return json({ error: 'bad_request' }, 400)
-      await saveFeedback(kv, device, body, deps.now())
-      return json({ ok: true })
-    }
 
     if (url.pathname === '/api/usage' && request.method === 'GET') {
       return json({ quota: await getQuota(kv, device, limits, deps.now()), model: configOf(env).model })
@@ -180,7 +149,7 @@ export function createHandler(deps: Deps) {
 const handle = createHandler({
   client: (env) => new Anthropic({ apiKey: env.ANTHROPIC_API_KEY }),
   now: () => Date.now(),
-  kv: (env) => env.USAGE as unknown as ListableKV,
+  kv: (env) => env.USAGE,
 })
 
 export default { fetch: handle } satisfies ExportedHandler<Env>

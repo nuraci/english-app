@@ -22,7 +22,7 @@ import { MODULE as NUMBERS, numberLevels } from '../../modules/numbers/data'
 import { computeNumberStats, recommendedLevel, recurringErrors } from '../../modules/numbers/stats'
 import { computeTrapStats } from '../../modules/spelling/stats'
 import { MODULE as VERBS } from '../../modules/verbs/data'
-import { usablePacks } from '../../core/plan'
+import { activePacksOf } from '../../core/packs'
 import { decksFor, termItemId } from '../../modules/vocab/data'
 import { buildDailyPlan, type PlanBlock } from './plan'
 
@@ -69,7 +69,7 @@ export async function loadProgressData(now = Date.now()): Promise<ProgressData> 
     (t) => t.tag,
   )
   const itemIds = new Map(items.map((i) => [i.id, i]))
-  const vocabDecks = decksFor(usablePacks(settings.activePacks, settings.plan)).map((d) => {
+  const vocabDecks = decksFor(activePacksOf(settings.activePacks)).map((d) => {
     const deckItems = d.terms.map((t) => itemIds.get(termItemId(d, t)))
     return {
       id: d.id,

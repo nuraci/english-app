@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getSettings } from '../../core/db/settings'
-import { usablePacks } from '../../core/plan'
+import { activePacksOf } from '../../core/packs'
 import { createRng } from '../../core/random'
 import { BackLink } from '../../ui/BackLink'
 import { Card, Screen } from '../../ui/Screen'
@@ -33,11 +33,7 @@ export function InterviewSessionScreen() {
         if (!alive) return
         setAnswers(mine)
         setPlan(
-          buildInterviewPlan(
-            counts,
-            createRng(Date.now()),
-            usablePacks(settings.activePacks, settings.plan),
-          ),
+          buildInterviewPlan(counts, createRng(Date.now()), activePacksOf(settings.activePacks)),
         )
       },
     )

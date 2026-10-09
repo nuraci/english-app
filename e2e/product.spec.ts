@@ -79,12 +79,12 @@ test('i tuoi dati: esporta, reimporta e cancella', async ({ page }) => {
   await expect(page.getByLabel('Cognome')).toHaveValue('Bianchi')
 })
 
-test('pacchetto Embedded e IoT: premium, gratis in beta, aggiunge i mazzi', async ({ page }) => {
+test('pacchetto Embedded e IoT: si attiva dalle impostazioni e aggiunge i mazzi', async ({
+  page,
+}) => {
   await page.goto('/allenamenti/vocabolario')
   await expect(page.getByRole('link', { name: /^Allenati: / })).toHaveCount(5)
   await page.goto('/impostazioni')
-  await expect(page.getByText('Beta: tutto incluso, gratis')).toBeVisible()
-  await expect(page.getByText('Premium · gratis in beta').first()).toBeVisible()
   await page.getByLabel('Pacchetto Embedded e IoT').click()
   await expect(page.getByLabel('Pacchetto Embedded e IoT')).toBeChecked()
   await page.goto('/allenamenti/vocabolario')
@@ -97,33 +97,4 @@ test('informativa sulla privacy', async ({ page }) => {
   await page.getByRole('link', { name: 'Informativa sulla privacy' }).click()
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Privacy')
   await expect(page.getByText(/restano sul tuo telefono/)).toBeVisible()
-})
-
-test('pagina di presentazione con lista d’attesa', async ({ page }) => {
-  const original = readFileSync('public/landing.html', 'utf8')
-  await page.route('**/landing.html', (route) =>
-    route.fulfill({
-      contentType: 'text/html',
-      body: original.replace('data-endpoint=""', 'data-endpoint="https://tutor.test"'),
-    }),
-  )
-  let received: unknown = null
-  await page.route('https://tutor.test/api/waitlist', async (route) => {
-    received = route.request().postDataJSON()
-    await route.fulfill({ json: { ok: true } })
-  })
-  await page.goto('/landing.html')
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText(
-    'L’inglese per i colloqui tecnici degli ingegneri.',
-  )
-  await page.getByLabel('Email', { exact: true }).fill('mario.rossi@example.com')
-  await page.getByLabel('Ruolo (facoltativo)').fill('Validation engineer')
-  await page.getByRole('checkbox').check()
-  await page.getByRole('button', { name: 'Iscrivimi' }).click()
-  await expect(page.getByText(/Grazie! Ti scriveremo/)).toBeVisible()
-  expect(received).toEqual({
-    email: 'mario.rossi@example.com',
-    role: 'Validation engineer',
-    consent: true,
-  })
 })
