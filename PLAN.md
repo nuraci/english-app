@@ -125,13 +125,13 @@ Ogni fase ha: **Obiettivo**, **Task**, **Criteri di accettazione**.
 
 **Obiettivo:** arrivare al colloquio con risposte già provate ad alta voce.
 
-- [ ] Banca domande: HR, tecniche (validation, misure, firmware, debug), comportamentali (metodo STAR)
+- [x] Banca domande: HR, tecniche (validation, misure, firmware, debug), comportamentali (metodo STAR)
   - "Tell me about yourself", "Describe a difficult bug you solved", "How do you validate a new peripheral?", "How do you measure power consumption in low-power modes?", "Why NXP?"
-- [ ] **Costruttore di "Tell me about yourself"** guidato: chi sei · esperienza · punti di forza · perché questo ruolo
-- [ ] Editor delle **proprie risposte**: l'utente le scrive, l'app le legge in TTS e le usa per lo shadowing
-- [ ] Prova: domanda letta dalla voce → l'utente risponde → trascrizione STT → checklist di autovalutazione (chiarezza, durata, parole chiave)
-- [ ] Frasi salvavita: "Could you repeat the question, please?", "Let me think about that for a second", "What I mean is…"
-- [ ] Domande da fare al selezionatore
+- [x] **Costruttore di "Tell me about yourself"** guidato: chi sei · esperienza · punti di forza · perché questo ruolo
+- [x] Editor delle **proprie risposte**: l'utente le scrive, l'app le legge in TTS e le usa per lo shadowing
+- [x] Prova: domanda letta dalla voce → l'utente risponde → trascrizione STT → checklist di autovalutazione (chiarezza, durata, parole chiave)
+- [x] Frasi salvavita: "Could you repeat the question, please?", "Let me think about that for a second", "What I mean is…"
+- [x] Domande da fare al selezionatore
 
 **Accettazione:** sessione completa da 10 domande con trascrizioni salvate e riascoltabili.
 

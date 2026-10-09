@@ -26,9 +26,15 @@ const MODULES = [
     subtitle: 'oscilloscope · jitter · root cause analysis',
     emoji: '🧰',
   },
+  {
+    to: '/allenamenti/colloquio',
+    title: 'Simulazione di colloquio',
+    subtitle: 'Tell me about yourself…',
+    emoji: '🎤',
+  },
 ]
 
-const COMING = ['Simulazione di colloquio']
+const COMING = ['Shadowing e ascolto']
 
 export function TrainingScreen() {
   return (

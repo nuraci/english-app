@@ -14,6 +14,12 @@ import { SpellingSessionScreen } from '../modules/spelling/SpellingSessionScreen
 import { AlphabetScreen } from '../modules/spelling/AlphabetScreen'
 import { VocabScreen } from '../modules/vocab/VocabScreen'
 import { VocabSessionScreen } from '../modules/vocab/VocabSessionScreen'
+import { InterviewScreen } from '../modules/interview/InterviewScreen'
+import { InterviewSessionScreen } from '../modules/interview/InterviewSessionScreen'
+import { HistoryScreen } from '../modules/interview/HistoryScreen'
+import { TellMeScreen } from '../modules/interview/TellMeScreen'
+import { AnswerEditorScreen, AnswersScreen } from '../modules/interview/AnswersScreen'
+import { PhrasesScreen } from '../modules/interview/PhrasesScreen'
 
 export function App() {
   return (
@@ -30,6 +36,13 @@ export function App() {
         <Route path="allenamenti/spelling/alfabeto" element={<AlphabetScreen />} />
         <Route path="allenamenti/vocabolario" element={<VocabScreen />} />
         <Route path="allenamenti/vocabolario/sessione" element={<VocabSessionScreen />} />
+        <Route path="allenamenti/colloquio" element={<InterviewScreen />} />
+        <Route path="allenamenti/colloquio/prova" element={<InterviewSessionScreen />} />
+        <Route path="allenamenti/colloquio/storico" element={<HistoryScreen />} />
+        <Route path="allenamenti/colloquio/tell-me" element={<TellMeScreen />} />
+        <Route path="allenamenti/colloquio/risposte" element={<AnswersScreen />} />
+        <Route path="allenamenti/colloquio/risposte/:id" element={<AnswerEditorScreen />} />
+        <Route path="allenamenti/colloquio/frasi" element={<PhrasesScreen />} />
         <Route path="progressi" element={<ProgressScreen />} />
         <Route path="impostazioni" element={<SettingsScreen />} />
         <Route path="prova" element={<DebugScreen />} />

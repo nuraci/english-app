@@ -38,6 +38,33 @@ export type SessionRecord = {
 
 export type SettingRecord = { key: string; value: unknown }
 
+/** Una risposta data durante una prova (colloquio): trascrizione, durata, autovalutazione. */
+export type AttemptRecord = {
+  id?: number
+  /** Id della sessione nella tabella sessions. */
+  sessionId: number
+  module: string
+  questionId: string
+  question: string
+  transcript: string
+  durationMs: number
+  /** Voci della checklist spuntate dall'utente. */
+  checklist: string[]
+  keywordsHit: string[]
+  /** Registrazione audio, se disponibile. */
+  recordingId?: number
+  createdAt: number
+}
+
+/** Audio registrato dall'utente: resta solo sul dispositivo. */
+export type RecordingRecord = {
+  id?: number
+  blob: Blob
+  mimeType: string
+  durationMs: number
+  createdAt: number
+}
+
 export type UserTextRecord = {
   id?: number
   /** Tipo di testo: "name", "email", "interview-answer"... */
@@ -54,6 +81,8 @@ export class AppDatabase extends Dexie {
   sessions!: EntityTable<SessionRecord, 'id'>
   settings!: EntityTable<SettingRecord, 'key'>
   userTexts!: EntityTable<UserTextRecord, 'id'>
+  attempts!: EntityTable<AttemptRecord, 'id'>
+  recordings!: EntityTable<RecordingRecord, 'id'>
 
   constructor(name = 'techtalk-coach') {
     super(name)
@@ -63,6 +92,10 @@ export class AppDatabase extends Dexie {
       sessions: '++id, module, startedAt',
       settings: 'key',
       userTexts: '++id, kind, updatedAt',
+    })
+    this.version(2).stores({
+      attempts: '++id, sessionId, questionId, createdAt',
+      recordings: '++id, createdAt',
     })
   }
 }

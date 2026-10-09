@@ -1,0 +1,560 @@
+{
+  "categories": {
+    "hr": "Domande HR",
+    "technical": "Domande tecniche",
+    "behavioral": "Domande comportamentali (STAR)"
+  },
+  "questions": [
+    {
+      "id": "tell-me",
+      "category": "hr",
+      "text": "Tell me about yourself.",
+      "it": "Parlami di te.",
+      "tip": "È quasi sempre la prima domanda: preparala bene. Chi sei, che esperienza hai, i tuoi punti di forza e perché questo ruolo. Uno o due minuti, non di più.",
+      "keywords": [
+        "validation",
+        "engineer",
+        "years",
+        "experience",
+        "microcontrollers",
+        "test",
+        "measurements",
+        "team"
+      ],
+      "targetSeconds": [60, 120],
+      "sample": "I'm a validation engineer with several years of experience in microcontrollers. In my current job I validate new chips in the lab: I write test plans, I prepare the test benches and I measure the performance of the peripherals, for example ADCs, timers and communication interfaces. I work every day with oscilloscopes, SMUs and climatic chambers, and I automate the tests with Python. My main strength is troubleshooting: I like to find the root cause of a problem. I'm interested in this role because I want to work on new silicon in a bigger team."
+    },
+    {
+      "id": "why-company",
+      "category": "hr",
+      "text": "Why do you want to work at NXP?",
+      "it": "Perché vuoi lavorare in NXP?",
+      "tip": "Mostra che conosci l'azienda: prodotti (microcontrollori, automotive, industriale), sede, team. Collega l'azienda alla tua esperienza.",
+      "keywords": [
+        "microcontrollers",
+        "automotive",
+        "industrial",
+        "products",
+        "team",
+        "grow",
+        "learn",
+        "Catania"
+      ],
+      "targetSeconds": [45, 90],
+      "sample": "NXP is a leader in microcontrollers and automotive chips, and these are exactly the products I know best. I like the idea of working on devices that go into cars and industrial systems, where quality and reliability are very important. I also know that the Catania site has a strong validation team, and I think I can learn a lot and grow there. At the same time, I can bring my experience in the lab and in test automation."
+    },
+    {
+      "id": "why-role",
+      "category": "hr",
+      "text": "Why are you interested in this role?",
+      "it": "Perché ti interessa questo ruolo?",
+      "tip": "Collega il ruolo a quello che sai fare e a quello che vuoi imparare.",
+      "keywords": ["validation", "silicon", "challenge", "learn", "experience", "lab"],
+      "targetSeconds": [45, 90]
+    },
+    {
+      "id": "strengths",
+      "category": "hr",
+      "text": "What are your main strengths?",
+      "it": "Quali sono i tuoi punti di forza?",
+      "tip": "Scegli due punti di forza e dai un esempio concreto per ognuno. Meglio un esempio vero che tanti aggettivi.",
+      "keywords": [
+        "problem solving",
+        "troubleshooting",
+        "attention to detail",
+        "organized",
+        "example",
+        "team"
+      ],
+      "targetSeconds": [45, 90]
+    },
+    {
+      "id": "weakness",
+      "category": "hr",
+      "text": "What is your biggest weakness?",
+      "it": "Qual è il tuo punto debole più grande?",
+      "tip": "Sii onesto e mostra come stai migliorando. L'inglese parlato è un'ottima risposta: stai usando proprio questa app!",
+      "keywords": ["improve", "working on", "learning", "English", "practice", "example"],
+      "targetSeconds": [30, 75],
+      "sample": "To be honest, my spoken English is not as good as my technical English. I read datasheets and write reports in English every day, but speaking is harder for me. So I'm working on it: I practise every day with an app, I listen to technical podcasts and I try to speak English in meetings. It's getting better step by step."
+    },
+    {
+      "id": "five-years",
+      "category": "hr",
+      "text": "Where do you see yourself in five years?",
+      "it": "Dove ti vedi tra cinque anni?",
+      "tip": "Mostra ambizione ma restando nel ruolo: più esperienza, più responsabilità, magari guidare un piccolo team.",
+      "keywords": ["experience", "responsibility", "expert", "lead", "team", "grow"],
+      "targetSeconds": [30, 75]
+    },
+    {
+      "id": "leave-job",
+      "category": "hr",
+      "text": "Why do you want to leave your current job?",
+      "it": "Perché vuoi lasciare il lavoro attuale?",
+      "tip": "Sempre in positivo: parla di cosa cerchi, non di cosa non ti piace.",
+      "keywords": ["new challenge", "grow", "learn", "bigger", "opportunity", "products"],
+      "targetSeconds": [30, 60]
+    },
+    {
+      "id": "any-questions",
+      "category": "hr",
+      "text": "Do you have any questions for us?",
+      "it": "Hai domande da farci?",
+      "tip": "Rispondi sempre di sì e fai una o due domande: mostrano interesse. Le trovi nella pagina «Domande da fare».",
+      "keywords": ["team", "projects", "tools", "training", "challenges", "next steps"],
+      "targetSeconds": [20, 60]
+    },
+    {
+      "id": "validate-peripheral",
+      "category": "technical",
+      "text": "How do you validate a new peripheral?",
+      "it": "Come validi una nuova periferica?",
+      "tip": "Racconta il processo in ordine: specifica, piano di test, banco, esecuzione con PVT e casi limite, automazione, report.",
+      "keywords": [
+        "specification",
+        "test plan",
+        "registers",
+        "corner cases",
+        "PVT",
+        "automation",
+        "coverage",
+        "report"
+      ],
+      "targetSeconds": [60, 150],
+      "sample": "First, I study the specification and the reference manual, and I write a test plan with all the features and the corner cases. Then I prepare the test bench: the board, the instruments and the scripts. I start with the basic tests, for example register access and simple transfers. Then I test the performance across PVT, so different samples, voltages and temperatures in the climatic chamber. I automate as much as possible with Python, so I can run the regression again on new silicon. At the end, I write a report with the results and I open issues for any bug."
+    },
+    {
+      "id": "power-low",
+      "category": "technical",
+      "text": "How do you measure power consumption in low-power modes?",
+      "it": "Come misuri il consumo nelle modalità a basso consumo?",
+      "tip": "Punti chiave: strumento giusto (SMU o amperometro di precisione), range di misura, media nel tempo, periferiche e pin configurati, temperatura.",
+      "keywords": [
+        "SMU",
+        "current",
+        "range",
+        "low-power mode",
+        "wake-up",
+        "average",
+        "leakage",
+        "temperature"
+      ],
+      "targetSeconds": [60, 150],
+      "sample": "I usually use an SMU or a precision ammeter in series with the supply of the chip. First I configure the device correctly: unused pins, peripherals and clocks, because they can change the current a lot. In low-power modes the current is very small, often a few microamps, so I choose the right range and I average the measurement over time. I also measure the wake-up time and the current peaks. Finally I repeat the measurement at different temperatures, because leakage current increases a lot at high temperature."
+    },
+    {
+      "id": "debug-approach",
+      "category": "technical",
+      "text": "How do you approach a bug that you cannot reproduce easily?",
+      "it": "Come affronti un bug difficile da riprodurre?",
+      "tip": "Metodo: raccogliere dati, aumentare la riproducibilità, isolare le variabili, fare ipotesi e verificarle una alla volta.",
+      "keywords": [
+        "reproduce",
+        "logs",
+        "isolate",
+        "hypothesis",
+        "trigger",
+        "oscilloscope",
+        "statistics",
+        "root cause"
+      ],
+      "targetSeconds": [60, 150]
+    },
+    {
+      "id": "probe",
+      "category": "technical",
+      "text": "How do you measure a fast signal with an oscilloscope?",
+      "it": "Come misuri un segnale veloce con l'oscilloscopio?",
+      "tip": "Parla di banda dell'oscilloscopio e della sonda, massa corta, sonde attive o differenziali, rise time.",
+      "keywords": [
+        "bandwidth",
+        "probe",
+        "short ground",
+        "active probe",
+        "differential probe",
+        "rise time",
+        "capacitance"
+      ],
+      "targetSeconds": [45, 120]
+    },
+    {
+      "id": "adc",
+      "category": "technical",
+      "text": "How would you characterize an ADC?",
+      "it": "Come caratterizzeresti un ADC?",
+      "tip": "Statiche (offset, gain, INL, DNL) e dinamiche (SNR, ENOB), con un riferimento stabile e su PVT.",
+      "keywords": ["offset", "gain", "INL", "DNL", "noise", "SNR", "reference", "temperature"],
+      "targetSeconds": [60, 150]
+    },
+    {
+      "id": "pvt",
+      "category": "technical",
+      "text": "What does PVT mean, and why is it important?",
+      "it": "Cosa significa PVT e perché è importante?",
+      "tip": "Process, Voltage, Temperature: il chip deve funzionare in tutti gli angoli, non solo a 25 gradi.",
+      "keywords": ["process", "voltage", "temperature", "corners", "margin", "samples"],
+      "targetSeconds": [30, 90]
+    },
+    {
+      "id": "interrupt-polling",
+      "category": "technical",
+      "text": "What is the difference between interrupts and polling?",
+      "it": "Che differenza c'è tra interrupt e polling?",
+      "tip": "Spiega entrambi e quando usarli: latenza, uso della CPU, consumo.",
+      "keywords": ["interrupt", "polling", "CPU", "latency", "power", "ISR"],
+      "targetSeconds": [30, 90]
+    },
+    {
+      "id": "i2c-spi",
+      "category": "technical",
+      "text": "Can you compare I2C and SPI?",
+      "it": "Puoi confrontare I2C e SPI?",
+      "tip": "Fili, clock, indirizzi, velocità, pull-up, full duplex.",
+      "keywords": ["wires", "clock", "address", "speed", "pull-up", "full duplex", "chip select"],
+      "targetSeconds": [30, 90]
+    },
+    {
+      "id": "automation",
+      "category": "technical",
+      "text": "How do you automate your tests?",
+      "it": "Come automatizzi i test?",
+      "tip": "Strumenti controllati da script (Python, SCPI), regressione, report automatici.",
+      "keywords": ["Python", "scripts", "instruments", "SCPI", "regression", "report", "time"],
+      "targetSeconds": [45, 120]
+    },
+    {
+      "id": "clock-boot",
+      "category": "technical",
+      "text": "The device does not boot after you change the clock configuration. What do you check?",
+      "it": "Il dispositivo non si avvia dopo aver cambiato la configurazione del clock. Cosa controlli?",
+      "tip": "Ragiona ad alta voce: PLL agganciato? Wait state della flash? Tensione del core? Il debugger si collega? Qual è la causa del reset?",
+      "keywords": [
+        "PLL",
+        "lock",
+        "flash",
+        "wait states",
+        "voltage",
+        "debugger",
+        "reset",
+        "registers"
+      ],
+      "targetSeconds": [45, 120]
+    },
+    {
+      "id": "silicon-bug",
+      "category": "technical",
+      "text": "You find a bug in the silicon. What do you do next?",
+      "it": "Trovi un bug nel silicio. Cosa fai dopo?",
+      "tip": "Riprodurre, ridurre a un test minimo, coinvolgere il design, documentare (errata), proporre un workaround.",
+      "keywords": [
+        "reproduce",
+        "test case",
+        "root cause",
+        "design team",
+        "errata",
+        "workaround",
+        "document"
+      ],
+      "targetSeconds": [45, 120]
+    },
+    {
+      "id": "watchdog",
+      "category": "technical",
+      "text": "What is a watchdog, and how do you test it?",
+      "it": "Cos'è un watchdog e come lo testi?",
+      "tip": "Definizione, poi test: timeout, refresh corretto e mancato, finestra, causa del reset.",
+      "keywords": ["timer", "reset", "refresh", "timeout", "window", "reset cause"],
+      "targetSeconds": [30, 90]
+    },
+    {
+      "id": "can-test",
+      "category": "technical",
+      "text": "How would you test a CAN interface?",
+      "it": "Come testeresti un'interfaccia CAN?",
+      "tip": "Bit rate, terminazione, transceiver, errori e bus load, analizzatore di protocollo.",
+      "keywords": [
+        "bit rate",
+        "termination",
+        "transceiver",
+        "errors",
+        "bus load",
+        "oscilloscope",
+        "analyzer"
+      ],
+      "targetSeconds": [45, 120]
+    },
+    {
+      "id": "ringing",
+      "category": "technical",
+      "text": "You see ringing on a signal. What do you check?",
+      "it": "Vedi del ringing su un segnale. Cosa controlli?",
+      "tip": "Prima la misura (massa della sonda!), poi terminazione, impedenza, lunghezza delle piste, slew rate.",
+      "keywords": [
+        "probe",
+        "ground",
+        "termination",
+        "impedance",
+        "trace",
+        "slew rate",
+        "overshoot"
+      ],
+      "targetSeconds": [30, 90]
+    },
+    {
+      "id": "difficult-bug",
+      "category": "behavioral",
+      "text": "Describe a difficult bug you solved.",
+      "it": "Descrivi un bug difficile che hai risolto.",
+      "tip": "Usa il metodo STAR: Situation (il contesto), Task (il tuo compito), Action (cosa hai fatto tu), Result (il risultato, meglio se con un numero). Scegli un bug tecnico che conosci bene.",
+      "keywords": ["situation", "root cause", "oscilloscope", "test", "team", "result", "learned"],
+      "targetSeconds": [60, 150],
+      "star": true,
+      "sample": "In my last project, some boards failed randomly during the temperature test, about one in a hundred cycles. My task was to find the root cause before the customer release. First I made the problem easier to reproduce: I changed the test to run continuously and I logged every reset. Then I used the oscilloscope with a trigger on the reset pin, and I saw a small drop on the supply voltage during the radio transmission. The root cause was a missing capacitor near the regulator. We added it, and the failure rate went to zero in one thousand cycles. I learned that a good trigger saves days of work."
+    },
+    {
+      "id": "conflict",
+      "category": "behavioral",
+      "text": "Tell me about a disagreement with a colleague. How did you handle it?",
+      "it": "Raccontami di un disaccordo con un collega. Come l'hai gestito?",
+      "tip": "Usa il metodo STAR: Situation (il contesto), Task (il tuo compito), Action (cosa hai fatto tu), Result (il risultato, meglio se con un numero). Mostra che ascolti e che cerchi una soluzione basata sui dati.",
+      "keywords": ["listened", "data", "solution", "agreed", "respect", "result"],
+      "targetSeconds": [60, 120],
+      "star": true
+    },
+    {
+      "id": "deadline",
+      "category": "behavioral",
+      "text": "Tell me about a time you worked under a tight deadline.",
+      "it": "Raccontami di una volta in cui hai lavorato con una scadenza stretta.",
+      "tip": "Usa il metodo STAR: Situation (il contesto), Task (il tuo compito), Action (cosa hai fatto tu), Result (il risultato, meglio se con un numero). Parla di priorità, comunicazione e risultato.",
+      "keywords": ["deadline", "priorities", "plan", "team", "communication", "on time"],
+      "targetSeconds": [60, 120],
+      "star": true
+    },
+    {
+      "id": "mistake",
+      "category": "behavioral",
+      "text": "Tell me about a mistake you made and what you learned.",
+      "it": "Raccontami di un errore che hai fatto e cosa hai imparato.",
+      "tip": "Usa il metodo STAR: Situation (il contesto), Task (il tuo compito), Action (cosa hai fatto tu), Result (il risultato, meglio se con un numero). Sii sincero, prenditi la responsabilità e chiudi con la lezione imparata.",
+      "keywords": ["mistake", "responsibility", "fixed", "learned", "now", "process"],
+      "targetSeconds": [45, 120],
+      "star": true
+    },
+    {
+      "id": "teamwork",
+      "category": "behavioral",
+      "text": "Give me an example of successful teamwork.",
+      "it": "Fammi un esempio di lavoro di squadra riuscito.",
+      "tip": "Usa il metodo STAR: Situation (il contesto), Task (il tuo compito), Action (cosa hai fatto tu), Result (il risultato, meglio se con un numero). Spiega il tuo ruolo preciso nel team.",
+      "keywords": ["team", "role", "together", "design team", "firmware team", "result"],
+      "targetSeconds": [45, 120],
+      "star": true
+    },
+    {
+      "id": "priorities",
+      "category": "behavioral",
+      "text": "How do you handle many tasks with different priorities?",
+      "it": "Come gestisci tanti compiti con priorità diverse?",
+      "tip": "Metodo concreto: lista, urgenza e impatto, comunicazione con il responsabile, esempio.",
+      "keywords": ["priorities", "list", "urgent", "impact", "manager", "communicate", "example"],
+      "targetSeconds": [45, 90]
+    },
+    {
+      "id": "learn-fast",
+      "category": "behavioral",
+      "text": "Tell me about a time you had to learn something new quickly.",
+      "it": "Raccontami di una volta in cui hai dovuto imparare qualcosa di nuovo in fretta.",
+      "tip": "Usa il metodo STAR: Situation (il contesto), Task (il tuo compito), Action (cosa hai fatto tu), Result (il risultato, meglio se con un numero). Uno strumento, un protocollo, un linguaggio: come l'hai imparato e cosa hai ottenuto.",
+      "keywords": ["learned", "documentation", "colleagues", "practice", "quickly", "result"],
+      "targetSeconds": [45, 120],
+      "star": true
+    },
+    {
+      "id": "improve-process",
+      "category": "behavioral",
+      "text": "Describe a time you improved a process or a tool.",
+      "it": "Descrivi una volta in cui hai migliorato un processo o uno strumento.",
+      "tip": "Usa il metodo STAR: Situation (il contesto), Task (il tuo compito), Action (cosa hai fatto tu), Result (il risultato, meglio se con un numero). Ideale parlare di automazione: quanto tempo hai fatto risparmiare?",
+      "keywords": ["automation", "script", "time", "saved", "team", "result"],
+      "targetSeconds": [45, 120],
+      "star": true
+    }
+  ],
+  "checklist": [
+    {
+      "id": "answered",
+      "label": "Ho risposto proprio alla domanda"
+    },
+    {
+      "id": "clear",
+      "label": "Ero chiaro e in ordine (inizio, sviluppo, fine)"
+    },
+    {
+      "id": "example",
+      "label": "Ho dato un esempio concreto"
+    },
+    {
+      "id": "calm",
+      "label": "Ho parlato con calma, senza correre"
+    }
+  ],
+  "tellMe": [
+    {
+      "id": "who",
+      "title": "Chi sei",
+      "help": "Una o due frasi: il tuo ruolo e gli anni di esperienza.",
+      "starters": [
+        "I'm a validation engineer with … years of experience.",
+        "I work on microcontrollers for …",
+        "I have a degree in electronic engineering."
+      ]
+    },
+    {
+      "id": "experience",
+      "title": "La tua esperienza",
+      "help": "Cosa fai nel lavoro di oggi: prodotti, strumenti, responsabilità.",
+      "starters": [
+        "In my current role at …, I validate …",
+        "I'm responsible for …",
+        "I work every day with oscilloscopes, SMUs and climatic chambers.",
+        "I automate the tests with Python."
+      ]
+    },
+    {
+      "id": "strengths",
+      "title": "I tuoi punti di forza",
+      "help": "Due punti di forza, meglio con un piccolo esempio.",
+      "starters": [
+        "My main strength is troubleshooting: …",
+        "I'm very careful with details.",
+        "I like to work with the design and firmware teams."
+      ]
+    },
+    {
+      "id": "why",
+      "title": "Perché questo ruolo",
+      "help": "Cosa cerchi e cosa puoi portare all'azienda.",
+      "starters": [
+        "I'm interested in this role because …",
+        "I'd like to work on new silicon and …",
+        "I think I can bring my experience in …"
+      ]
+    }
+  ],
+  "lifesavers": [
+    {
+      "en": "Could you repeat the question, please?",
+      "it": "Può ripetere la domanda, per favore?",
+      "when": "Non hai capito la domanda: chiedere è normalissimo."
+    },
+    {
+      "en": "Sorry, could you speak a bit more slowly?",
+      "it": "Scusi, può parlare un po' più lentamente?",
+      "when": "Il selezionatore parla troppo veloce."
+    },
+    {
+      "en": "Could you rephrase that, please?",
+      "it": "Può riformulare, per favore?",
+      "when": "Hai sentito le parole ma non hai capito il senso."
+    },
+    {
+      "en": "Let me think about that for a second.",
+      "it": "Mi lasci pensare un attimo.",
+      "when": "Ti serve tempo per organizzare la risposta."
+    },
+    {
+      "en": "That's a good question.",
+      "it": "Bella domanda.",
+      "when": "Per guadagnare qualche secondo con naturalezza."
+    },
+    {
+      "en": "I'm not sure I understood. Do you mean …?",
+      "it": "Non sono sicuro di aver capito. Intende …?",
+      "when": "Vuoi verificare di aver capito bene."
+    },
+    {
+      "en": "What I mean is …",
+      "it": "Quello che intendo è …",
+      "when": "Vuoi spiegarti meglio."
+    },
+    {
+      "en": "In other words …",
+      "it": "In altre parole …",
+      "when": "Riformuli una cosa detta in modo più semplice."
+    },
+    {
+      "en": "Let me give you an example.",
+      "it": "Le faccio un esempio.",
+      "when": "Un esempio concreto vale più di mille aggettivi."
+    },
+    {
+      "en": "Sorry, I don't know the exact word in English.",
+      "it": "Scusi, non conosco la parola esatta in inglese.",
+      "when": "Ti manca una parola: poi descrivila con parole semplici."
+    },
+    {
+      "en": "To be honest, I haven't worked with that directly, but …",
+      "it": "Sinceramente non ci ho lavorato direttamente, ma …",
+      "when": "Non conosci un argomento: sii onesto e collega a quello che sai."
+    },
+    {
+      "en": "Let me start again.",
+      "it": "Ricomincio.",
+      "when": "Ti sei perso: si può ricominciare la frase."
+    },
+    {
+      "en": "Does that answer your question?",
+      "it": "Questo risponde alla sua domanda?",
+      "when": "Per chiudere una risposta lunga."
+    },
+    {
+      "en": "I'd say that …",
+      "it": "Direi che …",
+      "when": "Per iniziare una risposta con calma."
+    }
+  ],
+  "questionsToAsk": [
+    {
+      "en": "What does a typical day look like in this role?",
+      "it": "Com'è una giornata tipo in questo ruolo?"
+    },
+    {
+      "en": "What products would I work on?",
+      "it": "Su quali prodotti lavorerei?"
+    },
+    {
+      "en": "What tools and instruments does the team use?",
+      "it": "Quali strumenti usa il team?"
+    },
+    {
+      "en": "How big is the validation team?",
+      "it": "Quanto è grande il team di validazione?"
+    },
+    {
+      "en": "How do the validation and design teams work together?",
+      "it": "Come collaborano il team di validazione e quello di progettazione?"
+    },
+    {
+      "en": "What are the main challenges for the team right now?",
+      "it": "Quali sono le sfide principali del team in questo momento?"
+    },
+    {
+      "en": "What training opportunities are there?",
+      "it": "Che opportunità di formazione ci sono?"
+    },
+    {
+      "en": "How do you measure success in this role?",
+      "it": "Come si misura il successo in questo ruolo?"
+    },
+    {
+      "en": "What are the next steps in the hiring process?",
+      "it": "Quali sono i prossimi passi della selezione?"
+    },
+    {
+      "en": "Is there some flexibility for remote work?",
+      "it": "C'è un po' di flessibilità per il lavoro da remoto?"
+    }
+  ]
+}

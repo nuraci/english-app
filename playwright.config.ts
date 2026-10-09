@@ -10,7 +10,19 @@ export default defineConfig({
     baseURL: 'http://localhost:4173',
     trace: 'on-first-retry',
   },
-  projects: [{ name: 'pixel7', use: { ...devices['Pixel 7'] } }],
+  projects: [
+    {
+      name: 'pixel7',
+      use: {
+        ...devices['Pixel 7'],
+        // Microfono finto di Chromium: serve ai test di registrazione audio.
+        permissions: ['microphone'],
+        launchOptions: {
+          args: ['--use-fake-device-for-media-stream', '--use-fake-ui-for-media-stream'],
+        },
+      },
+    },
+  ],
   // Test sulla build di produzione: è lì che vive il service worker.
   webServer: {
     command: 'npm run build && npm run preview -- --port 4173 --strictPort',
