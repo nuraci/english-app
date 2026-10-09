@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { Card, Screen } from '../../ui/Screen'
 import { useOnlineStatus } from '../../ui/useOnlineStatus'
 import { VoiceSettings } from '../../ui/VoiceSettings'
+import { GoalSettings } from '../../ui/GoalSettings'
 
 export function SettingsScreen() {
   const online = useOnlineStatus()
@@ -10,6 +11,10 @@ export function SettingsScreen() {
       <Card>
         <h2 className="mb-4 text-lg font-bold">Voce</h2>
         <VoiceSettings />
+      </Card>
+      <Card>
+        <h2 className="mb-4 text-lg font-bold">Obiettivi e promemoria</h2>
+        <GoalSettings />
       </Card>
       <Link
         to="/prova"

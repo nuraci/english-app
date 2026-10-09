@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { useSettings } from '../../core/db/settings'
+import { saveSession } from '../../core/session'
 import { isRecordingSupported, speakBatch, startRecording, type Recorder } from '../../core/speech'
 import { AudioPlayer } from '../../ui/AudioPlayer'
 import { BackLink } from '../../ui/BackLink'
@@ -24,14 +25,26 @@ export function PlayerScreen() {
   const [mine, setMine] = useState<Record<number, Blob>>({})
   const cancel = useRef<(() => void) | null>(null)
   const recorder = useRef<Recorder | null>(null)
+  /** Frasi ascoltate in questa visita: uscendo diventano una sessione (serie, XP, statistiche). */
+  const practiced = useRef(new Set<number>())
+  const startedAt = useRef(0)
 
-  useEffect(
-    () => () => {
+  useEffect(() => {
+    startedAt.current = Date.now()
+    const done = practiced.current
+    return () => {
       cancel.current?.()
       recorder.current?.cancel()
-    },
-    [],
-  )
+      if (done.size > 0) {
+        void saveSession({
+          module: 'shadowing',
+          startedAt: startedAt.current,
+          total: done.size,
+          correct: done.size,
+        })
+      }
+    }
+  }, [])
 
   if (source === undefined) return null
   if (!source || source.items.length === 0) {
@@ -47,6 +60,7 @@ export function PlayerScreen() {
 
   const play = async (times: number, rate = 1) => {
     cancel.current?.()
+    practiced.current.add(index)
     // Ogni ascolto è seguito da una pausa silenziosa lunga quanto la frase: il tempo per ripeterla.
     const segments = Array.from({ length: times }, () => [
       { text: item.text, rate },

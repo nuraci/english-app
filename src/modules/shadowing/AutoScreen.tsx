@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { useSettings } from '../../core/db/settings'
 import { createRng, shuffle } from '../../core/random'
+import { saveSession } from '../../core/session'
 import {
   keepScreenOn,
   speakBatch,
@@ -40,7 +41,19 @@ export function AutoScreen() {
   const background = useRef<BackgroundSession | null>(null)
   const wakeLock = useRef<WakeLockHandle | null>(null)
 
+  const startedAt = useRef(0)
+
   const stopAll = () => {
+    if (startedAt.current) {
+      const heard = currentRef.current + 1
+      void saveSession({
+        module: 'shadowing',
+        startedAt: startedAt.current,
+        total: heard,
+        correct: heard,
+      })
+      startedAt.current = 0
+    }
     cancelBatch.current?.()
     cancelBatch.current = null
     background.current?.stop()
@@ -98,6 +111,7 @@ export function AutoScreen() {
     const list = shuffled ? shuffle(source.items, createRng(Date.now())) : source.items
     listRef.current = list
     currentRef.current = 0
+    startedAt.current = Date.now()
     setItems(list)
     setCurrent(0)
     setRunning(true)

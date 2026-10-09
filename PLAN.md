@@ -154,12 +154,12 @@ Ogni fase ha: **Obiettivo**, **Task**, **Criteri di accettazione**.
 
 **Obiettivo:** rendere piacevole e costante l'abitudine.
 
-- [ ] Schermata **Oggi**: sessione da 30 minuti composta in automatico (10 lacune · 10 ascolto/shadowing · 10 parlato), con i punti deboli in priorità
-- [ ] Sessione lunga opzionale (film/serie + simulazione di colloquio)
-- [ ] Serie di giorni consecutivi, XP, obiettivo settimanale, badge (es. "Numeri senza errori", "Primo colloquio completo")
-- [ ] "Jolly" per saltare un giorno senza perdere la serie (niente sensi di colpa)
-- [ ] Pagina Progressi: grafici per modulo, parole difficili, confronto "come parlavi un mese fa" (registrazioni datate)
-- [ ] Promemoria giornaliero (notifica locale dove supportata)
+- [x] Schermata **Oggi**: sessione da 30 minuti composta in automatico (10 lacune · 10 ascolto/shadowing · 10 parlato), con i punti deboli in priorità
+- [x] Sessione lunga opzionale (film/serie + simulazione di colloquio)
+- [x] Serie di giorni consecutivi, XP, obiettivo settimanale, badge (es. "Numeri senza errori", "Primo colloquio completo")
+- [x] "Jolly" per saltare un giorno senza perdere la serie (niente sensi di colpa)
+- [x] Pagina Progressi: grafici per modulo, parole difficili, confronto "come parlavi un mese fa" (registrazioni datate)
+- [x] Promemoria giornaliero (notifica locale dove supportata)
 
 **Accettazione:** usando l'app per 7 giorni simulati, statistiche e serie sono corrette (test e2e con data finta).
 

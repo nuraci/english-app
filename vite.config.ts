@@ -43,6 +43,8 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2,json}'],
         navigateFallback: 'index.html',
+        // Promemoria giornaliero (Periodic Background Sync), dove supportato.
+        importScripts: ['reminder-sw.js'],
       },
     }),
   ],

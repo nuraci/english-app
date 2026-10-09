@@ -16,6 +16,11 @@ export type Settings = {
   numbersSpeed: 'normal' | 'ramp'
   /** Spelling: mostra l'alfabeto NATO come aiuto. */
   spellingNato: boolean
+  /** Obiettivo settimanale: giorni di allenamento (3–7). */
+  weeklyGoalDays: number
+  reminderEnabled: boolean
+  /** Ora del promemoria (0–23). */
+  reminderHour: number
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -25,6 +30,9 @@ export const DEFAULT_SETTINGS: Settings = {
   sttFallback: 'type',
   numbersSpeed: 'normal',
   spellingNato: false,
+  weeklyGoalDays: 5,
+  reminderEnabled: false,
+  reminderHour: 19,
 }
 
 export async function getSettings(database = db): Promise<Settings> {
