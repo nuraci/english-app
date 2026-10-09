@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TechTalk Coach: l'inglese parlato per i colloqui tecnici degli ingegneri. Verbi, numeri, spelling, vocabolario tecnico e simulazioni di colloquio, 30 minuti al giorno dal telefono." />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" href="favicon.ico" sizes="48x48" />
+    <link rel="icon" href="logo.svg" type="image/svg+xml" />
+    <title>TechTalk Coach</title>
+    <style>
+      :root {
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --ink: #0f172a;
+        --muted: #475569;
+        --line: #e2e8f0;
+        --accent: #0f766e;
+        --accent-ink: #ffffff;
+        --soft: #f0fdfa;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme='light']) {
+          --bg: #020617;
+          --card: #0f172a;
+          --ink: #f1f5f9;
+          --muted: #cbd5e1;
+          --line: #1e293b;
+          --accent: #14b8a6;
+          --accent-ink: #042f2e;
+          --soft: #042f2e;
+        }
+      }
+      :root[data-theme='dark'] {
+        --bg: #020617;
+        --card: #0f172a;
+        --ink: #f1f5f9;
+        --muted: #cbd5e1;
+        --line: #1e293b;
+        --accent: #14b8a6;
+        --accent-ink: #042f2e;
+        --soft: #042f2e;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font: 18px/1.55 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      }
+      main { max-width: 44rem; margin: 0 auto; padding: 2.5rem 1rem 4rem; }
+      h1 { font-size: 2.2rem; line-height: 1.15; margin: 1rem 0 0.75rem; }
+      h2 { font-size: 1.35rem; margin: 0 0 0.5rem; }
+      p { margin: 0 0 0.75rem; color: var(--muted); }
+      .logo { width: 64px; height: 64px; border-radius: 16px; }
+      .card { background: var(--card); border: 1px solid var(--line); border-radius: 1rem; padding: 1.25rem; margin: 1rem 0; }
+      .grid { display: grid; gap: 0.75rem; grid-template-columns: 1fr; }
+      @media (min-width: 40rem) { .grid { grid-template-columns: 1fr 1fr; } }
+      .feature { background: var(--soft); border-radius: 0.75rem; padding: 0.9rem 1rem; }
+      .feature strong { display: block; color: var(--ink); }
+      .feature span { color: var(--muted); font-size: 0.95rem; }
+      .cta { display: flex; align-items: center; justify-content: center; min-height: 3rem; padding: 0 1.25rem;
+        border-radius: 0.75rem; background: var(--accent); color: var(--accent-ink); font-weight: 700; text-decoration: none; border: 0; font-size: 1rem; width: 100%; cursor: pointer; }
+      label { display: block; font-weight: 600; margin: 0.75rem 0 0.25rem; }
+      input[type='email'], input[type='text'] { width: 100%; min-height: 3rem; padding: 0 0.9rem; border-radius: 0.75rem;
+        border: 1px solid var(--line); background: var(--bg); color: var(--ink); font-size: 1rem; }
+      .consent { display: flex; gap: 0.6rem; align-items: flex-start; font-weight: 400; color: var(--muted); font-size: 0.95rem; }
+      .consent input { width: 1.4rem; height: 1.4rem; margin-top: 0.15rem; accent-color: var(--accent); flex: none; }
+      .status { min-height: 1.5rem; margin-top: 0.75rem; }
+      footer { color: var(--muted); font-size: 0.9rem; margin-top: 2rem; }
+      a { color: var(--accent); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img class="logo" src="logo.svg" alt="" />
+      <h1>L’inglese per i colloqui tecnici degli ingegneri.</h1>
+      <p>
+        Non un altro corso generico: TechTalk Coach allena l’inglese <strong>parlato e ascoltato</strong> che serve
+        davvero a un ingegnere, con il tuo vocabolario di laboratorio, firmware e debug. Trenta minuti al giorno,
+        dal telefono, anche offline.
+      </p>
+      <a class="cta" href="./">Prova l’app</a>
+
+      <section class="card">
+        <h2>Cosa alleni</h2>
+        <div class="grid">
+          <div class="feature"><strong>🔁 Verbi irregolari</strong><span>«The board ran for 48 hours»: un gruppo alla volta, con il ripasso distanziato.</span></div>
+          <div class="feature"><strong>🔢 Numeri e misure</strong><span>13 o 30? 47 kΩ, 0x4000, ±5%: al primo ascolto.</span></div>
+          <div class="feature"><strong>🔤 Spelling</strong><span>Part number, sigle ed email dettati lettera per lettera.</span></div>
+          <div class="feature"><strong>🧰 Vocabolario tecnico</strong><span>Oscilloscope, jitter, root cause analysis, pronunciati bene.</span></div>
+          <div class="feature"><strong>🎤 Simulazione di colloquio</strong><span>Domande vere, risposte a voce, trascrizione e autovalutazione.</span></div>
+          <div class="feature"><strong>🤖 Tutor AI</strong><span>Un selezionatore che ti fa domande e ti corregge con gentilezza.</span></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Per chi è</h2>
+        <p>
+          Ingegneri e tecnici con un inglese scritto buono ma un parlato «arrugginito», che si preparano a un
+          colloquio o lavorano in team internazionali. Pacchetti di settore: semiconduttori e microcontrollori,
+          embedded e IoT; altri in arrivo.
+        </p>
+      </section>
+
+      <section class="card" id="waitlist">
+        <h2>Lista d’attesa per la beta</h2>
+        <p>Stiamo cercando 10–20 ingegneri per provare l’app e dirci cosa migliorare.</p>
+        <form id="waitlist-form" data-endpoint="" hidden>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+          <label for="role">Ruolo (facoltativo)</label>
+          <input id="role" name="role" type="text" placeholder="Es. validation engineer" />
+          <label class="consent">
+            <input id="consent" name="consent" type="checkbox" required />
+            Acconsento a essere contattato via email per la beta di TechTalk Coach. Conserviamo solo email, ruolo e
+            data; puoi chiedere la cancellazione rispondendo a una nostra email.
+          </label>
+          <button class="cta" type="submit" style="margin-top: 1rem">Iscrivimi</button>
+          <p class="status" id="waitlist-status" role="status"></p>
+        </form>
+        <p id="waitlist-soon">Le iscrizioni apriranno a breve. Intanto puoi già provare l’app.</p>
+      </section>
+
+      <footer>
+        Ideata e sviluppata da Nunzio Raciti con Claude (Anthropic). Nessun tracciamento: questa pagina non usa
+        cookie né statistiche.
+      </footer>
+    </main>
+    <script>
+      const form = document.getElementById('waitlist-form')
+      const endpoint = form.dataset.endpoint
+      if (endpoint) {
+        form.hidden = false
+        document.getElementById('waitlist-soon').hidden = true
+        form.addEventListener('submit', async (event) => {
+          event.preventDefault()
+          const status = document.getElementById('waitlist-status')
+          const data = new FormData(form)
+          status.textContent = 'Invio…'
+          try {
+            const res = await fetch(endpoint.replace(/\/+$/, '') + '/api/waitlist', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email: data.get('email'), role: data.get('role') || '', consent: data.get('consent') === 'on' }),
+            })
+            status.textContent = res.ok
+              ? 'Grazie! Ti scriveremo appena la beta sarà pronta. 🙌'
+              : res.status === 429
+                ? 'Troppe iscrizioni da questa rete oggi: riprova domani.'
+                : 'Controlla l’email e il consenso, poi riprova.'
+            if (res.ok) form.reset()
+          } catch {
+            status.textContent = 'Connessione assente: riprova tra poco.'
+          }
+        })
+      }
+    </script>
+  </body>
+</html>

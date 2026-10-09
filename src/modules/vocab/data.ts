@@ -1,5 +1,7 @@
 import firmware from '../../content/vocab/firmware.json'
 import instruments from '../../content/vocab/instruments.json'
+import iot from '../../content/vocab/iot.json'
+import wireless from '../../content/vocab/wireless.json'
 import measurements from '../../content/vocab/measurements.json'
 import softskills from '../../content/vocab/softskills.json'
 import traps from '../../content/vocab/traps.json'
@@ -21,12 +23,26 @@ export type Term = {
   trap?: boolean
 }
 
-export type Deck = { id: string; name: string; description: string; order: number; terms: Term[] }
+export type Deck = {
+  id: string
+  name: string
+  description: string
+  order: number
+  /** Pacchetto di contenuti a cui appartiene il mazzo. */
+  pack: string
+  terms: Term[]
+}
 export type TrapWord = { id: string; en: string; it: string; note: string; example: string }
 
-export const decks: Deck[] = [instruments, measurements, firmware, validation, softskills].sort(
-  (a, b) => a.order - b.order,
-)
+export const decks: Deck[] = [
+  instruments,
+  measurements,
+  firmware,
+  validation,
+  softskills,
+  wireless,
+  iot,
+].sort((a, b) => a.order - b.order)
 export const trapList: { name: string; description: string; words: TrapWord[] } = traps
 
 export const termItemId = (deck: Pick<Deck, 'id'>, term: Pick<Term, 'id'>) =>
@@ -35,4 +51,9 @@ export const trapItemId = (word: Pick<TrapWord, 'id'>) => `${MODULE}:trap:${word
 
 export function speechOf(term: Pick<Term, 'en' | 'say'>): string {
   return term.say ?? term.en
+}
+
+/** I mazzi dei pacchetti attivi. */
+export function decksFor(packs: readonly string[]): Deck[] {
+  return decks.filter((d) => packs.includes(d.pack))
 }

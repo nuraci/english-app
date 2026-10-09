@@ -10,6 +10,7 @@ import {
   sessionScore,
   type Evaluation,
   type Exercise,
+  type SessionState,
 } from '../../core/session'
 import { Button } from '../Button'
 import { ExerciseCard } from '../exercise/ExerciseCard'
@@ -22,6 +23,8 @@ type Props = {
   onDone: () => void
   /** Contenuto extra nel riepilogo finale. */
   summary?: ReactNode
+  /** Chiamata una volta, a sessione finita, con tutti i risultati. */
+  onFinish?: (results: SessionState['results']) => void
 }
 
 function closingMessage(correct: number, total: number): string {
@@ -35,7 +38,7 @@ function closingMessage(correct: number, total: number): string {
  * Esegue una sessione di esercizi: risposta → feedback → avanti.
  * Ogni risposta aggiorna subito l'SRS; gli errori tornano una volta in fondo alla sessione.
  */
-export function SessionRunner({ module, exercises, onDone, summary }: Props) {
+export function SessionRunner({ module, exercises, onDone, summary, onFinish }: Props) {
   const [state, dispatch] = useReducer(sessionReducer, exercises, (ex) => createSession(ex))
   const saved = useRef(false)
   const exercise = currentExercise(state)
@@ -45,7 +48,8 @@ export function SessionRunner({ module, exercises, onDone, summary }: Props) {
     if (!finished || saved.current || state.results.length === 0) return
     saved.current = true
     void saveSession({ module, startedAt: state.startedAt, ...sessionScore(state) })
-  }, [finished, module, state])
+    onFinish?.(state.results)
+  }, [finished, module, state, onFinish])
 
   const answer = (evaluation: Evaluation) => {
     if (!exercise) return

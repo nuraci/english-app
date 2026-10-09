@@ -22,7 +22,8 @@
         "team"
       ],
       "targetSeconds": [60, 120],
-      "sample": "I'm a validation engineer with several years of experience in microcontrollers. In my current job I validate new chips in the lab: I write test plans, I prepare the test benches and I measure the performance of the peripherals, for example ADCs, timers and communication interfaces. I work every day with oscilloscopes, SMUs and climatic chambers, and I automate the tests with Python. My main strength is troubleshooting: I like to find the root cause of a problem. I'm interested in this role because I want to work on new silicon in a bigger team."
+      "sample": "I'm a validation engineer with several years of experience in microcontrollers. In my current job I validate new chips in the lab: I write test plans, I prepare the test benches and I measure the performance of the peripherals, for example ADCs, timers and communication interfaces. I work every day with oscilloscopes, SMUs and climatic chambers, and I automate the tests with Python. My main strength is troubleshooting: I like to find the root cause of a problem. I'm interested in this role because I want to work on new silicon in a bigger team.",
+      "pack": "semiconductors"
     },
     {
       "id": "why-company",
@@ -41,7 +42,8 @@
         "Catania"
       ],
       "targetSeconds": [45, 90],
-      "sample": "NXP is a leader in microcontrollers and automotive chips, and these are exactly the products I know best. I like the idea of working on devices that go into cars and industrial systems, where quality and reliability are very important. I also know that the Catania site has a strong validation team, and I think I can learn a lot and grow there. At the same time, I can bring my experience in the lab and in test automation."
+      "sample": "NXP is a leader in microcontrollers and automotive chips, and these are exactly the products I know best. I like the idea of working on devices that go into cars and industrial systems, where quality and reliability are very important. I also know that the Catania site has a strong validation team, and I think I can learn a lot and grow there. At the same time, I can bring my experience in the lab and in test automation.",
+      "pack": "semiconductors"
     },
     {
       "id": "why-role",
@@ -50,7 +52,8 @@
       "it": "Perché ti interessa questo ruolo?",
       "tip": "Collega il ruolo a quello che sai fare e a quello che vuoi imparare.",
       "keywords": ["validation", "silicon", "challenge", "learn", "experience", "lab"],
-      "targetSeconds": [45, 90]
+      "targetSeconds": [45, 90],
+      "pack": "semiconductors"
     },
     {
       "id": "strengths",
@@ -66,7 +69,8 @@
         "example",
         "team"
       ],
-      "targetSeconds": [45, 90]
+      "targetSeconds": [45, 90],
+      "pack": "semiconductors"
     },
     {
       "id": "weakness",
@@ -76,7 +80,8 @@
       "tip": "Sii onesto e mostra come stai migliorando. L'inglese parlato è un'ottima risposta: stai usando proprio questa app!",
       "keywords": ["improve", "working on", "learning", "English", "practice", "example"],
       "targetSeconds": [30, 75],
-      "sample": "To be honest, my spoken English is not as good as my technical English. I read datasheets and write reports in English every day, but speaking is harder for me. So I'm working on it: I practise every day with an app, I listen to technical podcasts and I try to speak English in meetings. It's getting better step by step."
+      "sample": "To be honest, my spoken English is not as good as my technical English. I read datasheets and write reports in English every day, but speaking is harder for me. So I'm working on it: I practise every day with an app, I listen to technical podcasts and I try to speak English in meetings. It's getting better step by step.",
+      "pack": "semiconductors"
     },
     {
       "id": "five-years",
@@ -85,7 +90,8 @@
       "it": "Dove ti vedi tra cinque anni?",
       "tip": "Mostra ambizione ma restando nel ruolo: più esperienza, più responsabilità, magari guidare un piccolo team.",
       "keywords": ["experience", "responsibility", "expert", "lead", "team", "grow"],
-      "targetSeconds": [30, 75]
+      "targetSeconds": [30, 75],
+      "pack": "semiconductors"
     },
     {
       "id": "leave-job",
@@ -94,7 +100,8 @@
       "it": "Perché vuoi lasciare il lavoro attuale?",
       "tip": "Sempre in positivo: parla di cosa cerchi, non di cosa non ti piace.",
       "keywords": ["new challenge", "grow", "learn", "bigger", "opportunity", "products"],
-      "targetSeconds": [30, 60]
+      "targetSeconds": [30, 60],
+      "pack": "semiconductors"
     },
     {
       "id": "any-questions",
@@ -103,7 +110,8 @@
       "it": "Hai domande da farci?",
       "tip": "Rispondi sempre di sì e fai una o due domande: mostrano interesse. Le trovi nella pagina «Domande da fare».",
       "keywords": ["team", "projects", "tools", "training", "challenges", "next steps"],
-      "targetSeconds": [20, 60]
+      "targetSeconds": [20, 60],
+      "pack": "semiconductors"
     },
     {
       "id": "validate-peripheral",
@@ -122,7 +130,8 @@
         "report"
       ],
       "targetSeconds": [60, 150],
-      "sample": "First, I study the specification and the reference manual, and I write a test plan with all the features and the corner cases. Then I prepare the test bench: the board, the instruments and the scripts. I start with the basic tests, for example register access and simple transfers. Then I test the performance across PVT, so different samples, voltages and temperatures in the climatic chamber. I automate as much as possible with Python, so I can run the regression again on new silicon. At the end, I write a report with the results and I open issues for any bug."
+      "sample": "First, I study the specification and the reference manual, and I write a test plan with all the features and the corner cases. Then I prepare the test bench: the board, the instruments and the scripts. I start with the basic tests, for example register access and simple transfers. Then I test the performance across PVT, so different samples, voltages and temperatures in the climatic chamber. I automate as much as possible with Python, so I can run the regression again on new silicon. At the end, I write a report with the results and I open issues for any bug.",
+      "pack": "semiconductors"
     },
     {
       "id": "power-low",
@@ -141,7 +150,8 @@
         "temperature"
       ],
       "targetSeconds": [60, 150],
-      "sample": "I usually use an SMU or a precision ammeter in series with the supply of the chip. First I configure the device correctly: unused pins, peripherals and clocks, because they can change the current a lot. In low-power modes the current is very small, often a few microamps, so I choose the right range and I average the measurement over time. I also measure the wake-up time and the current peaks. Finally I repeat the measurement at different temperatures, because leakage current increases a lot at high temperature."
+      "sample": "I usually use an SMU or a precision ammeter in series with the supply of the chip. First I configure the device correctly: unused pins, peripherals and clocks, because they can change the current a lot. In low-power modes the current is very small, often a few microamps, so I choose the right range and I average the measurement over time. I also measure the wake-up time and the current peaks. Finally I repeat the measurement at different temperatures, because leakage current increases a lot at high temperature.",
+      "pack": "semiconductors"
     },
     {
       "id": "debug-approach",
@@ -159,7 +169,8 @@
         "statistics",
         "root cause"
       ],
-      "targetSeconds": [60, 150]
+      "targetSeconds": [60, 150],
+      "pack": "semiconductors"
     },
     {
       "id": "probe",
@@ -176,7 +187,8 @@
         "rise time",
         "capacitance"
       ],
-      "targetSeconds": [45, 120]
+      "targetSeconds": [45, 120],
+      "pack": "semiconductors"
     },
     {
       "id": "adc",
@@ -185,7 +197,8 @@
       "it": "Come caratterizzeresti un ADC?",
       "tip": "Statiche (offset, gain, INL, DNL) e dinamiche (SNR, ENOB), con un riferimento stabile e su PVT.",
       "keywords": ["offset", "gain", "INL", "DNL", "noise", "SNR", "reference", "temperature"],
-      "targetSeconds": [60, 150]
+      "targetSeconds": [60, 150],
+      "pack": "semiconductors"
     },
     {
       "id": "pvt",
@@ -194,7 +207,8 @@
       "it": "Cosa significa PVT e perché è importante?",
       "tip": "Process, Voltage, Temperature: il chip deve funzionare in tutti gli angoli, non solo a 25 gradi.",
       "keywords": ["process", "voltage", "temperature", "corners", "margin", "samples"],
-      "targetSeconds": [30, 90]
+      "targetSeconds": [30, 90],
+      "pack": "semiconductors"
     },
     {
       "id": "interrupt-polling",
@@ -203,7 +217,8 @@
       "it": "Che differenza c'è tra interrupt e polling?",
       "tip": "Spiega entrambi e quando usarli: latenza, uso della CPU, consumo.",
       "keywords": ["interrupt", "polling", "CPU", "latency", "power", "ISR"],
-      "targetSeconds": [30, 90]
+      "targetSeconds": [30, 90],
+      "pack": "semiconductors"
     },
     {
       "id": "i2c-spi",
@@ -212,7 +227,8 @@
       "it": "Puoi confrontare I2C e SPI?",
       "tip": "Fili, clock, indirizzi, velocità, pull-up, full duplex.",
       "keywords": ["wires", "clock", "address", "speed", "pull-up", "full duplex", "chip select"],
-      "targetSeconds": [30, 90]
+      "targetSeconds": [30, 90],
+      "pack": "semiconductors"
     },
     {
       "id": "automation",
@@ -221,7 +237,8 @@
       "it": "Come automatizzi i test?",
       "tip": "Strumenti controllati da script (Python, SCPI), regressione, report automatici.",
       "keywords": ["Python", "scripts", "instruments", "SCPI", "regression", "report", "time"],
-      "targetSeconds": [45, 120]
+      "targetSeconds": [45, 120],
+      "pack": "semiconductors"
     },
     {
       "id": "clock-boot",
@@ -239,7 +256,8 @@
         "reset",
         "registers"
       ],
-      "targetSeconds": [45, 120]
+      "targetSeconds": [45, 120],
+      "pack": "semiconductors"
     },
     {
       "id": "silicon-bug",
@@ -256,7 +274,8 @@
         "workaround",
         "document"
       ],
-      "targetSeconds": [45, 120]
+      "targetSeconds": [45, 120],
+      "pack": "semiconductors"
     },
     {
       "id": "watchdog",
@@ -265,7 +284,8 @@
       "it": "Cos'è un watchdog e come lo testi?",
       "tip": "Definizione, poi test: timeout, refresh corretto e mancato, finestra, causa del reset.",
       "keywords": ["timer", "reset", "refresh", "timeout", "window", "reset cause"],
-      "targetSeconds": [30, 90]
+      "targetSeconds": [30, 90],
+      "pack": "semiconductors"
     },
     {
       "id": "can-test",
@@ -282,7 +302,8 @@
         "oscilloscope",
         "analyzer"
       ],
-      "targetSeconds": [45, 120]
+      "targetSeconds": [45, 120],
+      "pack": "semiconductors"
     },
     {
       "id": "ringing",
@@ -299,7 +320,8 @@
         "slew rate",
         "overshoot"
       ],
-      "targetSeconds": [30, 90]
+      "targetSeconds": [30, 90],
+      "pack": "semiconductors"
     },
     {
       "id": "difficult-bug",
@@ -310,7 +332,8 @@
       "keywords": ["situation", "root cause", "oscilloscope", "test", "team", "result", "learned"],
       "targetSeconds": [60, 150],
       "star": true,
-      "sample": "In my last project, some boards failed randomly during the temperature test, about one in a hundred cycles. My task was to find the root cause before the customer release. First I made the problem easier to reproduce: I changed the test to run continuously and I logged every reset. Then I used the oscilloscope with a trigger on the reset pin, and I saw a small drop on the supply voltage during the radio transmission. The root cause was a missing capacitor near the regulator. We added it, and the failure rate went to zero in one thousand cycles. I learned that a good trigger saves days of work."
+      "sample": "In my last project, some boards failed randomly during the temperature test, about one in a hundred cycles. My task was to find the root cause before the customer release. First I made the problem easier to reproduce: I changed the test to run continuously and I logged every reset. Then I used the oscilloscope with a trigger on the reset pin, and I saw a small drop on the supply voltage during the radio transmission. The root cause was a missing capacitor near the regulator. We added it, and the failure rate went to zero in one thousand cycles. I learned that a good trigger saves days of work.",
+      "pack": "semiconductors"
     },
     {
       "id": "conflict",
@@ -320,7 +343,8 @@
       "tip": "Usa il metodo STAR: Situation (il contesto), Task (il tuo compito), Action (cosa hai fatto tu), Result (il risultato, meglio se con un numero). Mostra che ascolti e che cerchi una soluzione basata sui dati.",
       "keywords": ["listened", "data", "solution", "agreed", "respect", "result"],
       "targetSeconds": [60, 120],
-      "star": true
+      "star": true,
+      "pack": "semiconductors"
     },
     {
       "id": "deadline",
@@ -330,7 +354,8 @@
       "tip": "Usa il metodo STAR: Situation (il contesto), Task (il tuo compito), Action (cosa hai fatto tu), Result (il risultato, meglio se con un numero). Parla di priorità, comunicazione e risultato.",
       "keywords": ["deadline", "priorities", "plan", "team", "communication", "on time"],
       "targetSeconds": [60, 120],
-      "star": true
+      "star": true,
+      "pack": "semiconductors"
     },
     {
       "id": "mistake",
@@ -340,7 +365,8 @@
       "tip": "Usa il metodo STAR: Situation (il contesto), Task (il tuo compito), Action (cosa hai fatto tu), Result (il risultato, meglio se con un numero). Sii sincero, prenditi la responsabilità e chiudi con la lezione imparata.",
       "keywords": ["mistake", "responsibility", "fixed", "learned", "now", "process"],
       "targetSeconds": [45, 120],
-      "star": true
+      "star": true,
+      "pack": "semiconductors"
     },
     {
       "id": "teamwork",
@@ -350,7 +376,8 @@
       "tip": "Usa il metodo STAR: Situation (il contesto), Task (il tuo compito), Action (cosa hai fatto tu), Result (il risultato, meglio se con un numero). Spiega il tuo ruolo preciso nel team.",
       "keywords": ["team", "role", "together", "design team", "firmware team", "result"],
       "targetSeconds": [45, 120],
-      "star": true
+      "star": true,
+      "pack": "semiconductors"
     },
     {
       "id": "priorities",
@@ -359,7 +386,8 @@
       "it": "Come gestisci tanti compiti con priorità diverse?",
       "tip": "Metodo concreto: lista, urgenza e impatto, comunicazione con il responsabile, esempio.",
       "keywords": ["priorities", "list", "urgent", "impact", "manager", "communicate", "example"],
-      "targetSeconds": [45, 90]
+      "targetSeconds": [45, 90],
+      "pack": "semiconductors"
     },
     {
       "id": "learn-fast",
@@ -369,7 +397,8 @@
       "tip": "Usa il metodo STAR: Situation (il contesto), Task (il tuo compito), Action (cosa hai fatto tu), Result (il risultato, meglio se con un numero). Uno strumento, un protocollo, un linguaggio: come l'hai imparato e cosa hai ottenuto.",
       "keywords": ["learned", "documentation", "colleagues", "practice", "quickly", "result"],
       "targetSeconds": [45, 120],
-      "star": true
+      "star": true,
+      "pack": "semiconductors"
     },
     {
       "id": "improve-process",
@@ -379,7 +408,109 @@
       "tip": "Usa il metodo STAR: Situation (il contesto), Task (il tuo compito), Action (cosa hai fatto tu), Result (il risultato, meglio se con un numero). Ideale parlare di automazione: quanto tempo hai fatto risparmiare?",
       "keywords": ["automation", "script", "time", "saved", "team", "result"],
       "targetSeconds": [45, 120],
-      "star": true
+      "star": true,
+      "pack": "semiconductors"
+    },
+    {
+      "id": "iot-low-power",
+      "category": "technical",
+      "text": "How would you reduce the power consumption of a battery-powered IoT sensor?",
+      "it": "Come ridurresti il consumo di un sensore IoT a batteria?",
+      "tip": "Parla di sleep profondo, duty cycling, frequenza della radio, misura della corrente media e bilancio energetico.",
+      "keywords": [
+        "deep sleep",
+        "duty cycling",
+        "radio",
+        "average current",
+        "power budget",
+        "battery life"
+      ],
+      "targetSeconds": [60, 150],
+      "pack": "embedded-iot"
+    },
+    {
+      "id": "iot-ble-disconnect",
+      "category": "technical",
+      "text": "Users report random BLE disconnections. How do you investigate?",
+      "it": "Gli utenti segnalano disconnessioni BLE casuali. Come indaghi?",
+      "tip": "Riprodurre, sniffer BLE, RSSI e interferenze, parametri di connessione, log del firmware.",
+      "keywords": ["reproduce", "sniffer", "RSSI", "interference", "connection interval", "logs"],
+      "targetSeconds": [60, 150],
+      "pack": "embedded-iot"
+    },
+    {
+      "id": "iot-ota",
+      "category": "technical",
+      "text": "How do you make a firmware over-the-air update safe?",
+      "it": "Come rendi sicuro un aggiornamento del firmware via radio?",
+      "tip": "Immagine firmata, secure boot, due banchi di memoria, rollback, batteria scarica durante l'aggiornamento.",
+      "keywords": ["signed image", "secure boot", "rollback", "dual bank", "battery", "test"],
+      "targetSeconds": [60, 150],
+      "pack": "embedded-iot"
+    },
+    {
+      "id": "iot-range",
+      "category": "technical",
+      "text": "How would you validate the radio range of a new product?",
+      "it": "Come valideresti la portata radio di un nuovo prodotto?",
+      "tip": "Link budget, sensibilità, potenza di trasmissione, test in campo aperto e indoor, antenna e contenitore.",
+      "keywords": [
+        "link budget",
+        "sensitivity",
+        "transmit power",
+        "antenna",
+        "enclosure",
+        "field test"
+      ],
+      "targetSeconds": [45, 120],
+      "pack": "embedded-iot"
+    },
+    {
+      "id": "iot-security",
+      "category": "technical",
+      "text": "What do you check when you validate the security of an IoT device?",
+      "it": "Cosa controlli quando validi la sicurezza di un dispositivo IoT?",
+      "tip": "Secure boot, chiavi e root of trust, TLS, porte di debug chiuse, aggiornamenti firmati.",
+      "keywords": ["secure boot", "keys", "root of trust", "TLS", "debug port", "certificate"],
+      "targetSeconds": [45, 120],
+      "pack": "embedded-iot"
+    },
+    {
+      "id": "iot-field-failure",
+      "category": "technical",
+      "text": "A device fails in the field but works in your lab. What do you do?",
+      "it": "Un dispositivo si guasta sul campo ma in laboratorio funziona. Cosa fai?",
+      "tip": "Raccogliere log e telemetria, capire le condizioni (temperatura, alimentazione, radio), riprodurre, debug da remoto.",
+      "keywords": [
+        "logs",
+        "telemetry",
+        "conditions",
+        "reproduce",
+        "remote debugging",
+        "root cause"
+      ],
+      "targetSeconds": [60, 150],
+      "pack": "embedded-iot"
+    },
+    {
+      "id": "iot-sensor-calibration",
+      "category": "technical",
+      "text": "How do you calibrate and validate a sensor in production?",
+      "it": "Come calibri e validi un sensore in produzione?",
+      "tip": "Riferimento noto, punti di calibrazione, temperatura, tolleranza, test a fine linea, dati salvati.",
+      "keywords": ["reference", "calibration", "temperature", "tolerance", "end of line", "data"],
+      "targetSeconds": [45, 120],
+      "pack": "embedded-iot"
+    },
+    {
+      "id": "iot-mqtt",
+      "category": "technical",
+      "text": "Can you explain how MQTT works and why it is used in IoT?",
+      "it": "Puoi spiegare come funziona MQTT e perché si usa nell'IoT?",
+      "tip": "Publish/subscribe, broker, topic, QoS, leggerezza, connessioni instabili.",
+      "keywords": ["publish", "subscribe", "broker", "topic", "QoS", "lightweight"],
+      "targetSeconds": [30, 90],
+      "pack": "embedded-iot"
     }
   ],
   "checklist": [

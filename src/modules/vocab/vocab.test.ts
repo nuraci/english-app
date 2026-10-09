@@ -5,7 +5,7 @@ import { normalize } from '../../core/normalize'
 import { createRng } from '../../core/random'
 import { evaluate, itemIdOf } from '../../core/session'
 import { scheduleReview } from '../../core/srs'
-import { decks, speechOf, termItemId, trapList, type Deck } from './data'
+import { decks, decksFor, speechOf, termItemId, trapList, type Deck } from './data'
 import {
   canTranslate,
   definitionExercise,
@@ -21,14 +21,15 @@ const term = (d: Deck, en: string) => d.terms.find((t) => t.en === en) as Deck['
 
 describe('contenuti (accettazione: almeno 150 termini in 5 mazzi)', () => {
   it('5 mazzi, almeno 150 termini completi', () => {
-    expect(decks.map((d) => d.id)).toEqual([
+    const base = decks.filter((d) => d.pack === 'semiconductors')
+    expect(base.map((d) => d.id)).toEqual([
       'instruments',
       'measurements',
       'firmware',
       'validation',
       'softskills',
     ])
-    const all = decks.flatMap((d) => d.terms)
+    const all = base.flatMap((d) => d.terms)
     expect(all.length).toBeGreaterThanOrEqual(150)
     for (const t of all) {
       expect(t.en && t.it && t.definition && t.example, t.en).toBeTruthy()
@@ -41,6 +42,13 @@ describe('contenuti (accettazione: almeno 150 termini in 5 mazzi)', () => {
       expect(new Set(d.terms.map((t) => normalize(t.en))).size, d.id).toBe(d.terms.length)
       expect(new Set(d.terms.map((t) => normalize(t.it))).size, d.id).toBe(d.terms.length)
     }
+  })
+
+  it('pacchetto Embedded e IoT: due mazzi completi', () => {
+    const iot = decksFor(['embedded-iot'])
+    expect(iot.map((d) => d.id)).toEqual(['wireless', 'iot'])
+    expect(iot.flatMap((d) => d.terms).length).toBeGreaterThanOrEqual(60)
+    expect(decksFor(['semiconductors']).every((d) => d.pack === 'semiconductors')).toBe(true)
   })
 
   it('le trappole di pronuncia del piano ci sono tutte', () => {

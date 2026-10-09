@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { getSettings } from '../../core/db/settings'
+import { usablePacks } from '../../core/plan'
 import { createRng } from '../../core/random'
 import { BackLink } from '../../ui/BackLink'
 import { Card, Screen } from '../../ui/Screen'
@@ -26,11 +28,19 @@ export function InterviewSessionScreen() {
 
   useEffect(() => {
     let alive = true
-    void Promise.all([practiceCounts(), getMyAnswers()]).then(([counts, mine]) => {
-      if (!alive) return
-      setAnswers(mine)
-      setPlan(buildInterviewPlan(counts, createRng(Date.now())))
-    })
+    void Promise.all([practiceCounts(), getMyAnswers(), getSettings()]).then(
+      ([counts, mine, settings]) => {
+        if (!alive) return
+        setAnswers(mine)
+        setPlan(
+          buildInterviewPlan(
+            counts,
+            createRng(Date.now()),
+            usablePacks(settings.activePacks, settings.plan),
+          ),
+        )
+      },
+    )
     return () => {
       alive = false
     }

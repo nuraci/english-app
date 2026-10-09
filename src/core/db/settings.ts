@@ -27,6 +27,14 @@ export type Settings = {
   tutorCode: string
   /** Identificativo anonimo del dispositivo, per i limiti di utilizzo. */
   deviceId: string
+  /** Piano (freemium predisposto): durante la beta è tutto incluso. */
+  plan: 'free' | 'beta' | 'premium'
+  /** Pacchetti di contenuti attivi, oltre al base. */
+  activePacks: string[]
+  /** Onboarding con test di livello completato. */
+  onboardingDone: boolean
+  /** Lingua dell'interfaccia. */
+  uiLanguage: string
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -42,6 +50,10 @@ export const DEFAULT_SETTINGS: Settings = {
   tutorUrl: '',
   tutorCode: '',
   deviceId: '',
+  plan: 'beta',
+  activePacks: ['semiconductors'],
+  onboardingDone: false,
+  uiLanguage: 'it',
 }
 
 export async function getSettings(database = db): Promise<Settings> {

@@ -1,0 +1,246 @@
+{
+  "id": "iot",
+  "name": "Sistemi IoT",
+  "description": "Basso consumo, sicurezza, aggiornamenti e cloud dei dispositivi connessi.",
+  "pack": "embedded-iot",
+  "terms": [
+    {
+      "id": "sleep-current",
+      "en": "sleep current",
+      "it": "corrente in sleep",
+      "definition": "The current a device uses while it sleeps.",
+      "example": "The sleep current is two microamps with the RTC running."
+    },
+    {
+      "id": "deep-sleep",
+      "en": "deep sleep",
+      "it": "sleep profondo",
+      "definition": "The lowest power state, where almost everything is off.",
+      "example": "In deep sleep only the wake-up pin is active."
+    },
+    {
+      "id": "wake-up-latency",
+      "en": "wake-up latency",
+      "it": "latenza di risveglio",
+      "definition": "How long the device takes to become active after a wake-up event.",
+      "example": "The wake-up latency is under five microseconds."
+    },
+    {
+      "id": "energy-harvesting",
+      "en": "energy harvesting",
+      "it": "recupero di energia",
+      "definition": "Powering a device with energy from the environment, like light or vibration.",
+      "example": "The tag runs on energy harvesting from indoor light.",
+      "note": "harvesting: «hàrvesting»."
+    },
+    {
+      "id": "coin-cell",
+      "en": "coin cell",
+      "it": "batteria a bottone",
+      "definition": "A small round battery, like a CR2032.",
+      "example": "The sensor runs for five years on a coin cell."
+    },
+    {
+      "id": "battery-life",
+      "en": "battery life",
+      "it": "durata della batteria",
+      "definition": "How long a device works before the battery is empty.",
+      "example": "We estimated the battery life from the average current."
+    },
+    {
+      "id": "ota-update",
+      "en": "OTA update",
+      "it": "aggiornamento OTA",
+      "definition": "A firmware update sent over the air.",
+      "example": "The OTA update is downloaded in the background.",
+      "note": "«ou-ti-ei».",
+      "say": "O T A update"
+    },
+    {
+      "id": "rollback",
+      "en": "rollback",
+      "it": "ripristino (rollback)",
+      "definition": "Going back to the previous firmware if the new one fails.",
+      "example": "The bootloader does a rollback if the new image does not start."
+    },
+    {
+      "id": "secure-boot",
+      "en": "secure boot",
+      "it": "avvio sicuro",
+      "definition": "Checking that the firmware is signed and authentic before running it.",
+      "example": "Secure boot rejects any image without a valid signature."
+    },
+    {
+      "id": "root-of-trust",
+      "en": "root of trust",
+      "it": "radice di fiducia",
+      "definition": "The part of the chip that is trusted by design and protects the keys.",
+      "example": "The keys are stored in the hardware root of trust."
+    },
+    {
+      "id": "encryption-key",
+      "en": "encryption key",
+      "it": "chiave di cifratura",
+      "definition": "The secret value used to encrypt and decrypt data.",
+      "example": "Each device has its own encryption key."
+    },
+    {
+      "id": "device-identity",
+      "en": "device identity",
+      "it": "identità del dispositivo",
+      "definition": "The unique, secure identity of each device.",
+      "example": "The device identity is created in the factory."
+    },
+    {
+      "id": "certificate",
+      "en": "certificate",
+      "it": "certificato",
+      "definition": "A digital document that proves the identity of a device or server.",
+      "example": "The certificate expires in ten years.",
+      "note": "«sertìfiket»."
+    },
+    {
+      "id": "tls",
+      "en": "TLS",
+      "it": "TLS",
+      "definition": "The protocol that encrypts data between a device and a server.",
+      "example": "All the traffic to the cloud uses TLS.",
+      "note": "«ti-el-es».",
+      "say": "T L S"
+    },
+    {
+      "id": "mqtt",
+      "en": "MQTT",
+      "it": "MQTT",
+      "definition": "A lightweight publish-subscribe protocol for IoT messages.",
+      "example": "The sensors publish their data with MQTT.",
+      "note": "«em-kiu-ti-ti».",
+      "say": "M Q T T"
+    },
+    {
+      "id": "broker",
+      "en": "broker",
+      "it": "broker",
+      "definition": "The server that receives MQTT messages and sends them to subscribers.",
+      "example": "The broker handles ten thousand devices.",
+      "note": "«bròuker»."
+    },
+    {
+      "id": "telemetry",
+      "en": "telemetry",
+      "it": "telemetria",
+      "definition": "Data that devices send regularly about their state.",
+      "example": "The telemetry includes temperature and battery level.",
+      "note": "«telèmetri»."
+    },
+    {
+      "id": "cloud-backend",
+      "en": "cloud backend",
+      "it": "backend cloud",
+      "definition": "The servers that store and process the device data.",
+      "example": "The cloud backend stores one year of data."
+    },
+    {
+      "id": "edge-computing",
+      "en": "edge computing",
+      "it": "edge computing",
+      "definition": "Processing data on or near the device instead of in the cloud.",
+      "example": "With edge computing, only the alarms go to the cloud."
+    },
+    {
+      "id": "sensor-fusion",
+      "en": "sensor fusion",
+      "it": "fusione dei sensori",
+      "definition": "Combining data from several sensors to get a better result.",
+      "example": "Sensor fusion combines the accelerometer and the gyroscope."
+    },
+    {
+      "id": "accelerometer",
+      "en": "accelerometer",
+      "it": "accelerometro",
+      "definition": "A sensor that measures acceleration and movement.",
+      "example": "The accelerometer wakes the device when it moves.",
+      "note": "«akselerròmiter»."
+    },
+    {
+      "id": "calibration",
+      "en": "calibration",
+      "it": "calibrazione",
+      "definition": "Adjusting a sensor so its readings are accurate.",
+      "example": "Each humidity sensor needs a calibration at the end of the line."
+    },
+    {
+      "id": "data-rate",
+      "en": "data rate",
+      "it": "velocità dei dati",
+      "definition": "How many bits per second are sent.",
+      "example": "We lowered the data rate to increase the range."
+    },
+    {
+      "id": "connectivity",
+      "en": "connectivity",
+      "it": "connettività",
+      "definition": "The ability of a device to connect to a network.",
+      "example": "Connectivity problems are the first cause of support calls."
+    },
+    {
+      "id": "fleet-management",
+      "en": "fleet management",
+      "it": "gestione della flotta",
+      "definition": "Monitoring and updating many devices in the field.",
+      "example": "Fleet management shows which devices need an update."
+    },
+    {
+      "id": "field-failure",
+      "en": "field failure",
+      "it": "guasto sul campo",
+      "definition": "A failure that happens at the customer's site.",
+      "example": "We analyzed the field failure with the device logs."
+    },
+    {
+      "id": "remote-debugging",
+      "en": "remote debugging",
+      "it": "debug da remoto",
+      "definition": "Investigating problems on a device without touching it.",
+      "example": "Remote debugging saved us a trip to the customer."
+    },
+    {
+      "id": "digital-twin",
+      "en": "digital twin",
+      "it": "gemello digitale",
+      "definition": "A virtual model of a physical device, kept in sync with it.",
+      "example": "The digital twin shows the last known state of the pump."
+    },
+    {
+      "id": "power-budget",
+      "en": "power budget",
+      "it": "bilancio energetico",
+      "definition": "The estimate of how much energy each part of the system uses.",
+      "example": "The radio takes eighty percent of the power budget.",
+      "note": "budget: «bàgiet»."
+    },
+    {
+      "id": "duty-cycling",
+      "en": "duty cycling",
+      "it": "duty cycling",
+      "definition": "Turning a part on only for short periods to save energy.",
+      "example": "Duty cycling the sensor reduced the current by ninety percent."
+    },
+    {
+      "id": "brownout",
+      "en": "brownout",
+      "it": "brownout",
+      "definition": "A drop of the supply voltage below the safe level.",
+      "example": "The brownout detector resets the MCU when the battery is low.",
+      "note": "«bràunaut»."
+    },
+    {
+      "id": "interoperability",
+      "en": "interoperability",
+      "it": "interoperabilità",
+      "definition": "The ability of devices from different vendors to work together.",
+      "example": "We tested interoperability with five phone models."
+    }
+  ],
+  "order": 11
+}

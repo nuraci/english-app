@@ -1,0 +1,255 @@
+{
+  "id": "wireless",
+  "name": "Radio e Bluetooth",
+  "description": "Il lessico delle connessioni senza fili: BLE, RF, reti mesh.",
+  "pack": "embedded-iot",
+  "terms": [
+    {
+      "id": "antenna",
+      "en": "antenna",
+      "it": "antenna",
+      "definition": "The part of a device that sends and receives radio waves.",
+      "example": "We moved the antenna away from the battery to improve the range.",
+      "note": "«antèna», con l'accento sulla seconda sillaba."
+    },
+    {
+      "id": "rssi",
+      "en": "RSSI",
+      "it": "RSSI (potenza del segnale ricevuto)",
+      "definition": "Received signal strength indicator: how strong the received radio signal is.",
+      "example": "The RSSI dropped to minus ninety dBm at ten meters.",
+      "note": "«ar-es-es-ai».",
+      "say": "R S S I"
+    },
+    {
+      "id": "ble",
+      "en": "BLE",
+      "it": "BLE (Bluetooth Low Energy)",
+      "definition": "Bluetooth Low Energy: a version of Bluetooth designed for very low power.",
+      "example": "The sensor sends its data over BLE every second.",
+      "note": "«bi-el-ii».",
+      "say": "B L E"
+    },
+    {
+      "id": "advertising",
+      "en": "advertising",
+      "it": "advertising (annunci BLE)",
+      "definition": "Short BLE packets a device sends to say it is there and can connect.",
+      "example": "We reduced the advertising interval to save power.",
+      "note": "«àdvertaising»."
+    },
+    {
+      "id": "gatt",
+      "en": "GATT",
+      "it": "GATT",
+      "definition": "The BLE structure of services and characteristics used to exchange data.",
+      "example": "The temperature value is a characteristic in the GATT table.",
+      "note": "Si dice «gat»."
+    },
+    {
+      "id": "characteristic",
+      "en": "characteristic",
+      "it": "caratteristica (BLE)",
+      "definition": "A single value inside a BLE service, like a temperature reading.",
+      "example": "The phone writes the new configuration to a characteristic.",
+      "note": "«kariktarìstik»."
+    },
+    {
+      "id": "pairing",
+      "en": "pairing",
+      "it": "accoppiamento (pairing)",
+      "definition": "The first secure exchange between two Bluetooth devices.",
+      "example": "Pairing fails if the phone and the device use different security modes."
+    },
+    {
+      "id": "bonding",
+      "en": "bonding",
+      "it": "bonding",
+      "definition": "Saving the pairing keys so the devices can reconnect securely later.",
+      "example": "After bonding, the watch reconnects automatically."
+    },
+    {
+      "id": "connection-interval",
+      "en": "connection interval",
+      "it": "intervallo di connessione",
+      "definition": "How often two connected BLE devices exchange packets.",
+      "example": "A longer connection interval reduces power but increases latency."
+    },
+    {
+      "id": "packet-loss",
+      "en": "packet loss",
+      "it": "perdita di pacchetti",
+      "definition": "The percentage of data packets that never arrive.",
+      "example": "We measured two percent packet loss in the factory."
+    },
+    {
+      "id": "interference",
+      "en": "interference",
+      "it": "interferenza",
+      "definition": "Unwanted signals that disturb the radio communication.",
+      "example": "Wi-Fi interference caused the BLE disconnections.",
+      "note": "«interfìrens»."
+    },
+    {
+      "id": "channel-hopping",
+      "en": "channel hopping",
+      "it": "salto di frequenza",
+      "definition": "Changing radio channel continuously to avoid interference.",
+      "example": "Bluetooth uses channel hopping across forty channels."
+    },
+    {
+      "id": "sub-ghz",
+      "en": "sub-GHz",
+      "it": "sub-GHz",
+      "definition": "Radio bands below one gigahertz, used for long range at low power.",
+      "example": "The sub-GHz radio reaches two kilometers in open field.",
+      "note": "«sab-ghìga-herts»."
+    },
+    {
+      "id": "lora",
+      "en": "LoRa",
+      "it": "LoRa",
+      "definition": "A long-range, low-power radio technology for IoT sensors.",
+      "example": "The meters send one LoRa message per hour.",
+      "note": "Si dice «lòra»."
+    },
+    {
+      "id": "zigbee",
+      "en": "Zigbee",
+      "it": "Zigbee",
+      "definition": "A low-power mesh network protocol for smart home devices.",
+      "example": "The light bulbs form a Zigbee mesh network.",
+      "note": "«zìgbii»."
+    },
+    {
+      "id": "thread",
+      "en": "Thread",
+      "it": "Thread",
+      "definition": "A low-power IP mesh network used by Matter devices.",
+      "example": "The new sensors join the Thread network automatically.",
+      "note": "«thred», con la th inglese."
+    },
+    {
+      "id": "matter",
+      "en": "Matter",
+      "it": "Matter",
+      "definition": "A standard that lets smart home devices from different brands work together.",
+      "example": "We are certifying the plug for Matter."
+    },
+    {
+      "id": "provisioning",
+      "en": "provisioning",
+      "it": "provisioning",
+      "definition": "Setting up a new device so it can join the network and the cloud.",
+      "example": "Wi-Fi provisioning is done with the phone app over BLE.",
+      "note": "«provìsioning»."
+    },
+    {
+      "id": "mesh-network",
+      "en": "mesh network",
+      "it": "rete mesh",
+      "definition": "A network where devices pass messages to each other to cover a large area.",
+      "example": "In a mesh network, every node can repeat the message."
+    },
+    {
+      "id": "gateway",
+      "en": "gateway",
+      "it": "gateway",
+      "definition": "A device that connects local sensors to the internet.",
+      "example": "The gateway collects data from fifty sensors.",
+      "note": "«ghèituei»."
+    },
+    {
+      "id": "link-budget",
+      "en": "link budget",
+      "it": "link budget",
+      "definition": "The total balance of gains and losses on a radio link.",
+      "example": "The link budget is one hundred and twenty dB.",
+      "note": "budget: «bàgiet»."
+    },
+    {
+      "id": "sensitivity",
+      "en": "sensitivity",
+      "it": "sensibilità",
+      "definition": "The weakest signal a receiver can still decode.",
+      "example": "The receiver sensitivity is minus one hundred and five dBm."
+    },
+    {
+      "id": "transmit-power",
+      "en": "transmit power",
+      "it": "potenza di trasmissione",
+      "definition": "How strong the signal is when it leaves the antenna.",
+      "example": "We set the transmit power to zero dBm."
+    },
+    {
+      "id": "dbm",
+      "en": "dBm",
+      "it": "dBm",
+      "definition": "Decibels relative to one milliwatt: the unit of radio power.",
+      "example": "Plus ten dBm is ten milliwatts.",
+      "note": "«di-bi-em».",
+      "say": "d B m"
+    },
+    {
+      "id": "rf-certification",
+      "en": "RF certification",
+      "it": "certificazione radio",
+      "definition": "The tests that prove a radio product meets the legal limits.",
+      "example": "The RF certification took six weeks."
+    },
+    {
+      "id": "coexistence",
+      "en": "coexistence",
+      "it": "coesistenza",
+      "definition": "Working well together with other radios in the same band.",
+      "example": "We tested BLE and Wi-Fi coexistence on the same chip.",
+      "note": "«coeghsìstens»."
+    },
+    {
+      "id": "beacon",
+      "en": "beacon",
+      "it": "beacon",
+      "definition": "A small device that keeps broadcasting a short radio message.",
+      "example": "The beacon helps the app find the nearest room.",
+      "note": "«bìicon»."
+    },
+    {
+      "id": "range",
+      "en": "range",
+      "it": "portata",
+      "definition": "The maximum distance at which the radio link works.",
+      "example": "The range is fifty meters indoors.",
+      "note": "«reing»."
+    },
+    {
+      "id": "modulation",
+      "en": "modulation",
+      "it": "modulazione",
+      "definition": "The way data is encoded on the radio wave.",
+      "example": "LoRa uses a chirp spread spectrum modulation."
+    },
+    {
+      "id": "radio-stack",
+      "en": "radio stack",
+      "it": "stack radio",
+      "definition": "The software layers that implement a radio protocol.",
+      "example": "We updated the BLE stack to fix the connection bug."
+    },
+    {
+      "id": "firmware-over-the-air",
+      "en": "firmware over the air",
+      "it": "aggiornamento via radio",
+      "definition": "Updating the device software through a wireless link.",
+      "example": "Firmware over the air must not brick the device if the battery dies."
+    },
+    {
+      "id": "throughput",
+      "en": "throughput",
+      "it": "throughput",
+      "definition": "How much data the link can transfer per second.",
+      "example": "The BLE throughput is about one megabit per second.",
+      "note": "«thrùput»."
+    }
+  ],
+  "order": 10
+}

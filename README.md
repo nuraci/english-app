@@ -1,5 +1,9 @@
 # TechTalk Coach
 
+**L’inglese per i colloqui tecnici degli ingegneri.** Non un altro corso generico: verbi, numeri, spelling,
+vocabolario tecnico e simulazioni di colloquio, con il lessico di laboratorio, firmware e debug.
+Pagina di presentazione: `landing.html` (con lista d’attesa per la beta).
+
 PWA mobile-first per allenare l'inglese parlato e l'ascolto in vista di colloqui tecnici.
 Contesto e regole in `CLAUDE.md`, roadmap in `PLAN.md`.
 

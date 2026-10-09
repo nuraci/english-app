@@ -256,5 +256,6 @@
       "example": "Design verification is done in simulation."
     }
   ],
-  "order": 4
+  "order": 4,
+  "pack": "semiconductors"
 }

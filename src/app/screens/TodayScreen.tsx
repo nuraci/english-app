@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import { parseDayKey } from '../../core/progress'
+import { updateSettings, useSettings } from '../../core/db/settings'
+import { Button } from '../../ui/Button'
 import { Card, Screen } from '../../ui/Screen'
 import { useProgressData } from '../today/useProgressData'
 
@@ -7,6 +9,7 @@ const WEEKDAYS = ['L', 'M', 'M', 'G', 'V', 'S', 'D']
 
 export function TodayScreen() {
   const data = useProgressData()
+  const settings = useSettings()
   if (!data) return <Screen title="Oggi">{null}</Screen>
   const { streak, week, plan, level } = data
   const todayXp = data.xp.get(data.today) ?? 0
@@ -21,6 +24,28 @@ export function TodayScreen() {
   return (
     <Screen title="Oggi">
       <p className="-mt-4 text-slate-500 dark:text-slate-400">{date}</p>
+
+      {!settings.onboardingDone && (
+        <Card>
+          <p className="text-lg font-semibold">Benvenuto! 👋</p>
+          <p className="mt-1 text-slate-600 dark:text-slate-300">
+            Un test di 5 minuti per capire da dove partire: verbi, numeri, spelling e vocabolario.
+          </p>
+          <Link
+            to="/benvenuto"
+            className="mt-3 flex min-h-12 items-center justify-center rounded-xl bg-teal-700 px-4 font-semibold text-white dark:bg-teal-500 dark:text-slate-950"
+          >
+            Fai il test di livello
+          </Link>
+          <Button
+            variant="ghost"
+            className="mt-1 w-full"
+            onClick={() => void updateSettings({ onboardingDone: true })}
+          >
+            No grazie
+          </Button>
+        </Card>
+      )}
 
       <div className="grid grid-cols-3 gap-2" data-testid="today-stats">
         <Card>

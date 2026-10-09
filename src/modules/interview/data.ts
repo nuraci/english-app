@@ -17,6 +17,8 @@ export type Question = {
   star?: boolean
   /** Risposta modello in inglese semplice, da personalizzare. */
   sample?: string
+  /** Pacchetto di contenuti a cui appartiene la domanda. */
+  pack: string
 }
 
 export type Phrase = { en: string; it: string; when?: string }

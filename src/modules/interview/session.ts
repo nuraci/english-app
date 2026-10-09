@@ -23,12 +23,15 @@ const MIX: [QuestionCategory, number][] = [
 export function buildInterviewPlan(
   practiceCounts: ReadonlyMap<string, number>,
   rng: Rng,
+  packs: readonly string[] = ['semiconductors'],
 ): Question[] {
   const first = questions.find((q) => q.id === TELL_ME_ID)
   const last = questions.find((q) => q.id === LAST_QUESTION_ID)
   const middle: Question[] = []
   for (const [category, count] of MIX) {
-    const pool = questions.filter((q) => q.category === category && q !== first && q !== last)
+    const pool = questions.filter(
+      (q) => q.category === category && q !== first && q !== last && packs.includes(q.pack),
+    )
     const ordered = shuffle(pool, rng).sort(
       (a, b) => (practiceCounts.get(a.id) ?? 0) - (practiceCounts.get(b.id) ?? 0),
     )

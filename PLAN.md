@@ -187,15 +187,15 @@ Ogni fase ha: **Obiettivo**, **Task**, **Criteri di accettazione**.
 
 **Obiettivo:** trasformare lo strumento personale in un prodotto.
 
-- [ ] **Posizionamento:** non "un altro Duolingo", ma _inglese per colloqui tecnici di ingegneri_. Il mercato generalista è affollato, la nicchia no.
-- [ ] Pacchetti di contenuti per settore: semiconduttori (base), automotive, embedded/IoT, IT, dispositivi medicali
-- [ ] UI tradotta per altri madrelingua (spagnolo, portoghese, francese): i contenuti in inglese restano gli stessi
-- [ ] Onboarding con test di livello di 5 minuti
-- [ ] Account e sincronizzazione (es. Supabase), esportazione dei dati
-- [ ] Pagamenti: freemium (moduli base gratis, Tutor AI e pacchetti a pagamento). Se si pubblica sul Play Store (TWA o Capacitor) verificare gli obblighi di Google Play Billing per i beni digitali
-- [ ] Privacy e GDPR: informativa, registrazioni locali per default, analytics rispettosi della privacy
-- [ ] Landing page e lista d'attesa
-- [ ] Beta con 10–20 colleghi ingegneri, raccolta feedback dentro l'app
+- [x] **Posizionamento:** non "un altro Duolingo", ma _inglese per colloqui tecnici di ingegneri_. Il mercato generalista è affollato, la nicchia no.
+- [ ] Pacchetti di contenuti per settore: semiconduttori (base), automotive, embedded/IoT, IT, dispositivi medicali — *fatti: sistema dei pacchetti, semiconduttori, embedded/IoT; da fare: automotive, IT, medicali*
+- [ ] UI tradotta per altri madrelingua (spagnolo, portoghese, francese): i contenuti in inglese restano gli stessi — *fatto: struttura `src/i18n` con l'interfaccia principale; da fare: le traduzioni*
+- [x] Onboarding con test di livello di 5 minuti
+- [ ] Account e sincronizzazione (es. Supabase), esportazione dei dati — *fatto: esportazione/importazione e cancellazione; account e sincronizzazione rimandati alla beta*
+- [ ] Pagamenti: freemium (moduli base gratis, Tutor AI e pacchetti a pagamento). Se si pubblica sul Play Store (TWA o Capacitor) verificare gli obblighi di Google Play Billing per i beni digitali — *fatto: predisposizione (piani, funzioni premium, «gratis in beta»); da scegliere: Play Store o Stripe*
+- [x] Privacy e GDPR: informativa, registrazioni locali per default, analytics rispettosi della privacy
+- [x] Landing page e lista d'attesa
+- [ ] Beta con 10–20 colleghi ingegneri, raccolta feedback dentro l'app — *fatto: suggerimenti dentro l'app e lista d'attesa; da fare: reclutare i beta tester*
 
 **Accettazione:** 10 beta tester attivi per 2 settimane, almeno metà ancora attivi alla fine.
 

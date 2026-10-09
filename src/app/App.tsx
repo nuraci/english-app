@@ -25,6 +25,8 @@ import { PlayerScreen } from '../modules/shadowing/PlayerScreen'
 import { AutoScreen } from '../modules/shadowing/AutoScreen'
 import { TutorScreen } from '../modules/tutor/TutorScreen'
 import { TutorChatScreen } from '../modules/tutor/TutorChatScreen'
+import { WelcomeScreen } from '../modules/onboarding/WelcomeScreen'
+import { PrivacyScreen } from './screens/PrivacyScreen'
 
 export function App() {
   return (
@@ -53,6 +55,8 @@ export function App() {
         <Route path="allenamenti/shadowing/auto" element={<AutoScreen />} />
         <Route path="allenamenti/tutor" element={<TutorScreen />} />
         <Route path="allenamenti/tutor/chat" element={<TutorChatScreen />} />
+        <Route path="benvenuto" element={<WelcomeScreen />} />
+        <Route path="privacy" element={<PrivacyScreen />} />
         <Route path="progressi" element={<ProgressScreen />} />
         <Route path="impostazioni" element={<SettingsScreen />} />
         <Route path="prova" element={<DebugScreen />} />

@@ -91,6 +91,20 @@ describe('piano della prova (10 domande)', () => {
     expect(plan.filter((q) => q.category === 'behavioral')).toHaveLength(2)
   })
 
+  it('le domande tecniche seguono i pacchetti attivi', () => {
+    const base = buildInterviewPlan(new Map(), createRng(3))
+    expect(base.every((q) => q.pack === 'semiconductors')).toBe(true)
+    let iotSeen = false
+    for (let seed = 0; seed < 20; seed++) {
+      const plan = buildInterviewPlan(new Map(), createRng(seed), [
+        'semiconductors',
+        'embedded-iot',
+      ])
+      if (plan.some((q) => q.pack === 'embedded-iot')) iotSeen = true
+    }
+    expect(iotSeen).toBe(true)
+  })
+
   it('preferisce le domande provate meno volte', () => {
     const technical = questions.filter((q) => q.category === 'technical')
     const counts = new Map(technical.slice(0, 10).map((q) => [q.id, 3]))

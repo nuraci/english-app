@@ -257,5 +257,6 @@
       "example": "The bit error rate tester ran for one hour without errors."
     }
   ],
-  "order": 1
+  "order": 1,
+  "pack": "semiconductors"
 }
