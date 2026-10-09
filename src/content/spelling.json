@@ -1,0 +1,408 @@
+{
+  "letters": [
+    {
+      "letter": "A",
+      "say": "ay",
+      "it": "«ei», come in «day»",
+      "nato": "Alfa"
+    },
+    {
+      "letter": "B",
+      "say": "bee",
+      "it": "«bi»",
+      "nato": "Bravo"
+    },
+    {
+      "letter": "C",
+      "say": "see",
+      "it": "«si»",
+      "nato": "Charlie"
+    },
+    {
+      "letter": "D",
+      "say": "dee",
+      "it": "«di»",
+      "nato": "Delta"
+    },
+    {
+      "letter": "E",
+      "say": "ee",
+      "it": "«ii», una i lunga",
+      "nato": "Echo"
+    },
+    {
+      "letter": "F",
+      "say": "eff",
+      "it": "«ef»",
+      "nato": "Foxtrot"
+    },
+    {
+      "letter": "G",
+      "say": "gee",
+      "it": "«gi», come in «jeans»",
+      "nato": "Golf"
+    },
+    {
+      "letter": "H",
+      "say": "aitch",
+      "it": "«eich», mai «acca»",
+      "nato": "Hotel"
+    },
+    {
+      "letter": "I",
+      "say": "eye",
+      "it": "«ai», come «eye» (occhio)",
+      "nato": "India"
+    },
+    {
+      "letter": "J",
+      "say": "jay",
+      "it": "«gei»",
+      "nato": "Juliett"
+    },
+    {
+      "letter": "K",
+      "say": "kay",
+      "it": "«kei», come «ok»",
+      "nato": "Kilo"
+    },
+    {
+      "letter": "L",
+      "say": "el",
+      "it": "«el»",
+      "nato": "Lima"
+    },
+    {
+      "letter": "M",
+      "say": "em",
+      "it": "«em»",
+      "nato": "Mike"
+    },
+    {
+      "letter": "N",
+      "say": "en",
+      "it": "«en»",
+      "nato": "November"
+    },
+    {
+      "letter": "O",
+      "say": "oh",
+      "it": "«ou»",
+      "nato": "Oscar"
+    },
+    {
+      "letter": "P",
+      "say": "pee",
+      "it": "«pi»",
+      "nato": "Papa"
+    },
+    {
+      "letter": "Q",
+      "say": "cue",
+      "it": "«kiu»",
+      "nato": "Quebec"
+    },
+    {
+      "letter": "R",
+      "say": "ar",
+      "it": "«ar», con la r morbida",
+      "nato": "Romeo"
+    },
+    {
+      "letter": "S",
+      "say": "ess",
+      "it": "«es»",
+      "nato": "Sierra"
+    },
+    {
+      "letter": "T",
+      "say": "tee",
+      "it": "«ti»",
+      "nato": "Tango"
+    },
+    {
+      "letter": "U",
+      "say": "you",
+      "it": "«iu», come «you»",
+      "nato": "Uniform"
+    },
+    {
+      "letter": "V",
+      "say": "vee",
+      "it": "«vi»",
+      "nato": "Victor"
+    },
+    {
+      "letter": "W",
+      "say": "double you",
+      "it": "«dabliu», cioè «doppia u»",
+      "nato": "Whiskey"
+    },
+    {
+      "letter": "X",
+      "say": "ex",
+      "it": "«eks»",
+      "nato": "X-ray"
+    },
+    {
+      "letter": "Y",
+      "say": "why",
+      "it": "«uai», come «why»",
+      "nato": "Yankee"
+    },
+    {
+      "letter": "Z",
+      "say": "zed",
+      "it": "«zed» in UK, «zii» in US",
+      "nato": "Zulu"
+    }
+  ],
+  "zUs": "zee",
+  "groups": [
+    {
+      "id": "aei",
+      "name": "A, E, I",
+      "tip": "Sembrano scambiate rispetto all'italiano: A si dice «ei», E si dice «ii», I si dice «ai».",
+      "letters": ["A", "E", "I"]
+    },
+    {
+      "id": "gj",
+      "name": "G e J",
+      "tip": "G si dice «gi» (come in jeans), J si dice «gei». Si confondono facilissimo!",
+      "letters": ["G", "J"]
+    },
+    {
+      "id": "kq",
+      "name": "K e Q",
+      "tip": "K si dice «kei», Q si dice «kiu».",
+      "letters": ["K", "Q"]
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "tip": "H si dice «eich», non «acca»: spesso si confonde con A («ei») o K («kei»).",
+      "letters": ["H", "A", "K"]
+    },
+    {
+      "id": "r",
+      "name": "R",
+      "tip": "R si dice «ar»: attenzione a non confonderla con A («ei»).",
+      "letters": ["R", "A"]
+    },
+    {
+      "id": "w",
+      "name": "W",
+      "tip": "W si dice «double you», cioè «doppia u»: non confonderla con U o V.",
+      "letters": ["W", "U", "V"]
+    },
+    {
+      "id": "y",
+      "name": "Y",
+      "tip": "Y si dice «uai», come «why»: non è una i!",
+      "letters": ["Y", "I"]
+    },
+    {
+      "id": "z",
+      "name": "Z",
+      "tip": "Z si dice «zed» in UK e «zii» in US: in americano si confonde con C («si»).",
+      "letters": ["Z", "C"]
+    },
+    {
+      "id": "ee",
+      "name": "Le lettere in «-ii»",
+      "tip": "B, C, D, E, G, P, T, V (e Z in americano) finiscono tutte in «ii»: ascolta bene la consonante iniziale.",
+      "letters": ["B", "C", "D", "E", "G", "P", "T", "V", "Z"]
+    },
+    {
+      "id": "mn",
+      "name": "M e N",
+      "tip": "«em» e «en» si somigliano: la differenza è solo nella chiusura delle labbra.",
+      "letters": ["M", "N"]
+    },
+    {
+      "id": "sf",
+      "name": "S e F",
+      "tip": "«es» ed «ef»: al telefono si confondono, per questo si usa l'alfabeto NATO.",
+      "letters": ["S", "F"]
+    }
+  ],
+  "codes": {
+    "part": [
+      "STM32H743",
+      "STM32F407VG",
+      "STM32L476",
+      "LPC55S69",
+      "LPC1768",
+      "LPC845",
+      "ESP32-S3",
+      "ESP32-C6",
+      "ATmega328P",
+      "ATSAMD21G18",
+      "nRF52840",
+      "MK64FN1M0",
+      "MIMXRT1062",
+      "MIMXRT1176",
+      "S32K144",
+      "S32K344",
+      "MCXN947",
+      "KW45",
+      "PIC18F4550",
+      "RP2040",
+      "TMS320F28379D",
+      "MSP430G2553",
+      "EFR32MG21",
+      "GD32VF103",
+      "CC2652R",
+      "MAX32660",
+      "R7FA6M5",
+      "XMC4700",
+      "TC397",
+      "SPC58EC"
+    ],
+    "acronym": [
+      "I2C",
+      "SPI",
+      "QSPI",
+      "CAN FD",
+      "LIN",
+      "JTAG",
+      "SWD",
+      "UART",
+      "USB",
+      "DMA",
+      "ADC",
+      "DAC",
+      "PWM",
+      "GPIO",
+      "RTC",
+      "PLL",
+      "LDO",
+      "ESD",
+      "EMC",
+      "PCB",
+      "BOM",
+      "FPGA",
+      "ASIC",
+      "MCU",
+      "SoC",
+      "NVIC",
+      "MPU",
+      "OTP",
+      "ECC",
+      "CRC",
+      "I2S",
+      "SDIO",
+      "eMMC",
+      "PVT",
+      "DFT",
+      "BIST",
+      "ATE",
+      "HTOL",
+      "DUT",
+      "FMEA",
+      "AEC-Q100",
+      "RISC-V"
+    ],
+    "name": [
+      "Russo",
+      "Ferrari",
+      "Esposito",
+      "Bianchi",
+      "Romano",
+      "Colombo",
+      "Ricci",
+      "Marino",
+      "Greco",
+      "Bruno",
+      "Gallo",
+      "Conti",
+      "De Luca",
+      "Mancini",
+      "Costa",
+      "Giordano",
+      "Rizzo",
+      "Lombardi",
+      "Moretti",
+      "Barbieri",
+      "Fontana",
+      "Santoro",
+      "Mariani",
+      "Rinaldi",
+      "Caruso",
+      "Galli",
+      "Martini",
+      "Leone",
+      "Longo",
+      "Gentile",
+      "Vitale",
+      "Serra",
+      "Coppola",
+      "Catania",
+      "Palermo",
+      "Agrate",
+      "Eindhoven",
+      "Nijmegen",
+      "Grenoble",
+      "Zurich"
+    ]
+  },
+  "categories": {
+    "part": "Part number",
+    "acronym": "Sigla",
+    "name": "Cognome o città",
+    "email": "Indirizzo email",
+    "serial": "Numero di serie"
+  },
+  "emailParts": {
+    "first": [
+      "giuseppe",
+      "salvatore",
+      "maria",
+      "anna",
+      "giovanni",
+      "francesca",
+      "marco",
+      "luca",
+      "sara",
+      "chiara",
+      "davide",
+      "elena",
+      "paolo",
+      "giulia",
+      "andrea"
+    ],
+    "domains": [
+      "acme-semi.com",
+      "testlab.eu",
+      "example.com",
+      "chipworks.it",
+      "validation-team.org",
+      "silicon-valley.io"
+    ]
+  },
+  "symbols": {
+    "@": "at",
+    ".": "dot",
+    "_": "underscore",
+    "-": "dash",
+    "/": "slash",
+    "'": "apostrophe"
+  },
+  "personal": [
+    {
+      "kind": "name",
+      "label": "Nome",
+      "question": "Could you spell your first name, please?"
+    },
+    {
+      "kind": "surname",
+      "label": "Cognome",
+      "question": "And how do you spell your surname?"
+    },
+    {
+      "kind": "email",
+      "label": "Email",
+      "question": "Could you spell your email address for me?"
+    }
+  ]
+}

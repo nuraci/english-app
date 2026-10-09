@@ -1,5 +1,7 @@
 import type { FeedbackMessage } from '../core/session'
+import type { CharOp } from '../core/normalize'
 import { Button } from './Button'
+import { SpellingDiff } from './SpellingDiff'
 import { Icon } from './Icon'
 import { SpeakButton } from './exercise/SpeakButton'
 
@@ -20,6 +22,8 @@ type Props = {
   continueLabel?: string
   /** Testo da riascoltare (es. le tre forme del verbo). */
   speak?: string
+  /** Spelling: lettere da evidenziare. */
+  charOps?: CharOp[]
 }
 
 /** Feedback incoraggiante: titolo, dettaglio sull'errore e spiegazione. */
@@ -29,6 +33,7 @@ export function Feedback({
   onContinue,
   continueLabel = 'Continua',
   speak,
+  charOps,
 }: Props) {
   return (
     <div
@@ -41,6 +46,7 @@ export function Feedback({
         {message.title}
       </p>
       {message.detail && <p className="mt-1">{message.detail}</p>}
+      {charOps && charOps.some((o) => o.op !== 'ok') && <SpellingDiff ops={charOps} />}
       {explanation && <p className="mt-3 text-sm opacity-90">💡 {explanation}</p>}
       {speak && (
         <div className="mt-3">

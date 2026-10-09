@@ -15,3 +15,5 @@ export {
   wordsToDigits,
 } from './numeric'
 export type { NumberErrorTag, NumericCompareResult } from './numeric'
+export { alignChars, compareSpelling, spellingKey, spokenToChars } from './spelling'
+export type { CharOp, SpellingCompareResult, SpellingOptions } from './spelling'

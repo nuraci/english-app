@@ -14,6 +14,8 @@ export type Settings = {
   sttFallback: SttFallback
   /** Numeri: velocità normale o crescente durante la sessione. */
   numbersSpeed: 'normal' | 'ramp'
+  /** Spelling: mostra l'alfabeto NATO come aiuto. */
+  spellingNato: boolean
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -22,6 +24,7 @@ export const DEFAULT_SETTINGS: Settings = {
   voiceURI: null,
   sttFallback: 'type',
   numbersSpeed: 'normal',
+  spellingNato: false,
 }
 
 export async function getSettings(database = db): Promise<Settings> {

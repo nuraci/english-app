@@ -94,11 +94,11 @@ Ogni fase ha: **Obiettivo**, **Task**, **Criteri di accettazione**.
 
 **Obiettivo:** fare e capire lo spelling senza esitazioni.
 
-- [ ] Alfabeto con focus sulle trappole per italiani: A/E/I, G/J, K/Q, R, W, Y, H ("aitch"), Z (zed/zee)
-- [ ] Alfabeto NATO (Alpha, Bravo…) come aiuto opzionale
-- [ ] Dettati: part number (STM32H743, LPC55S69, ESP32-S3), sigle (I2C, SPI, CAN FD, JTAG), nomi, email ("at", "dot", "underscore", "dash")
-- [ ] Modalità inversa: l'app mostra una parola, l'utente fa lo spelling a voce (STT)
-- [ ] Esercizio fisso: "Spell your name / surname / email" (dati inseriti dall'utente)
+- [x] Alfabeto con focus sulle trappole per italiani: A/E/I, G/J, K/Q, R, W, Y, H ("aitch"), Z (zed/zee)
+- [x] Alfabeto NATO (Alpha, Bravo…) come aiuto opzionale
+- [x] Dettati: part number (STM32H743, LPC55S69, ESP32-S3), sigle (I2C, SPI, CAN FD, JTAG), nomi, email ("at", "dot", "underscore", "dash")
+- [x] Modalità inversa: l'app mostra una parola, l'utente fa lo spelling a voce (STT)
+- [x] Esercizio fisso: "Spell your name / surname / email" (dati inseriti dall'utente)
 
 **Accettazione:** dettato di 10 codici con correzione lettera per lettera evidenziata.
 

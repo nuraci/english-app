@@ -20,8 +20,17 @@ export type Exercise = {
     accepted: string[]
     mode: AnswerMode
     choices?: string[]
-    /** 'number': confronto numerico ("47k" = "47 kΩ" = "forty-seven kilo-ohms"). */
-    match?: 'text' | 'number'
+    /**
+     * 'number': confronto numerico ("47k" = "47 kΩ" = "forty-seven kilo-ohms").
+     * 'spelling': lettera per lettera; a voce capisce i nomi delle lettere ("ess tee em").
+     */
+    match?: 'text' | 'number' | 'spelling'
+    /** Spelling: trattini facoltativi (part number), non nelle email. */
+    ignoreDash?: boolean
+    /** Spelling: gruppi di lettere che si confondono, per riconoscere l'errore. */
+    letterGroups?: Record<string, string[]>
+    /** Testo mostrato nell'autovalutazione, se diverso dalla prima risposta accettata. */
+    reveal?: string
     /** Cosa fare negli esercizi parlati senza microfono, se diverso dalle impostazioni. */
     fallback?: 'type' | 'selfgrade'
   }

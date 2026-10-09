@@ -105,6 +105,7 @@ export function SessionRunner({ module, exercises, onDone, summary }: Props) {
             exercise.explanation
           }
           speak={exercise.say}
+          charOps={state.current.charOps}
           onContinue={() => dispatch({ type: 'next', retry: !state.current?.correct })}
         />
       )}

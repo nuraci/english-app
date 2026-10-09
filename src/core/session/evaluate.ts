@@ -1,4 +1,12 @@
-import { compareAnswer, compareNumeric, type MatchKind, type WordDiff } from '../normalize'
+import {
+  compareAnswer,
+  compareNumeric,
+  compareSpelling,
+  type CharOp,
+  type CompareResult,
+  type MatchKind,
+  type WordDiff,
+} from '../normalize'
 import { Rating, type Grade } from '../srs'
 import type { Exercise, Response, SelfGrade } from './types'
 
@@ -14,7 +22,11 @@ export type Evaluation = {
   grade: Grade
   /** Tipo di errore riconosciuto (es. "teen-ty"), per feedback mirato e statistiche. */
   errorTag?: string
+  /** Spelling: allineamento lettera per lettera, per evidenziare gli errori. */
+  charOps?: CharOp[]
 }
+
+type AnyCompareResult = CompareResult & { errorTag?: string; charOps?: CharOp[] }
 
 const SELF_GRADES: Record<SelfGrade, Grade> = {
   again: Rating.Again,
@@ -51,8 +63,15 @@ export function evaluate(exercise: Exercise, response: Response): Evaluation {
   if (candidates.length === 0) candidates.push('')
 
   // Con la voce basta che una delle trascrizioni alternative sia giusta.
-  const compare = exercise.answer.match === 'number' ? compareNumeric : compareAnswer
-  let best: { given: string; result: ReturnType<typeof compareNumeric> } | undefined
+  const { match, ignoreDash, letterGroups } = exercise.answer
+  const spoken = response.kind === 'speech'
+  const compare = (given: string, accepted: string[]): AnyCompareResult =>
+    match === 'number'
+      ? compareNumeric(given, accepted)
+      : match === 'spelling'
+        ? compareSpelling(given, accepted, { spoken, ignoreDash, letterGroups })
+        : compareAnswer(given, accepted)
+  let best: { given: string; result: AnyCompareResult } | undefined
   for (const given of candidates) {
     const result = compare(given, exercise.answer.accepted)
     if (!best || RANK[result.kind] < RANK[best.result.kind]) best = { given, result }
@@ -68,5 +87,6 @@ export function evaluate(exercise: Exercise, response: Response): Evaluation {
     diffs: result.diffs,
     grade: KIND_GRADES[result.kind],
     ...(result.errorTag ? { errorTag: result.errorTag } : {}),
+    ...(result.charOps ? { charOps: result.charOps } : {}),
   }
 }

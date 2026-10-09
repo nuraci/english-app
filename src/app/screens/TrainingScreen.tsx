@@ -14,9 +14,15 @@ const MODULES = [
     subtitle: '13 or 30? · 47 kΩ · 0x4000',
     emoji: '🔢',
   },
+  {
+    to: '/allenamenti/spelling',
+    title: 'Spelling',
+    subtitle: 'aitch, double you, zed · STM32H743',
+    emoji: '🔤',
+  },
 ]
 
-const COMING = ['Spelling', 'Vocabolario tecnico', 'Simulazione di colloquio']
+const COMING = ['Vocabolario tecnico', 'Simulazione di colloquio']
 
 export function TrainingScreen() {
   return (

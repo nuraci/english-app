@@ -200,7 +200,7 @@ const SELF_GRADE_BUTTONS: { grade: SelfGrade; label: string }[] = [
 
 function SelfGradeAnswer({ exercise, answered, onAnswer }: Props) {
   const [revealed, setRevealed] = useState(false)
-  const answer = exercise.answer.accepted[0] ?? ''
+  const answer = exercise.answer.reveal ?? exercise.answer.accepted[0] ?? ''
   const say = exercise.say ?? answer
   if (!revealed) {
     return (
@@ -211,7 +211,10 @@ function SelfGradeAnswer({ exercise, answered, onAnswer }: Props) {
   }
   return (
     <div className="space-y-3">
-      <p lang="en" className="rounded-xl bg-slate-100 p-3 text-lg font-medium dark:bg-slate-800">
+      <p
+        lang="en"
+        className="rounded-xl bg-slate-100 p-3 text-lg font-medium whitespace-pre-line dark:bg-slate-800"
+      >
         {answer}
       </p>
       <SpeakButton text={say} />

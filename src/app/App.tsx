@@ -9,6 +9,9 @@ import { VerbsScreen } from '../modules/verbs/VerbsScreen'
 import { VerbSessionScreen } from '../modules/verbs/VerbSessionScreen'
 import { NumbersScreen } from '../modules/numbers/NumbersScreen'
 import { NumbersSessionScreen } from '../modules/numbers/NumbersSessionScreen'
+import { SpellingScreen } from '../modules/spelling/SpellingScreen'
+import { SpellingSessionScreen } from '../modules/spelling/SpellingSessionScreen'
+import { AlphabetScreen } from '../modules/spelling/AlphabetScreen'
 
 export function App() {
   return (
@@ -20,6 +23,9 @@ export function App() {
         <Route path="allenamenti/verbi/sessione" element={<VerbSessionScreen />} />
         <Route path="allenamenti/numeri" element={<NumbersScreen />} />
         <Route path="allenamenti/numeri/sessione" element={<NumbersSessionScreen />} />
+        <Route path="allenamenti/spelling" element={<SpellingScreen />} />
+        <Route path="allenamenti/spelling/sessione" element={<SpellingSessionScreen />} />
+        <Route path="allenamenti/spelling/alfabeto" element={<AlphabetScreen />} />
         <Route path="progressi" element={<ProgressScreen />} />
         <Route path="impostazioni" element={<SettingsScreen />} />
         <Route path="prova" element={<DebugScreen />} />

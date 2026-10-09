@@ -16,7 +16,20 @@ function pick(options: readonly string[], seed: number): string {
   return options[Math.abs(seed) % options.length] ?? options[0] ?? ''
 }
 
+function describeLetters(evaluation: Evaluation): string | undefined {
+  const errors = (evaluation.charOps ?? []).filter((o) => o.op !== 'ok')
+  const [only] = errors
+  if (!only) return undefined
+  if (errors.length > 1) return `${errors.length} lettere da sistemare: guarda quelle evidenziate.`
+  const said = evaluation.source === 'speech' ? 'Ho sentito' : 'Hai scritto'
+  if (only.op === 'sub') return `${said} «${only.got}», era «${only.expected}».`
+  if (only.op === 'missing') return `Manca una «${only.expected}».`
+  if (only.op === 'extra') return `C'è una «${only.got}» in più.`
+  return undefined
+}
+
 function describeDiffs(evaluation: Evaluation, verb = 'era'): string | undefined {
+  if (evaluation.charOps) return describeLetters(evaluation)
   const [first, ...rest] = evaluation.diffs
   if (!first) return undefined
   const said = evaluation.source === 'speech' ? 'Ho sentito' : 'Hai scritto'
