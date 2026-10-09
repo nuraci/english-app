@@ -1,0 +1,260 @@
+{
+  "id": "measurements",
+  "name": "Misure",
+  "description": "I nomi delle misure e delle caratteristiche dei segnali.",
+  "terms": [
+    {
+      "id": "rise-time",
+      "en": "rise time",
+      "it": "tempo di salita",
+      "definition": "The time a signal takes to go from low to high, usually from 10 to 90 percent.",
+      "example": "The rise time is twelve nanoseconds."
+    },
+    {
+      "id": "fall-time",
+      "en": "fall time",
+      "it": "tempo di discesa",
+      "definition": "The time a signal takes to go from high to low.",
+      "example": "The fall time is longer than the rise time."
+    },
+    {
+      "id": "jitter",
+      "en": "jitter",
+      "it": "jitter",
+      "definition": "Small random changes in the timing of a signal's edges.",
+      "example": "The clock jitter is below fifty picoseconds.",
+      "note": "Si legge «gìter»."
+    },
+    {
+      "id": "ripple",
+      "en": "ripple",
+      "it": "ripple (ondulazione)",
+      "definition": "The small AC variation on top of a DC voltage.",
+      "example": "The ripple on the 1.8 volt rail is twenty millivolts."
+    },
+    {
+      "id": "leakage-current",
+      "en": "leakage current",
+      "it": "corrente di perdita",
+      "definition": "A small unwanted current that flows when a device should be off.",
+      "example": "The leakage current increases a lot at high temperature.",
+      "note": "leakage: «lìchig»."
+    },
+    {
+      "id": "power-consumption",
+      "en": "power consumption",
+      "it": "consumo di potenza",
+      "definition": "How much power a device uses.",
+      "example": "We reduced the power consumption in stop mode.",
+      "note": "consumption: «consàmpscion»."
+    },
+    {
+      "id": "eye-diagram",
+      "en": "eye diagram",
+      "it": "diagramma a occhio",
+      "definition": "A picture of many bits on top of each other, used to check signal quality.",
+      "example": "The eye diagram is wide open at 480 megabits per second."
+    },
+    {
+      "id": "noise-floor",
+      "en": "noise floor",
+      "it": "rumore di fondo",
+      "definition": "The level of noise when there is no signal.",
+      "example": "The noise floor of the ADC is about two LSB."
+    },
+    {
+      "id": "overshoot",
+      "en": "overshoot",
+      "it": "sovraelongazione (overshoot)",
+      "definition": "When a signal goes above its final value after an edge.",
+      "example": "The overshoot is ten percent of the amplitude."
+    },
+    {
+      "id": "undershoot",
+      "en": "undershoot",
+      "it": "sottoelongazione (undershoot)",
+      "definition": "When a signal goes below its final value after an edge.",
+      "example": "We saw undershoot below ground on the reset line."
+    },
+    {
+      "id": "settling-time",
+      "en": "settling time",
+      "it": "tempo di assestamento",
+      "definition": "The time a signal needs to become stable after a change.",
+      "example": "The DAC settling time is five microseconds."
+    },
+    {
+      "id": "propagation-delay",
+      "en": "propagation delay",
+      "it": "ritardo di propagazione",
+      "definition": "The time between a change at the input and the change at the output.",
+      "example": "The propagation delay of the buffer is three nanoseconds."
+    },
+    {
+      "id": "duty-cycle",
+      "en": "duty cycle",
+      "it": "duty cycle",
+      "definition": "The percentage of time a signal is high in each period.",
+      "example": "The PWM runs at fifty percent duty cycle.",
+      "note": "cycle si legge «saicol»."
+    },
+    {
+      "id": "bandwidth",
+      "en": "bandwidth",
+      "it": "larghezza di banda",
+      "definition": "The range of frequencies a system can handle.",
+      "example": "We need an oscilloscope with at least one gigahertz of bandwidth.",
+      "note": "width: «uìdth», con la th finale.",
+      "trap": true
+    },
+    {
+      "id": "sampling-rate",
+      "en": "sampling rate",
+      "it": "frequenza di campionamento",
+      "definition": "How many samples per second an ADC or an instrument takes.",
+      "example": "The sampling rate is one megasample per second."
+    },
+    {
+      "id": "resolution",
+      "en": "resolution",
+      "it": "risoluzione",
+      "definition": "The smallest change a system can detect or produce.",
+      "example": "It is a twelve-bit ADC, so the resolution is about one millivolt.",
+      "note": "«resolùscion»."
+    },
+    {
+      "id": "accuracy",
+      "en": "accuracy",
+      "it": "accuratezza",
+      "definition": "How close a measurement is to the true value.",
+      "example": "The accuracy of the reference is plus or minus 0.1 percent.",
+      "note": "Accento all'inizio: «ÀKiuresi».",
+      "trap": true
+    },
+    {
+      "id": "offset",
+      "en": "offset",
+      "it": "offset",
+      "definition": "A constant error added to every measurement.",
+      "example": "We calibrated the offset at room temperature."
+    },
+    {
+      "id": "gain",
+      "en": "gain",
+      "it": "guadagno",
+      "definition": "How much a circuit amplifies a signal.",
+      "example": "The gain error is below 0.5 percent.",
+      "note": "Si legge «ghein»."
+    },
+    {
+      "id": "linearity",
+      "en": "linearity",
+      "it": "linearità",
+      "definition": "How well the output follows a straight line compared to the input.",
+      "example": "We measured the ADC linearity with a slow ramp.",
+      "note": "«liniàriti»."
+    },
+    {
+      "id": "signal-to-noise-ratio",
+      "en": "signal-to-noise ratio",
+      "it": "rapporto segnale/rumore",
+      "definition": "How much stronger the signal is than the noise, in decibels.",
+      "example": "The signal-to-noise ratio is seventy decibels.",
+      "note": "ratio: «rèiscio»."
+    },
+    {
+      "id": "quiescent-current",
+      "en": "quiescent current",
+      "it": "corrente di riposo",
+      "definition": "The current a device uses when it is on but not doing any work.",
+      "example": "The quiescent current of the LDO is only one microamp.",
+      "note": "quiescent: «kuaièsent».",
+      "trap": true
+    },
+    {
+      "id": "peak-to-peak",
+      "en": "peak-to-peak",
+      "it": "picco-picco",
+      "definition": "The difference between the highest and the lowest value of a signal.",
+      "example": "The noise is five millivolts peak-to-peak."
+    },
+    {
+      "id": "rms",
+      "en": "RMS",
+      "it": "valore efficace (RMS)",
+      "definition": "A kind of average that tells the effective value of an AC signal.",
+      "example": "The RMS noise is one millivolt.",
+      "note": "Si dice «ar-em-es».",
+      "say": "R M S"
+    },
+    {
+      "id": "setup-time",
+      "en": "setup time",
+      "it": "tempo di setup",
+      "definition": "How long data must be stable before the clock edge.",
+      "example": "We have a setup time violation at high temperature."
+    },
+    {
+      "id": "hold-time",
+      "en": "hold time",
+      "it": "tempo di hold",
+      "definition": "How long data must stay stable after the clock edge.",
+      "example": "The hold time margin is only 200 picoseconds."
+    },
+    {
+      "id": "slew-rate",
+      "en": "slew rate",
+      "it": "slew rate",
+      "definition": "How fast a signal can change, in volts per microsecond.",
+      "example": "The op-amp slew rate limits the output at high frequency.",
+      "note": "slew si legge «slu»."
+    },
+    {
+      "id": "crosstalk",
+      "en": "crosstalk",
+      "it": "diafonia (crosstalk)",
+      "definition": "When a signal on one wire disturbs a nearby wire.",
+      "example": "We saw crosstalk between the clock and the data line."
+    },
+    {
+      "id": "ground-bounce",
+      "en": "ground bounce",
+      "it": "ground bounce",
+      "definition": "A short voltage change on ground when many outputs switch together.",
+      "example": "Ground bounce caused false triggers on the input.",
+      "note": "ground: «graund»."
+    },
+    {
+      "id": "drift",
+      "en": "drift",
+      "it": "deriva",
+      "definition": "A slow change of a value over time or temperature.",
+      "example": "The oscillator drift is ten ppm over temperature."
+    },
+    {
+      "id": "tolerance",
+      "en": "tolerance",
+      "it": "tolleranza",
+      "definition": "How much a value can differ from its nominal value.",
+      "example": "These resistors have a one percent tolerance.",
+      "note": "Accento all'inizio: «TÒlerans»."
+    },
+    {
+      "id": "throughput",
+      "en": "throughput",
+      "it": "throughput",
+      "definition": "How much data a system can transfer in a given time.",
+      "example": "The DMA throughput is twenty megabytes per second.",
+      "note": "throughput: «thrùput»."
+    },
+    {
+      "id": "latency",
+      "en": "latency",
+      "it": "latenza",
+      "definition": "The delay between a request and the response.",
+      "example": "The interrupt latency is twelve clock cycles.",
+      "note": "«lèitensi»."
+    }
+  ],
+  "order": 2
+}

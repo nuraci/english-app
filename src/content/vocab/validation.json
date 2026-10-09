@@ -1,0 +1,260 @@
+{
+  "id": "validation",
+  "name": "Processo di validazione",
+  "description": "Le parole del processo: piani, campioni, analisi, rilascio.",
+  "terms": [
+    {
+      "id": "test-plan",
+      "en": "test plan",
+      "it": "piano di test",
+      "definition": "The document that lists what to test, how and when.",
+      "example": "I wrote the test plan for the new ADC."
+    },
+    {
+      "id": "test-bench",
+      "en": "test bench",
+      "it": "banco di test",
+      "definition": "The setup of instruments, boards and scripts used for testing.",
+      "example": "We automated the test bench with Python."
+    },
+    {
+      "id": "coverage",
+      "en": "coverage",
+      "it": "copertura",
+      "definition": "How much of the specification or the code the tests check.",
+      "example": "Our coverage of the CAN features is now ninety-five percent.",
+      "note": "«càverig»."
+    },
+    {
+      "id": "corner-cases",
+      "en": "corner cases",
+      "it": "casi limite",
+      "definition": "Unusual conditions at the edges of the specification.",
+      "example": "Most bugs hide in the corner cases."
+    },
+    {
+      "id": "pvt",
+      "en": "PVT",
+      "it": "PVT (processo, tensione, temperatura)",
+      "definition": "Process, voltage and temperature: the conditions that change a chip's behaviour.",
+      "example": "We characterized the oscillator across PVT.",
+      "note": "«pi-vi-ti».",
+      "say": "P V T"
+    },
+    {
+      "id": "characterization",
+      "en": "characterization",
+      "it": "caratterizzazione",
+      "definition": "Measuring how a device really behaves across conditions and samples.",
+      "example": "The characterization showed a margin of ten percent.",
+      "note": "«karakterai-zéiscion»."
+    },
+    {
+      "id": "silicon-bring-up",
+      "en": "silicon bring-up",
+      "it": "bring-up del silicio",
+      "definition": "The first tests on new chips, to make them work for the first time.",
+      "example": "During the silicon bring-up we found a clock issue.",
+      "note": "silicon: «sìlikon», non «silicone» (quello è il silicone!).",
+      "trap": true
+    },
+    {
+      "id": "errata",
+      "en": "errata",
+      "it": "errata",
+      "definition": "The official list of known bugs in a chip and their workarounds.",
+      "example": "This issue is documented in the errata sheet.",
+      "note": "«eràta»."
+    },
+    {
+      "id": "root-cause-analysis",
+      "en": "root cause analysis",
+      "it": "analisi della causa principale",
+      "definition": "Finding the real origin of a problem, not just its symptoms.",
+      "example": "The root cause analysis took two weeks.",
+      "note": "cause: «coz»."
+    },
+    {
+      "id": "regression",
+      "en": "regression",
+      "it": "regressione",
+      "definition": "Running old tests again to check that nothing broke.",
+      "example": "The nightly regression runs four hundred tests.",
+      "note": "«rigrèscion»."
+    },
+    {
+      "id": "test-case",
+      "en": "test case",
+      "it": "caso di test",
+      "definition": "A single test with steps and an expected result.",
+      "example": "Each requirement has at least one test case."
+    },
+    {
+      "id": "pass-fail-criteria",
+      "en": "pass/fail criteria",
+      "it": "criteri di superamento",
+      "definition": "The rules that decide if a test passed.",
+      "example": "The pass/fail criteria come from the datasheet limits.",
+      "note": "criteria: «kraitìria»."
+    },
+    {
+      "id": "datasheet",
+      "en": "datasheet",
+      "it": "datasheet",
+      "definition": "The document with the specifications of a component.",
+      "example": "According to the datasheet, the maximum current is twenty milliamps.",
+      "note": "data: «deita», o «data» in americano.",
+      "trap": true
+    },
+    {
+      "id": "specification",
+      "en": "specification",
+      "it": "specifica",
+      "definition": "A document that describes exactly how something must work.",
+      "example": "The specification requires a startup time below one millisecond.",
+      "note": "«spesifikéiscion»."
+    },
+    {
+      "id": "sample",
+      "en": "sample",
+      "it": "campione",
+      "definition": "One of the chips or boards used for testing.",
+      "example": "We tested thirty samples from three lots.",
+      "note": "Si legge «sàmpol» (US) o «sàampol» (UK)."
+    },
+    {
+      "id": "lot",
+      "en": "lot",
+      "it": "lotto",
+      "definition": "A group of chips made together.",
+      "example": "One lot showed higher leakage."
+    },
+    {
+      "id": "wafer",
+      "en": "wafer",
+      "it": "wafer",
+      "definition": "The thin disk of silicon on which chips are made.",
+      "example": "Each wafer has about two thousand dies.",
+      "note": "Si legge «uèifer».",
+      "trap": true
+    },
+    {
+      "id": "yield",
+      "en": "yield",
+      "it": "resa",
+      "definition": "The percentage of good chips out of all chips made.",
+      "example": "The yield improved after the process change.",
+      "note": "Si legge «iìld».",
+      "trap": true
+    },
+    {
+      "id": "failure-analysis",
+      "en": "failure analysis",
+      "it": "analisi dei guasti",
+      "definition": "The lab study of a failed part to understand what broke.",
+      "example": "We sent the part to failure analysis.",
+      "note": "failure: «fèiliur»."
+    },
+    {
+      "id": "sign-off",
+      "en": "sign-off",
+      "it": "approvazione finale",
+      "definition": "The final approval that the work is complete.",
+      "example": "We need the validation sign-off before the release.",
+      "note": "sign: la g è muta, «sain»."
+    },
+    {
+      "id": "tape-out",
+      "en": "tape-out",
+      "it": "tape-out",
+      "definition": "The moment the final chip design is sent to production.",
+      "example": "The tape-out is planned for March."
+    },
+    {
+      "id": "design-review",
+      "en": "design review",
+      "it": "revisione del progetto",
+      "definition": "A meeting to check a design before going on.",
+      "example": "I presented the test results at the design review.",
+      "note": "design: «disàin».",
+      "trap": true
+    },
+    {
+      "id": "automation",
+      "en": "automation",
+      "it": "automazione",
+      "definition": "Using scripts and tools so tests run without manual work.",
+      "example": "Automation reduced the test time from days to hours.",
+      "note": "«otomèiscion»."
+    },
+    {
+      "id": "script",
+      "en": "script",
+      "it": "script",
+      "definition": "A small program that automates a task.",
+      "example": "I wrote a script to control the climatic chamber."
+    },
+    {
+      "id": "report",
+      "en": "report",
+      "it": "report (rapporto)",
+      "definition": "A document that summarizes the results.",
+      "example": "The test report is ready for review.",
+      "note": "Accento sulla seconda: re-PORT."
+    },
+    {
+      "id": "issue-tracker",
+      "en": "issue tracker",
+      "it": "sistema di tracciamento dei problemi",
+      "definition": "The tool where bugs and tasks are recorded.",
+      "example": "I opened a ticket in the issue tracker.",
+      "note": "issue: «ìsciu»."
+    },
+    {
+      "id": "reproducibility",
+      "en": "reproducibility",
+      "it": "riproducibilità",
+      "definition": "How easy it is to make a problem happen again.",
+      "example": "The reproducibility is low: one failure every hundred runs."
+    },
+    {
+      "id": "workaround",
+      "en": "workaround",
+      "it": "soluzione temporanea",
+      "definition": "A way to avoid a problem without fixing its cause.",
+      "example": "The errata gives a software workaround.",
+      "note": "«uòrkaraund»."
+    },
+    {
+      "id": "qualification",
+      "en": "qualification",
+      "it": "qualifica",
+      "definition": "Tests that prove a product is reliable enough to be sold.",
+      "example": "The automotive qualification follows AEC-Q100."
+    },
+    {
+      "id": "reliability",
+      "en": "reliability",
+      "it": "affidabilità",
+      "definition": "How long and how well a product works without failing.",
+      "example": "The reliability tests run for one thousand hours.",
+      "note": "«rilaiabìliti»."
+    },
+    {
+      "id": "compliance",
+      "en": "compliance",
+      "it": "conformità",
+      "definition": "Meeting a standard or a regulation.",
+      "example": "The board passed the EMC compliance tests.",
+      "note": "«complàians»."
+    },
+    {
+      "id": "verification",
+      "en": "verification",
+      "it": "verifica",
+      "definition": "Checking that a design matches its specification, often before silicon.",
+      "example": "Design verification is done in simulation."
+    }
+  ],
+  "order": 4
+}

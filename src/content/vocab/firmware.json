@@ -1,0 +1,260 @@
+{
+  "id": "firmware",
+  "name": "Firmware e debug",
+  "description": "Registri, interrupt, debug: il linguaggio del firmware.",
+  "terms": [
+    {
+      "id": "register",
+      "en": "register",
+      "it": "registro",
+      "definition": "A small memory location inside a peripheral that controls or reports its state.",
+      "example": "I read the status register after every transfer.",
+      "note": "Si legge «règister», con la g dolce e l'accento all'inizio.",
+      "trap": true
+    },
+    {
+      "id": "interrupt",
+      "en": "interrupt",
+      "it": "interrupt",
+      "definition": "A signal that stops the normal program to handle an event.",
+      "example": "The timer interrupt fires every millisecond.",
+      "note": "«ìnterapt», accento all'inizio."
+    },
+    {
+      "id": "dma",
+      "en": "DMA",
+      "it": "DMA",
+      "definition": "Direct memory access: moving data without using the CPU.",
+      "example": "We use DMA to move the ADC samples to RAM.",
+      "note": "Si dice «di-em-ei».",
+      "say": "D M A"
+    },
+    {
+      "id": "peripheral",
+      "en": "peripheral",
+      "it": "periferica",
+      "definition": "A hardware block of the microcontroller, like a timer or a UART.",
+      "example": "We validated every peripheral on the new chip.",
+      "note": "Accento sulla seconda sillaba: pe-RI-pheral, «perìferal».",
+      "trap": true
+    },
+    {
+      "id": "bootloader",
+      "en": "bootloader",
+      "it": "bootloader",
+      "definition": "The small program that starts first and loads the main application.",
+      "example": "The bootloader checks the image before jumping to it."
+    },
+    {
+      "id": "breakpoint",
+      "en": "breakpoint",
+      "it": "breakpoint",
+      "definition": "A point where the debugger stops the program.",
+      "example": "Set a breakpoint in the interrupt handler.",
+      "note": "break si legge «breik»."
+    },
+    {
+      "id": "jtag",
+      "en": "JTAG",
+      "it": "JTAG",
+      "definition": "A standard interface to test and debug chips.",
+      "example": "We connected to the core through JTAG.",
+      "note": "Si dice «jèi-tag».",
+      "say": "jay tag"
+    },
+    {
+      "id": "swd",
+      "en": "SWD",
+      "it": "SWD",
+      "definition": "Serial wire debug: a two-pin debug interface used on Arm chips.",
+      "example": "SWD needs only two pins: SWDIO and SWCLK.",
+      "note": "«es-dàbliu-di».",
+      "say": "S W D"
+    },
+    {
+      "id": "watchdog",
+      "en": "watchdog",
+      "it": "watchdog",
+      "definition": "A timer that resets the system if the software stops responding.",
+      "example": "The watchdog reset the MCU after the deadlock.",
+      "note": "«uòcdog»."
+    },
+    {
+      "id": "stack",
+      "en": "stack",
+      "it": "stack",
+      "definition": "The memory area for function calls and local variables.",
+      "example": "We increased the stack size to two kilobytes."
+    },
+    {
+      "id": "heap",
+      "en": "heap",
+      "it": "heap",
+      "definition": "The memory area for dynamic allocation.",
+      "example": "Avoid using the heap in interrupt handlers.",
+      "note": "Si legge «hiip»."
+    },
+    {
+      "id": "linker-script",
+      "en": "linker script",
+      "it": "linker script",
+      "definition": "The file that tells the linker where to place code and data in memory.",
+      "example": "I changed the linker script to move the vectors to RAM."
+    },
+    {
+      "id": "memory-map",
+      "en": "memory map",
+      "it": "mappa di memoria",
+      "definition": "The list of addresses used by memories and peripherals.",
+      "example": "The memory map is in chapter three of the reference manual."
+    },
+    {
+      "id": "clock-tree",
+      "en": "clock tree",
+      "it": "albero dei clock",
+      "definition": "How the clock signals are generated and distributed inside the chip.",
+      "example": "The PLL output feeds the whole clock tree."
+    },
+    {
+      "id": "pll",
+      "en": "PLL",
+      "it": "PLL",
+      "definition": "Phase-locked loop: a circuit that multiplies a reference clock to a higher frequency.",
+      "example": "The PLL locks in less than one hundred microseconds.",
+      "note": "«pi-el-el».",
+      "say": "P L L"
+    },
+    {
+      "id": "low-power-mode",
+      "en": "low-power mode",
+      "it": "modalità a basso consumo",
+      "definition": "A state where the chip turns off parts of itself to save energy.",
+      "example": "In the deepest low-power mode the current is one microamp."
+    },
+    {
+      "id": "wake-up-source",
+      "en": "wake-up source",
+      "it": "sorgente di risveglio",
+      "definition": "An event that brings the chip out of a low-power mode.",
+      "example": "The RTC alarm is the wake-up source."
+    },
+    {
+      "id": "flash-memory",
+      "en": "flash memory",
+      "it": "memoria flash",
+      "definition": "Non-volatile memory that keeps the program when the power is off.",
+      "example": "We erase the flash memory before programming."
+    },
+    {
+      "id": "firmware-image",
+      "en": "firmware image",
+      "it": "immagine del firmware",
+      "definition": "The binary file that is programmed into the chip.",
+      "example": "The firmware image is signed by the build server.",
+      "note": "image: «ìmig».",
+      "trap": true
+    },
+    {
+      "id": "toolchain",
+      "en": "toolchain",
+      "it": "toolchain",
+      "definition": "The set of tools to build software: compiler, linker, debugger.",
+      "example": "We moved to a newer version of the toolchain."
+    },
+    {
+      "id": "compiler",
+      "en": "compiler",
+      "it": "compilatore",
+      "definition": "The program that turns source code into machine code.",
+      "example": "The compiler optimized away my test loop!",
+      "note": "«compàiler»."
+    },
+    {
+      "id": "stack-overflow",
+      "en": "stack overflow",
+      "it": "stack overflow",
+      "definition": "When the stack grows beyond its memory area.",
+      "example": "The hard fault was caused by a stack overflow."
+    },
+    {
+      "id": "hard-fault",
+      "en": "hard fault",
+      "it": "hard fault",
+      "definition": "A severe CPU exception, for example after an illegal memory access.",
+      "example": "The firmware went into a hard fault after the DMA transfer."
+    },
+    {
+      "id": "race-condition",
+      "en": "race condition",
+      "it": "race condition",
+      "definition": "A bug that appears only when two events happen in a certain order.",
+      "example": "It was a race condition between the ISR and the main loop.",
+      "note": "race: «reis»."
+    },
+    {
+      "id": "deadlock",
+      "en": "deadlock",
+      "it": "deadlock",
+      "definition": "When two tasks wait for each other forever.",
+      "example": "The two tasks were in a deadlock on the same mutex."
+    },
+    {
+      "id": "polling",
+      "en": "polling",
+      "it": "polling",
+      "definition": "Checking a flag again and again instead of using an interrupt.",
+      "example": "We replaced polling with an interrupt to save power.",
+      "note": "«pòuling»."
+    },
+    {
+      "id": "isr",
+      "en": "ISR",
+      "it": "ISR (routine di interrupt)",
+      "definition": "Interrupt service routine: the function that runs when an interrupt fires.",
+      "example": "Keep the ISR as short as possible.",
+      "note": "«ai-es-ar».",
+      "say": "I S R"
+    },
+    {
+      "id": "rtos",
+      "en": "RTOS",
+      "it": "RTOS",
+      "definition": "Real-time operating system: it runs tasks with predictable timing.",
+      "example": "The application runs on an RTOS with five tasks.",
+      "note": "Si dice «àr-toss».",
+      "say": "R toss"
+    },
+    {
+      "id": "driver",
+      "en": "driver",
+      "it": "driver",
+      "definition": "The software that controls a peripheral.",
+      "example": "I wrote the SPI driver from scratch.",
+      "note": "«dràiver»."
+    },
+    {
+      "id": "hal",
+      "en": "HAL",
+      "it": "HAL",
+      "definition": "Hardware abstraction layer: a library that hides the register details.",
+      "example": "The HAL makes the code portable between chips.",
+      "note": "Si dice «hal» o «eich-ei-el»."
+    },
+    {
+      "id": "bit-mask",
+      "en": "bit mask",
+      "it": "maschera di bit",
+      "definition": "A value used to select some bits of a register.",
+      "example": "Use a bit mask to clear only bit seven."
+    },
+    {
+      "id": "endianness",
+      "en": "endianness",
+      "it": "endianness",
+      "definition": "The order of bytes in a multi-byte value: little or big endian.",
+      "example": "The bug was an endianness problem in the protocol.",
+      "note": "«èndiannes»."
+    }
+  ],
+  "order": 3
+}

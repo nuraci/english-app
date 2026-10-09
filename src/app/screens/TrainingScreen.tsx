@@ -20,9 +20,15 @@ const MODULES = [
     subtitle: 'aitch, double you, zed · STM32H743',
     emoji: '🔤',
   },
+  {
+    to: '/allenamenti/vocabolario',
+    title: 'Vocabolario tecnico',
+    subtitle: 'oscilloscope · jitter · root cause analysis',
+    emoji: '🧰',
+  },
 ]
 
-const COMING = ['Vocabolario tecnico', 'Simulazione di colloquio']
+const COMING = ['Simulazione di colloquio']
 
 export function TrainingScreen() {
   return (

@@ -108,14 +108,14 @@ Ogni fase ha: **Obiettivo**, **Task**, **Criteri di accettazione**.
 
 **Obiettivo:** dire bene le parole che l'utente già conosce per iscritto.
 
-- [ ] Mazzi tematici in `vocab/*.json`: `en, it, definitionEasy, example, pronunciationNote`
+- [x] Mazzi tematici in `vocab/*.json`: `en, it, definitionEasy, example, pronunciationNote`
   - **Strumenti:** oscilloscope, probe, logic analyzer, power supply, SMU, multimeter, signal generator, climatic chamber
   - **Misure:** rise time, jitter, ripple, leakage current, power consumption, eye diagram, noise floor
   - **Firmware e debug:** register, interrupt, DMA, peripheral, bootloader, breakpoint, JTAG/SWD, watchdog
   - **Processo di validazione:** test plan, test bench, coverage, corner cases, PVT, characterization, silicon bring-up, errata, root cause analysis, regression
   - **Soft skills:** teamwork, deadline, trade-off, ownership, troubleshooting
-- [ ] Lista "trappole di pronuncia" per italiani: cache, data, silicon, oscilloscope, width, debug, via, voltage
-- [ ] Modalità: ascolta e ripeti · traduci · definisci con parole tue (autovalutazione)
+- [x] Lista "trappole di pronuncia" per italiani: cache, data, silicon, oscilloscope, width, debug, via, voltage
+- [x] Modalità: ascolta e ripeti · traduci · definisci con parole tue (autovalutazione)
 
 **Accettazione:** almeno 150 termini in 5 mazzi, ognuno ascoltabile.
 

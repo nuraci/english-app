@@ -1,0 +1,244 @@
+{
+  "id": "softskills",
+  "name": "Soft skills",
+  "description": "Lavoro di squadra, scadenze, priorità: le parole del colloquio.",
+  "terms": [
+    {
+      "id": "teamwork",
+      "en": "teamwork",
+      "it": "lavoro di squadra",
+      "definition": "Working well together with other people.",
+      "example": "Teamwork was the key to finishing on time."
+    },
+    {
+      "id": "deadline",
+      "en": "deadline",
+      "it": "scadenza",
+      "definition": "The date by which something must be finished.",
+      "example": "We met the deadline for the customer samples.",
+      "note": "«dèdlain»."
+    },
+    {
+      "id": "trade-off",
+      "en": "trade-off",
+      "it": "compromesso",
+      "definition": "A balance between two good things you cannot have at the same time.",
+      "example": "There is a trade-off between speed and power consumption."
+    },
+    {
+      "id": "ownership",
+      "en": "ownership",
+      "it": "responsabilità (ownership)",
+      "definition": "Taking full responsibility for a task until it is done.",
+      "example": "I took ownership of the USB validation.",
+      "note": "«òunersciip»."
+    },
+    {
+      "id": "troubleshooting",
+      "en": "troubleshooting",
+      "it": "risoluzione dei problemi",
+      "definition": "Finding and fixing the cause of a problem step by step.",
+      "example": "Troubleshooting is the part of the job I enjoy most.",
+      "note": "«tràbolsciuuting»."
+    },
+    {
+      "id": "communication",
+      "en": "communication",
+      "it": "comunicazione",
+      "definition": "Sharing information clearly with others.",
+      "example": "Good communication with the design team saves a lot of time."
+    },
+    {
+      "id": "priority",
+      "en": "priority",
+      "it": "priorità",
+      "definition": "Something more important that must be done first.",
+      "example": "My first priority was to unblock the customer.",
+      "note": "«praiòriti»."
+    },
+    {
+      "id": "feedback",
+      "en": "feedback",
+      "it": "feedback",
+      "definition": "Comments about how something was done, to improve it.",
+      "example": "My manager gave me positive feedback on the report."
+    },
+    {
+      "id": "stakeholder",
+      "en": "stakeholder",
+      "it": "parte interessata",
+      "definition": "A person or group interested in the result of a project.",
+      "example": "I presented the status to all the stakeholders."
+    },
+    {
+      "id": "milestone",
+      "en": "milestone",
+      "it": "traguardo intermedio",
+      "definition": "An important point in a project's schedule.",
+      "example": "The first milestone is the silicon bring-up.",
+      "note": "«màilstoun»."
+    },
+    {
+      "id": "schedule",
+      "en": "schedule",
+      "it": "pianificazione",
+      "definition": "The plan of when each task will happen.",
+      "example": "We are two weeks behind schedule.",
+      "note": "Si legge «skèdiul» (US) o «scèdiul» (UK).",
+      "trap": true
+    },
+    {
+      "id": "deliverable",
+      "en": "deliverable",
+      "it": "risultato da consegnare",
+      "definition": "Something you must hand over, like a report or a tool.",
+      "example": "The main deliverable is the characterization report."
+    },
+    {
+      "id": "problem-solving",
+      "en": "problem solving",
+      "it": "capacità di risolvere problemi",
+      "definition": "The ability to find solutions to difficult problems.",
+      "example": "This job needs strong problem solving skills."
+    },
+    {
+      "id": "attention-to-detail",
+      "en": "attention to detail",
+      "it": "attenzione ai dettagli",
+      "definition": "Being careful about small things.",
+      "example": "Attention to detail is essential in validation."
+    },
+    {
+      "id": "mentoring",
+      "en": "mentoring",
+      "it": "mentoring (fare da guida)",
+      "definition": "Helping a less experienced colleague to grow.",
+      "example": "I enjoy mentoring junior engineers."
+    },
+    {
+      "id": "initiative",
+      "en": "initiative",
+      "it": "iniziativa",
+      "definition": "Doing useful things without waiting to be asked.",
+      "example": "I took the initiative to automate the setup.",
+      "note": "«inìsciativ»."
+    },
+    {
+      "id": "adaptability",
+      "en": "adaptability",
+      "it": "adattabilità",
+      "definition": "Being able to change your plans when the situation changes.",
+      "example": "Adaptability is important when the silicon arrives late."
+    },
+    {
+      "id": "collaboration",
+      "en": "collaboration",
+      "it": "collaborazione",
+      "definition": "Working together on a common goal.",
+      "example": "The collaboration with the firmware team was excellent."
+    },
+    {
+      "id": "time-management",
+      "en": "time management",
+      "it": "gestione del tempo",
+      "definition": "Organizing your time to finish the most important things.",
+      "example": "Time management is hard when you support three projects."
+    },
+    {
+      "id": "presentation",
+      "en": "presentation",
+      "it": "presentazione",
+      "definition": "A talk to show information to a group.",
+      "example": "I gave a presentation on the test results."
+    },
+    {
+      "id": "meeting",
+      "en": "meeting",
+      "it": "riunione",
+      "definition": "When people get together to discuss something.",
+      "example": "We have a short meeting every morning."
+    },
+    {
+      "id": "follow-up",
+      "en": "follow-up",
+      "it": "seguito",
+      "definition": "An action or message after something, to continue it.",
+      "example": "I sent a follow-up email after the call."
+    },
+    {
+      "id": "escalation",
+      "en": "escalation",
+      "it": "escalation",
+      "definition": "Bringing a problem to a higher level of management.",
+      "example": "The escalation helped us get more samples.",
+      "note": "«eskalèiscion»."
+    },
+    {
+      "id": "lesson-learned",
+      "en": "lesson learned",
+      "it": "lezione imparata",
+      "definition": "Something you understood from an experience, to do better next time.",
+      "example": "The main lesson learned was to automate early.",
+      "note": "learned: «lërnd»."
+    },
+    {
+      "id": "continuous-improvement",
+      "en": "continuous improvement",
+      "it": "miglioramento continuo",
+      "definition": "Making processes better step by step, all the time.",
+      "example": "We believe in continuous improvement of our test flow."
+    },
+    {
+      "id": "accountability",
+      "en": "accountability",
+      "it": "rendere conto dei propri risultati",
+      "definition": "Being responsible for the results of your work.",
+      "example": "Accountability means you own the result, good or bad."
+    },
+    {
+      "id": "customer",
+      "en": "customer",
+      "it": "cliente",
+      "definition": "The person or company that buys the product.",
+      "example": "The customer reported a problem in the field."
+    },
+    {
+      "id": "remote-work",
+      "en": "remote work",
+      "it": "lavoro da remoto",
+      "definition": "Working from home or from another place, not the office.",
+      "example": "We do remote work two days a week."
+    },
+    {
+      "id": "leadership",
+      "en": "leadership",
+      "it": "leadership",
+      "definition": "Guiding and motivating a team.",
+      "example": "I showed leadership during the bring-up.",
+      "note": "«lìdersciip»."
+    },
+    {
+      "id": "goal",
+      "en": "goal",
+      "it": "obiettivo",
+      "definition": "Something you want to achieve.",
+      "example": "Our goal is zero escapes to the customer.",
+      "note": "Si legge «goul»."
+    },
+    {
+      "id": "workload",
+      "en": "workload",
+      "it": "carico di lavoro",
+      "definition": "The amount of work a person has to do.",
+      "example": "The workload is high before the tape-out."
+    },
+    {
+      "id": "on-track",
+      "en": "on track",
+      "it": "in linea con i tempi",
+      "definition": "Progressing as planned.",
+      "example": "The project is on track for the March release."
+    }
+  ],
+  "order": 5
+}

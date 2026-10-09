@@ -1,0 +1,261 @@
+{
+  "id": "instruments",
+  "name": "Strumenti",
+  "description": "Gli strumenti del laboratorio di validazione.",
+  "terms": [
+    {
+      "id": "oscilloscope",
+      "en": "oscilloscope",
+      "it": "oscilloscopio",
+      "definition": "An instrument that shows how a voltage changes over time.",
+      "example": "I captured the glitch on the oscilloscope.",
+      "note": "Accento sulla seconda sillaba: o-SIL-o-scope, «osìloscoup».",
+      "trap": true
+    },
+    {
+      "id": "probe",
+      "en": "probe",
+      "it": "sonda",
+      "definition": "The tip you connect to the circuit to measure a signal.",
+      "example": "Use a short ground spring on the probe.",
+      "note": "Si legge «proub»."
+    },
+    {
+      "id": "logic-analyzer",
+      "en": "logic analyzer",
+      "it": "analizzatore logico",
+      "definition": "An instrument that records many digital signals at the same time.",
+      "example": "We decoded the SPI bus with the logic analyzer.",
+      "note": "analyzer: «ànalaizer»."
+    },
+    {
+      "id": "power-supply",
+      "en": "power supply",
+      "it": "alimentatore",
+      "definition": "A device that provides a stable voltage or current to the board.",
+      "example": "Set the power supply to 3.3 volts with a 500 milliamp limit.",
+      "note": "supply: «suplài»."
+    },
+    {
+      "id": "smu",
+      "en": "SMU",
+      "it": "SMU (source measure unit)",
+      "definition": "An instrument that can force a voltage or current and measure at the same time.",
+      "example": "We measured the leakage current with the SMU.",
+      "note": "Si dice lettera per lettera: «es-em-iu».",
+      "say": "S M U"
+    },
+    {
+      "id": "multimeter",
+      "en": "multimeter",
+      "it": "multimetro",
+      "definition": "A handheld instrument to measure voltage, current and resistance.",
+      "example": "Check the continuity with the multimeter.",
+      "note": "Accento sulla seconda sillaba: mul-TI-meter.",
+      "trap": true
+    },
+    {
+      "id": "signal-generator",
+      "en": "signal generator",
+      "it": "generatore di segnali",
+      "definition": "An instrument that produces test signals, like sine or square waves.",
+      "example": "The signal generator injects a 1 kilohertz sine wave."
+    },
+    {
+      "id": "climatic-chamber",
+      "en": "climatic chamber",
+      "it": "camera climatica",
+      "definition": "A box that keeps the board at a controlled temperature and humidity.",
+      "example": "We tested the board from minus forty to one hundred twenty-five degrees in the climatic chamber.",
+      "note": "climatic: «claimàtic»."
+    },
+    {
+      "id": "spectrum-analyzer",
+      "en": "spectrum analyzer",
+      "it": "analizzatore di spettro",
+      "definition": "An instrument that shows the signal power at each frequency.",
+      "example": "The spectrum analyzer showed a spur at 48 megahertz."
+    },
+    {
+      "id": "network-analyzer",
+      "en": "network analyzer",
+      "it": "analizzatore di reti",
+      "definition": "An instrument that measures how a circuit reflects and transmits high-frequency signals.",
+      "example": "We checked the antenna matching with the network analyzer."
+    },
+    {
+      "id": "current-probe",
+      "en": "current probe",
+      "it": "sonda di corrente",
+      "definition": "A probe that measures current without breaking the circuit.",
+      "example": "The current probe showed a spike at power-up."
+    },
+    {
+      "id": "differential-probe",
+      "en": "differential probe",
+      "it": "sonda differenziale",
+      "definition": "A probe that measures the voltage between two points, neither of them ground.",
+      "example": "Use a differential probe on the USB data lines.",
+      "note": "differential: «diferènscial»."
+    },
+    {
+      "id": "function-generator",
+      "en": "function generator",
+      "it": "generatore di funzioni",
+      "definition": "A simple signal generator for standard waveforms.",
+      "example": "The function generator drives the external clock input."
+    },
+    {
+      "id": "electronic-load",
+      "en": "electronic load",
+      "it": "carico elettronico",
+      "definition": "An instrument that draws a programmable current from a power source.",
+      "example": "We tested the regulator with an electronic load."
+    },
+    {
+      "id": "thermal-camera",
+      "en": "thermal camera",
+      "it": "termocamera",
+      "definition": "A camera that shows the temperature of every point on the board.",
+      "example": "The thermal camera found a hot spot near the regulator.",
+      "note": "thermal: «thèrmal», con la th inglese."
+    },
+    {
+      "id": "soldering-iron",
+      "en": "soldering iron",
+      "it": "saldatore",
+      "definition": "The hot tool used to melt solder and connect components.",
+      "example": "I fixed the broken pin with the soldering iron.",
+      "note": "iron si legge «àiern»: la r quasi non si sente.",
+      "trap": true
+    },
+    {
+      "id": "hot-air-station",
+      "en": "hot air station",
+      "it": "stazione ad aria calda",
+      "definition": "A tool that blows hot air to solder or remove small chips.",
+      "example": "We replaced the QFN package with the hot air station."
+    },
+    {
+      "id": "microscope",
+      "en": "microscope",
+      "it": "microscopio",
+      "definition": "An instrument that makes very small things look bigger.",
+      "example": "I inspected the solder joints under the microscope.",
+      "note": "Accento all'inizio: «MAI-croscoup».",
+      "trap": true
+    },
+    {
+      "id": "esd-wrist-strap",
+      "en": "ESD wrist strap",
+      "it": "braccialetto antistatico",
+      "definition": "A strap that connects you to ground to avoid electrostatic discharge.",
+      "example": "Always wear the ESD wrist strap when you touch the board.",
+      "note": "wrist: la w è muta, «rist».",
+      "say": "E S D wrist strap"
+    },
+    {
+      "id": "evaluation-board",
+      "en": "evaluation board",
+      "it": "scheda di valutazione",
+      "definition": "A ready-made board to test a chip and its features.",
+      "example": "We started with the vendor's evaluation board."
+    },
+    {
+      "id": "debug-probe",
+      "en": "debug probe",
+      "it": "sonda di debug",
+      "definition": "The adapter that connects the PC to the chip's debug port.",
+      "example": "Connect the debug probe to the SWD header.",
+      "note": "debug: «di-BAG», accento sulla seconda."
+    },
+    {
+      "id": "breadboard",
+      "en": "breadboard",
+      "it": "breadboard",
+      "definition": "A board with holes to build circuits without soldering.",
+      "example": "I built a quick prototype on a breadboard.",
+      "note": "bread si legge «bred»."
+    },
+    {
+      "id": "jumper-wire",
+      "en": "jumper wire",
+      "it": "cavetto (jumper)",
+      "definition": "A short wire used to connect two points.",
+      "example": "Add a jumper wire between the two test points.",
+      "note": "jumper: «giàmper»."
+    },
+    {
+      "id": "test-fixture",
+      "en": "test fixture",
+      "it": "attrezzatura di test",
+      "definition": "A mechanical setup that holds the board and connects it to the instruments.",
+      "example": "The test fixture has spring pins for every test point.",
+      "note": "fixture: «fìkscer»."
+    },
+    {
+      "id": "thermocouple",
+      "en": "thermocouple",
+      "it": "termocoppia",
+      "definition": "A temperature sensor made of two different metals.",
+      "example": "We glued a thermocouple on top of the package.",
+      "note": "«thèrmocapol»."
+    },
+    {
+      "id": "data-logger",
+      "en": "data logger",
+      "it": "registratore di dati",
+      "definition": "A device that records measurements over a long time.",
+      "example": "The data logger recorded the temperature every second.",
+      "note": "data: «deita»."
+    },
+    {
+      "id": "frequency-counter",
+      "en": "frequency counter",
+      "it": "frequenzimetro",
+      "definition": "An instrument that measures the frequency of a signal very accurately.",
+      "example": "The frequency counter read 32.768 kilohertz.",
+      "note": "frequency: «frìcuensi»."
+    },
+    {
+      "id": "lcr-meter",
+      "en": "LCR meter",
+      "it": "misuratore LCR",
+      "definition": "An instrument that measures inductance, capacitance and resistance.",
+      "example": "We checked the capacitor value with the LCR meter.",
+      "note": "«el-si-ar mìter».",
+      "say": "L C R meter"
+    },
+    {
+      "id": "bench",
+      "en": "bench",
+      "it": "banco",
+      "definition": "The table in the lab where you set up a test.",
+      "example": "The new samples are on my bench."
+    },
+    {
+      "id": "socket",
+      "en": "socket",
+      "it": "zoccolo (socket)",
+      "definition": "A holder that lets you change the chip without soldering.",
+      "example": "We use a test socket to swap the samples quickly."
+    },
+    {
+      "id": "cable",
+      "en": "cable",
+      "it": "cavo",
+      "definition": "A wire, or group of wires, with connectors.",
+      "example": "Use a shorter cable to reduce the noise.",
+      "note": "Si legge «keibol», non «càble».",
+      "trap": true
+    },
+    {
+      "id": "bit-error-rate-tester",
+      "en": "bit error rate tester",
+      "it": "BERT (tester di errori di bit)",
+      "definition": "An instrument that sends data and counts the wrong bits at the receiver.",
+      "example": "The bit error rate tester ran for one hour without errors."
+    }
+  ],
+  "order": 1
+}

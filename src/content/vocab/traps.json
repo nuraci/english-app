@@ -1,0 +1,174 @@
+{
+  "name": "Trappole di pronuncia",
+  "description": "Parole che gli italiani pronunciano spesso male: ascolta e ripeti.",
+  "words": [
+    {
+      "id": "cache",
+      "en": "cache",
+      "it": "cache",
+      "note": "«cash», come i soldi: non «cacche»!",
+      "example": "The data is still in the cache."
+    },
+    {
+      "id": "data",
+      "en": "data",
+      "it": "dati",
+      "note": "«deita» (UK e US) oppure «dàta» (US), mai «data» all'italiana.",
+      "example": "We collected the data overnight."
+    },
+    {
+      "id": "silicon",
+      "en": "silicon",
+      "it": "silicio",
+      "note": "«sìlikon». Attenzione: silicone (la gomma) è un'altra cosa, «sìlikoun».",
+      "example": "The bug is in the silicon, not in the firmware."
+    },
+    {
+      "id": "oscilloscope",
+      "en": "oscilloscope",
+      "it": "oscilloscopio",
+      "note": "«osìloscoup»: accento sulla seconda sillaba, la sc si legge «s».",
+      "example": "The oscilloscope shows a clean square wave."
+    },
+    {
+      "id": "width",
+      "en": "width",
+      "it": "larghezza",
+      "note": "«uìdth»: finisce con la th, come «with» con la d.",
+      "example": "The pulse width is two microseconds."
+    },
+    {
+      "id": "debug",
+      "en": "debug",
+      "it": "fare il debug",
+      "note": "«di-BAG»: accento sulla seconda sillaba, la u si legge come una a breve.",
+      "example": "I spent the day debugging the driver."
+    },
+    {
+      "id": "via",
+      "en": "via",
+      "it": "via (foro passante)",
+      "note": "«vàia» oppure «vìa»: nei PCB si sente molto «vàia».",
+      "example": "Add more vias under the ground pad."
+    },
+    {
+      "id": "voltage",
+      "en": "voltage",
+      "it": "tensione",
+      "note": "«vòultig»: la o è lunga e la finale -age si legge «-ig».",
+      "example": "The voltage drops during the transmission."
+    },
+    {
+      "id": "circuit",
+      "en": "circuit",
+      "it": "circuito",
+      "note": "«sërkit»: la ui non si pronuncia, si legge come una i breve.",
+      "example": "We added a protection circuit on the input."
+    },
+    {
+      "id": "architecture",
+      "en": "architecture",
+      "it": "architettura",
+      "note": "«àrkitekcer»: la ch si legge k.",
+      "example": "The new architecture has two cores."
+    },
+    {
+      "id": "peripheral",
+      "en": "peripheral",
+      "it": "periferica",
+      "note": "«perìferal»: accento sulla seconda sillaba.",
+      "example": "Each peripheral has its own clock enable bit."
+    },
+    {
+      "id": "hierarchy",
+      "en": "hierarchy",
+      "it": "gerarchia",
+      "note": "«hàirarki»: si sente la h, e la ch si legge k.",
+      "example": "The clock hierarchy is described in the manual."
+    },
+    {
+      "id": "gauge",
+      "en": "gauge",
+      "it": "calibro, spessore (del filo)",
+      "note": "«gheig», come «page» con la g dura.",
+      "example": "Use a thicker wire gauge for high current."
+    },
+    {
+      "id": "diode",
+      "en": "diode",
+      "it": "diodo",
+      "note": "«dàioud»: la i si legge «ai».",
+      "example": "The diode protects the input from reverse polarity."
+    },
+    {
+      "id": "label",
+      "en": "label",
+      "it": "etichetta",
+      "note": "«lèibol», non «labèl».",
+      "example": "Put a label on every sample."
+    },
+    {
+      "id": "module",
+      "en": "module",
+      "it": "modulo",
+      "note": "«mòdiul» (UK) o «màgiul» (US).",
+      "example": "The radio module needs its own supply."
+    },
+    {
+      "id": "capacitor",
+      "en": "capacitor",
+      "it": "condensatore",
+      "note": "«kapàsitor»: accento sulla seconda sillaba.",
+      "example": "Add a 100 nanofarad capacitor close to the pin."
+    },
+    {
+      "id": "engineer",
+      "en": "engineer",
+      "it": "ingegnere",
+      "note": "«engiinìer»: accento sull'ultima sillaba.",
+      "example": "I am a validation engineer."
+    },
+    {
+      "id": "iron",
+      "en": "iron",
+      "it": "ferro, saldatore",
+      "note": "«àiern»: la r quasi non si sente.",
+      "example": "Clean the tip of the iron."
+    },
+    {
+      "id": "analog",
+      "en": "analog",
+      "it": "analogico",
+      "note": "«ànalog»: accento all'inizio.",
+      "example": "The analog front end is very sensitive to noise."
+    },
+    {
+      "id": "sensor",
+      "en": "sensor",
+      "it": "sensore",
+      "note": "«sènsor», accento all'inizio.",
+      "example": "The temperature sensor is inside the chip."
+    },
+    {
+      "id": "error",
+      "en": "error",
+      "it": "errore",
+      "note": "«èrror», con una sola r forte all'inizio e la finale debole.",
+      "example": "The error rate is below one in a billion."
+    },
+    {
+      "id": "component",
+      "en": "component",
+      "it": "componente",
+      "note": "«compòunent»: accento sulla seconda sillaba, o lunga.",
+      "example": "We replaced the faulty component."
+    },
+    {
+      "id": "chip",
+      "en": "chip",
+      "it": "chip",
+      "note": "«cip», con la i breve. Non «sciip»: quello è «ship», la nave!",
+      "example": "The chip runs at 150 megahertz."
+    }
+  ]
+}
