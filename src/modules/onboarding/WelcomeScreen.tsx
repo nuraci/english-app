@@ -125,8 +125,8 @@ export function WelcomeScreen() {
         <div className="grid grid-cols-2 gap-2">
           {(
             [
-              ['en-US', '🇺🇸 Americano'],
               ['en-GB', '🇬🇧 Britannico'],
+              ['en-US', '🇺🇸 Americano'],
             ] as [Accent, string][]
           ).map(([value, label]) => (
             <Button

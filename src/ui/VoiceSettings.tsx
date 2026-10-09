@@ -12,8 +12,8 @@ import {
 import { Button } from './Button'
 
 const ACCENTS: { value: Accent; label: string }[] = [
-  { value: 'en-US', label: '🇺🇸 Americano' },
   { value: 'en-GB', label: '🇬🇧 Britannico' },
+  { value: 'en-US', label: '🇺🇸 Americano' },
 ]
 
 const FALLBACKS: { value: SttFallback; label: string }[] = [

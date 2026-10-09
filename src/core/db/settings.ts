@@ -34,7 +34,7 @@ export type Settings = {
 }
 
 export const DEFAULT_SETTINGS: Settings = {
-  accent: 'en-US',
+  accent: 'en-GB',
   rate: 0.9,
   voiceURI: null,
   sttFallback: 'type',

@@ -58,13 +58,19 @@ test('la pagina di prova valuta le risposte con feedback incoraggiante', async (
   await expect(page.getByText(/Da ripassare adesso \(SRS\): \d/)).toBeVisible()
 })
 
-test('le impostazioni della voce si salvano', async ({ page }) => {
+test('la voce britannica è predefinita e la scelta si salva', async ({ page }) => {
   await page.goto('/impostazioni')
-  const gb = page.getByRole('button', { name: /Britannico/ })
-  await gb.click()
-  await expect(gb).toHaveAttribute('aria-pressed', 'true')
-  await page.reload()
   await expect(page.getByRole('button', { name: /Britannico/ })).toHaveAttribute(
+    'aria-pressed',
+    'true',
+  )
+  await page.getByRole('button', { name: /Americano/ }).click()
+  await expect(page.getByRole('button', { name: /Americano/ })).toHaveAttribute(
+    'aria-pressed',
+    'true',
+  )
+  await page.reload()
+  await expect(page.getByRole('button', { name: /Americano/ })).toHaveAttribute(
     'aria-pressed',
     'true',
   )
