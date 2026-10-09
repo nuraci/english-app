@@ -26,3 +26,20 @@ Nota: microfono e installazione richiedono HTTPS, quindi il dev server in LAN (H
 
 ## Autori
 Ideata e sviluppata da **Nunzio Raciti** insieme a **Claude** (Anthropic), con Claude Code.
+
+## Sincronizzazione con Google Drive (facoltativa)
+Per usare l'app su telefono e PC con gli stessi progressi. I dati finiscono in una cartella nascosta
+del tuo Drive che solo l'app vede (permesso `drive.appdata`); le registrazioni audio restano sui dispositivi.
+
+Una volta sola, su <https://console.cloud.google.com>:
+1. Crea un progetto (es. «TechTalk Coach»).
+2. *API e servizi → Libreria* → abilita **Google Drive API**.
+3. *Google Auth Platform* (schermata di consenso OAuth) → tipo **Esterno**, nome app, la tua email;
+   in *Accesso ai dati* aggiungi l'ambito `https://www.googleapis.com/auth/drive.appdata`;
+   in *Pubblico / Utenti di test* aggiungi il tuo account Google.
+4. *Client* → **Crea client** → tipo **Applicazione web** → *Origini JavaScript autorizzate*:
+   `https://nuraci.github.io` → crea e copia l'**ID client** (finisce con `.apps.googleusercontent.com`).
+5. Salvalo come variabile del repository (non è un segreto):
+   `gh variable set GOOGLE_CLIENT_ID --body "<ID client>"` e rifai il deploy.
+
+Poi nell'app: *Impostazioni → Sincronizzazione (Google Drive) → Collega Google Drive*, su ogni dispositivo.

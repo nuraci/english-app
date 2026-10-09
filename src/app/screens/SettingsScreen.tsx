@@ -3,6 +3,7 @@ import { DataSettings } from '../../ui/DataSettings'
 import { GoalSettings } from '../../ui/GoalSettings'
 import { PackSettings } from '../../ui/PackSettings'
 import { Card, Screen } from '../../ui/Screen'
+import { SyncSettings } from '../../ui/SyncSettings'
 import { TutorSettings } from '../../ui/TutorSettings'
 import { useOnlineStatus } from '../../ui/useOnlineStatus'
 import { VoiceSettings } from '../../ui/VoiceSettings'
@@ -29,6 +30,10 @@ export function SettingsScreen() {
       <Card>
         <h2 className="mb-4 text-lg font-bold">Tutor AI (facoltativo)</h2>
         <TutorSettings />
+      </Card>
+      <Card>
+        <h2 className="mb-4 text-lg font-bold">Sincronizzazione (Google Drive)</h2>
+        <SyncSettings />
       </Card>
       <Card>
         <h2 className="mb-4 text-lg font-bold">I tuoi dati</h2>

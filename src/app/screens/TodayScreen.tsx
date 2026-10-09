@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { parseDayKey } from '../../core/progress'
 import { updateSettings, useSettings } from '../../core/db/settings'
 import { Button } from '../../ui/Button'
+import { SyncReminder } from '../../ui/SyncReminder'
 import { Card, Screen } from '../../ui/Screen'
 import { useProgressData } from '../today/useProgressData'
 
@@ -46,6 +47,8 @@ export function TodayScreen() {
           </Button>
         </Card>
       )}
+
+      <SyncReminder />
 
       <div className="grid grid-cols-3 gap-2" data-testid="today-stats">
         <Card>

@@ -31,6 +31,10 @@ export type Settings = {
   activePacks: string[]
   /** Onboarding con test di livello completato. */
   onboardingDone: boolean
+  /** Sincronizzazione con Google Drive attivata su questo dispositivo. */
+  driveConnected: boolean
+  /** Ultima sincronizzazione riuscita (ms). */
+  lastSyncAt: number
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -48,6 +52,8 @@ export const DEFAULT_SETTINGS: Settings = {
   deviceId: '',
   activePacks: ['semiconductors'],
   onboardingDone: false,
+  driveConnected: false,
+  lastSyncAt: 0,
 }
 
 export async function getSettings(database = db): Promise<Settings> {
@@ -56,8 +62,27 @@ export async function getSettings(database = db): Promise<Settings> {
   return { ...DEFAULT_SETTINGS, ...stored }
 }
 
+/** Impostazioni legate al singolo dispositivo: non si sincronizzano tra telefono e PC. */
+export const DEVICE_SETTINGS: readonly string[] = [
+  'voiceURI',
+  'deviceId',
+  'reminderEnabled',
+  'reminderHour',
+  'driveConnected',
+  'lastSyncAt',
+]
+
+/** Quando sono cambiate l'ultima volta le impostazioni condivise (per la sincronizzazione). */
+export const SETTINGS_UPDATED_AT = 'settingsUpdatedAt'
+
 export async function updateSettings(patch: Partial<Settings>, database = db): Promise<void> {
-  await database.settings.bulkPut(Object.entries(patch).map(([key, value]) => ({ key, value })))
+  const rows: { key: string; value: unknown }[] = Object.entries(patch).map(([key, value]) => ({
+    key,
+    value,
+  }))
+  if (rows.some((r) => !DEVICE_SETTINGS.includes(r.key)))
+    rows.push({ key: SETTINGS_UPDATED_AT, value: Date.now() })
+  await database.settings.bulkPut(rows)
 }
 
 /** Impostazioni sempre aggiornate; fino al primo caricamento valgono quelle di default. */

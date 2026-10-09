@@ -30,5 +30,7 @@ export async function saveSession(
   now = new Date(),
   database: AppDatabase = defaultDb,
 ) {
-  return database.sessions.add({ ...session, endedAt: now.getTime() })
+  const id = await database.sessions.add({ ...session, endedAt: now.getTime() })
+  if (database === defaultDb) void import('../sync/drive').then((m) => m.syncQuietly())
+  return id
 }

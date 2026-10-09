@@ -27,13 +27,15 @@ export async function saveTutorSummary(summary: TutorSummary): Promise<number> {
     total: userTurns,
     correct: Math.max(0, userTurns - summary.corrections.length),
   })
-  return (await db.userTexts.add({
+  const id = (await db.userTexts.add({
     kind: SUMMARY_KIND,
     title: summary.mode,
     text: JSON.stringify(summary),
     createdAt: summary.endedAt,
     updatedAt: summary.endedAt,
   })) as number
+  void import('../../core/sync/drive').then((m) => m.syncQuietly())
+  return id
 }
 
 export async function tutorHistory(): Promise<(TutorSummary & { id: number })[]> {

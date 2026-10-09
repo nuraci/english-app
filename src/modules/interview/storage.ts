@@ -12,6 +12,7 @@ export async function finishInterviewSession(
   now = Date.now(),
 ): Promise<void> {
   await db.sessions.update(id, { endedAt: now, correct: answered })
+  void import('../../core/sync/drive').then((m) => m.syncQuietly())
 }
 
 /** Salva una risposta con l'eventuale registrazione audio (che resta sul dispositivo). */

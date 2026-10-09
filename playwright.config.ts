@@ -25,7 +25,9 @@ export default defineConfig({
   ],
   // Test sulla build di produzione: è lì che vive il service worker.
   webServer: {
-    command: 'npm run build && npm run preview -- --port 4173 --strictPort',
+    // ID client Google fittizio: abilita la sincronizzazione con Drive (simulato nei test).
+    command:
+      'VITE_GOOGLE_CLIENT_ID=e2e-client-id npm run build && npm run preview -- --port 4173 --strictPort',
     url: 'http://localhost:4173',
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
